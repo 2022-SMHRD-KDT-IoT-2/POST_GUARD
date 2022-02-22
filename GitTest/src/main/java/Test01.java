@@ -11,6 +11,7 @@ public class Test01 {
 		System.out.println("github 사라져라!");
 		System.out.println("^_^");
 		System.out.println("아뇨 뚱인데요");
+		System.out.println("123");
 	}
 
 }
