@@ -7,13 +7,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.dao.requestDAO;
+import com.dao.RequestDAO;
 
 
 // 택배사에 수거 요청 컨트롤러
 
 @WebServlet("/requestCon")
-public class requestCon extends HttpServlet {
+public class RequestCon extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -34,7 +34,7 @@ public class requestCon extends HttpServlet {
 		
 		int parsed_pin = Integer.parseInt(pin);
 
-		requestDAO dao = new requestDAO();
+		RequestDAO dao = new RequestDAO();
 
 		int cnt = dao.deliveryRequest(mem_id, deli_type, req_type, parsed_pin);
 

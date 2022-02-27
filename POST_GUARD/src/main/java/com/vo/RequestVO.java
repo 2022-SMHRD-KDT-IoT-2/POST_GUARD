@@ -2,7 +2,7 @@ package com.vo;
 
 
 // 택배 수거 요청할 때 필요한 정보를 담고 있는 객체
-public class requestVO {
+public class RequestVO {
 	
 	private int req_seq;
 	private String mem_id;
@@ -12,7 +12,7 @@ public class requestVO {
 	private String accept_time;
 	private int pin;
 	
-	public requestVO(int req_seq, String mem_id, Double company_seq, String req_datetime, String req_type, String accept_time,
+	public RequestVO(int req_seq, String mem_id, Double company_seq, String req_datetime, String req_type, String accept_time,
 			int pin) {
 		super();
 		this.req_seq = req_seq;
