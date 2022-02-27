@@ -1,14 +1,16 @@
 package com.vo;
 
+
+//
 public class CompanyVO {
-	private Double company_seq;
+	private int company_seq;
 	private String company_name;
 	private String company_addr;
 	private String company_tel;
 	private String company_ceo;
 	private String company_homepage;
 	
-	public CompanyVO(Double company_seq, String company_name, String company_addr, String company_tel,
+	public CompanyVO(int company_seq, String company_name, String company_addr, String company_tel,
 			String company_ceo, String company_homepage) {
 		super();
 		this.company_seq = company_seq;
@@ -18,7 +20,7 @@ public class CompanyVO {
 		this.company_ceo = company_ceo;
 		this.company_homepage = company_homepage;
 	}
-	public Double getCompany_seq() {
+	public int getCompany_seq() {
 		return company_seq;
 	}
 	public String getCompany_name() {

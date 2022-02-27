@@ -1,6 +1,10 @@
 package com.vo;
 
-public class PostVO {
+
+// PostVO -> MemberVO 로 파일명 변경
+// PostVO 라는 파일명 적절하지 않음.. VO객체 내용만 봐도 멤버관련된 필드들
+
+public class MemberVO {
 	private String mem_id;
 	private String mem_pw;
 	private String mem_name;
@@ -10,8 +14,9 @@ public class PostVO {
 	private String mem_joindate;
 	private String admin_yesno;
 
-	public PostVO(String mem_id, String mem_pw, String mem_name, String mem_phone, String mem_email, String mem_addr,
-			String mem_joindate, String admin_yesno) {
+	// MemberVO 생성자에 joindate, admin_yesno 는 필요하지 않다.
+	// joindate는 사용자가 회원가입을 하면 자동으로 갱신되는 부분이고, admin 권한은 따로 DB에서 우리가 권한을 주는것이 적절함.
+	public MemberVO(String mem_id, String mem_pw, String mem_name, String mem_phone, String mem_email, String mem_addr) {
 		super();
 		this.mem_id = mem_id;
 		this.mem_pw = mem_pw;
@@ -19,8 +24,6 @@ public class PostVO {
 		this.mem_phone = mem_phone;
 		this.mem_email = mem_email;
 		this.mem_addr = mem_addr;
-		this.mem_joindate = mem_joindate;
-		this.admin_yesno = admin_yesno;
 	}
 
 	public String getMem_id() {

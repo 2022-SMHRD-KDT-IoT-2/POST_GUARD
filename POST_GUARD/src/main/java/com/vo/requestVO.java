@@ -1,28 +1,30 @@
 package com.vo;
 
+
+// 택배 수거 요청할 때 필요한 정보를 담고 있는 객체
 public class requestVO {
 	
-	private Double re_seq;
+	private int req_seq;
 	private String mem_id;
 	private Double company_seq;
-	private String rq_datetime;
-	private String rq_type;
+	private String req_datetime;
+	private String req_type;
 	private String accept_time;
 	private int pin;
 	
-	public requestVO(Double re_seq, String mem_id, Double company_seq, String rq_datetime, String rq_type, String accept_time,
+	public requestVO(int req_seq, String mem_id, Double company_seq, String req_datetime, String req_type, String accept_time,
 			int pin) {
 		super();
-		this.re_seq = re_seq;
+		this.req_seq = req_seq;
 		this.mem_id = mem_id;
 		this.company_seq = company_seq;
-		this.rq_datetime = rq_datetime;
-		this.rq_type = rq_type;
+		this.req_datetime = req_datetime;
+		this.req_type = req_type;
 		this.accept_time = accept_time;
 		this.pin = pin;
 	}
-	public Double getReseq() {
-		return re_seq;
+	public int getReseq() {
+		return req_seq;
 	}
 	public String getMemid() {
 		return mem_id;
@@ -31,10 +33,10 @@ public class requestVO {
 		return company_seq;
 	}
 	public String getRqdatetime() {
-		return rq_datetime;
+		return req_datetime;
 	}
 	public String getRqtype() {
-		return rq_type;
+		return req_type;
 	}
 	public String getAcceptTime() {
 		return accept_time;
