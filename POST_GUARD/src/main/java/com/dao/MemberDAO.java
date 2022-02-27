@@ -4,8 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
-
+import com.vo.MemberVO;
 
 // 유저 관련 DAO
 public class MemberDAO {
@@ -45,7 +44,8 @@ public class MemberDAO {
 		}
 	}
 
-	public int join(String mem_id, String mem_pw, String mem_name, String mem_phone, String mem_email, String mem_addr) {
+	public int join(String mem_id, String mem_pw, String mem_name, String mem_phone, String mem_email,
+			String mem_addr) {
 
 		int cnt = 0;
 
@@ -103,7 +103,36 @@ public class MemberDAO {
 		return cnt;
 	}
 
-	 
+	public MemberVO login(String mem_id, String mem_pw) {
+		MemberVO vo = null;
+		try {
+
+			DB();
+
+			String sql = "select * from t_member where mem_id = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, mem_id);
+
+			rs = psmt.executeQuery();
+
+			if (rs.next()) {
+				String getMem_id = rs.getString(1);
+				String getMem_pw = rs.getString(2);
+				String mem_name = rs.getString(3);
+				String phone = rs.getString(4);
+				String email = rs.getString(5);
+				String addr = rs.getString(6);
+
+				if (mem_pw.equals(getMem_pw)) {
+					vo = new MemberVO(mem_id, mem_pw, mem_name, phone, email, addr);
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return vo;
+
+	}
 }
-
-
