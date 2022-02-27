@@ -14,7 +14,7 @@ public class requestDAO {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
-			String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
+			String url = "jdbc:oracle:thin:@project-db-stu-ddns.net:1524:xe";
 			String dbid = "campus_d_5_0216";
 			String dbpw = "smhrd5";
 
@@ -43,19 +43,18 @@ public class requestDAO {
 	
 	// 그냥 request 라는 이름을 붙이면 어떤걸 요청하는지 식별하기 어려움이 있다.
 	// 따라서 함수 명 변경 (request -> deliveryRequest)
-	public int deliveryRequest(int req_seq, String mem_id, int company_seq, String req_type, int pin) {
+	public int deliveryRequest(String mem_id, String dl_type, String req_type, int pin) {
 		int cnt = 0;
 		
 		try {
 			DB();
 			
-			String sql = "insert into t_dlrequest values(?, ?, ?, ?, sysdate, ?, sysdate, ?)";
+			String sql = "insert into t_dlrequest (member_id, dl_type, rq_type pin_code, rq_datatime, accept_time) values(?, ?, ?, ? sysdate, sysdate)";
 			psmt = conn.prepareStatement(sql);
-			psmt.setDouble(1, req_seq);
-			psmt.setString(2, mem_id);
-			psmt.setDouble(3, company_seq);
-			psmt.setString(4, req_type);
-			psmt.setInt(5, pin);
+			psmt.setString(1, mem_id);
+			psmt.setString(2, dl_type);
+			psmt.setString(3, req_type);
+			psmt.setInt(4, pin);
 					
 		}
 		catch(Exception e) {
