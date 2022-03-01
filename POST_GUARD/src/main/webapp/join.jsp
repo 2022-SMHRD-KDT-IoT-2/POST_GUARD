@@ -55,15 +55,15 @@
                   </div>
                   <div class="field">
                     <label for="name">이름</label>
-                    <input type="text" name="name" id="name" required />
+                    <input type="text" name="mem_name" id="name" required />
                   </div>
                   <div class="field">
                     <label for="id">아이디</label>
-                    <input type="text" name="id" id="id" required />
+                    <input type="text" name="mem_id" id="id" required />
                   </div>
                   <div class="field">
                     <label for="pw">비밀번호</label>
-                    <input type="password" name="pw" id="pw" required />
+                    <input type="password" name="mem_pw" id="pw" required />
                   </div>
                   <div class="field">
                     <label for="pwcheck">비밀번호 확인</label>
@@ -76,15 +76,15 @@
                   </div>
                   <div class="field">
                     <label for="email">메일 주소</label>
-                    <input type="email" name="email" id="email" required />
+                    <input type="email" name="mem_email" id="email" required />
                   </div>
                   <div class="field">
                     <label for="tel">전화번호</label>
-                    <input type="text" name="tel" id="tel" required />
+                    <input type="text" name="mem_phone" id="tel" required />
                   </div>
                   <div class="field">
                     <label for="address">주소</label>
-                    <input type="text" name="address" id="address" required />
+                    <input type="text" name="mem_addr" id="address" required />
                     <div class="addr__container">
                       <input
                         type="button"
