@@ -43,7 +43,7 @@ const handleXhr = (id, pw, username, phone, email, addr) => {
         if (xhr.responseText === "joinSuccess") {
           // 회원가입 성공
           idPass = true;
-          if (idPass && pwPass) {
+          if (idPass) {
             location.href = "login.jsp";
           }
         } else {
@@ -130,14 +130,16 @@ const pwInputCheck = (e) => {
 const handleJoin = (e) => {
   e.preventDefault();
   passwordConfirm();
-  handleXhr(
-    id.value,
-    pw.value,
-    username.value,
-    phone.value,
-    email.value,
-    addr.value
-  );
+  if (pwPass) {
+    handleXhr(
+      id.value,
+      pw.value,
+      username.value,
+      phone.value,
+      email.value,
+      addr.value
+    );
+  }
 };
 
 joinBtn.addEventListener("click", handleJoin);
