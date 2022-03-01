@@ -106,6 +106,7 @@
         </div>
       </section>
     </div>
+    <script src="assets/js/join.js"></script>
   </body>
 </html>
 
