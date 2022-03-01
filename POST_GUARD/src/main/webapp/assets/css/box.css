@@ -1,0 +1,15 @@
+.box1,
+.box2 {
+  display: flex;
+}
+
+.box1 li {
+  margin-right: 50px;
+}
+
+.box_container {
+  display: flex;
+  padding-left: 100px;
+  width: 1090px;
+  justify-content: space-between;
+}
