@@ -10,3 +10,19 @@
   margin: 0 auto;
   line-height: 1.5em;
 }
+
+.hide {
+	display: none;
+}
+
+.loginAlertBox {
+	width: 100%;
+	display : flex;
+	align-items : center;
+	justify-content: center;
+}
+
+.loginAlert {
+	font-size: 20px;
+	color : red;
+}

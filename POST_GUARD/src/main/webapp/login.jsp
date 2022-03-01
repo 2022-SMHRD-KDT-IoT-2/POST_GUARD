@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ page import="com.dao.MemberDAO" %>
+<%@ page import="com.vo.MemberVO" %>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,6 +15,10 @@
     <title>POST-GUARD | 로그인</title>
   </head>
   <body>
+  <%
+  	MemberDAO dao = new MemberDAO();
+  %>
+  
     <section id="sidebar">
       <div class="inner">
         <nav>
@@ -48,24 +55,26 @@
         <div class="inner">
           <div class="login__container">
             <section>
-              <form method="post" action="#">
+              <form method="post" action="index.jsp">
                 <div class="fields">
                   <div class="field">
                     <h2>로그인</h2>
                   </div>
                   <div class="field">
                     <label for="id">아이디</label>
-                    <input type="text" name="id" id="id" required />
+                    <input type="text" name="mem_id" id="id" required />
                   </div>
                   <div class="field">
                     <label for="pw">비밀번호</label>
-                    <input type="password" name="pw" id="pw" required />
+                    <input type="password" name="mem_pw" id="pw" required />
                   </div>
+                </div>
+                <div class="loginAlertBox">
+                	<span id = "loginAlertId"class="loginAlert hide">아이디 또는 비밀번호가 틀렸습니다.</span>
                 </div>
                 <ul class="actions">
                   <li class="loginbtn">
-                    <!-- 자바스크립트로 페이지 이동할 예정~! -->
-                    <button>로그인</button>
+                    <button class="login">로그인</button>
                   </li>
                 </ul>
               </form>
@@ -74,6 +83,50 @@
         </div>
       </section>
     </div>
-    <script src="assets/js/login.js"></script>
+    <script>
+    	const id = document.querySelector("#id");
+    	const pw = document.querySelector("#pw");
+    	const loginBtn = document.querySelector(".login");
+    	const AlertMessage = document.querySelector("#loginAlertId");
+    	
+    	// 비동기 통신
+    	const handleXhr = (id, pw) => {
+			let xhr = new XMLHttpRequest();
+			
+			const userObj = {"id" : id, "pw" : pw};
+
+		    xhr.open('post', 'LoginCon');
+		      xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+		      
+		      xhr.send(JSON.stringify(userObj)); // 문자열로 보내기
+		      
+		      xhr.onreadystatechange = function(){
+		         if(xhr.readyState===XMLHttpRequest.DONE){  //요청성공
+		            if(xhr.status===200){ //응답성공
+		               console.log(xhr.responseText)
+		            	if(xhr.responseText === "true") {
+		            		// 로그인 성공
+		            		location.herf = "index.jsp";
+		            	} else {
+		            		// 로그인 실패
+		            		AlertMessage.classList.remove('hide');
+		            	}
+		            
+		            }else{
+		               console.log("응답실패");
+		            }
+		         }else{  //요청실패
+		            console.log("요청실패");
+		         }
+		      }
+    	}
+    	
+    	const handleLogin = (e) => {
+    		e.preventDefault();
+    		handleXhr(id.value, pw.value);
+    	};
+
+    	loginBtn.addEventListener("click", handleLogin);
+</script>
   </body>
 </html>
