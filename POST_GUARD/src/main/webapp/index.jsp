@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <html>
@@ -35,11 +35,11 @@
 
 						<div class="box1">
 
-							<li><a href="product.jsp">»óÇ° ¼Ò°³</a></li>
+							<li><a href="product.jsp">ìƒí’ˆ ì†Œê°œ</a></li>
 
-							<li><a href="service.jsp">¼­ºñ½º ½ÅÃ»</a></li>
+							<li><a href="service.jsp">ì„œë¹„ìŠ¤ ì‹ ì²­</a></li>
 
-							<li><a href="as.jsp">AS ½ÅÃ»</a></li>
+							<li><a href="as.jsp">AS ì‹ ì²­</a></li>
 
 							<li><a href="faq.jsp">FAQ</a></li>
 
@@ -47,9 +47,9 @@
 
 						<div class="box2">
 
-							<li><a href="join.jsp">È¸¿ø°¡ÀÔ</a></li>
+							<li><a href="join.jsp">íšŒì›ê°€ìž…</a></li>
 
-							<li><a href="login.jsp">·Î±×ÀÎ</a></li>
+							<li><a href="login.jsp">ë¡œê·¸ì¸</a></li>
 
 						</div>
 
@@ -57,13 +57,13 @@
 
 
 
-					<!-- <li><a href="#">ÅÃ¹è ¿¹¾à</a></li>
+					<!-- <li><a href="#">íƒë°° ì˜ˆì•½</a></li>
 
-            <li><a href="#">°í°´ Á¤º¸ ¼öÁ¤</a></li>
+            <li><a href="#">ê³ ê° ì •ë³´ ìˆ˜ì •</a></li>
 
-            <li><a href="#">°í°´ Á¤º¸ ¼öÁ¤</a></li>
+            <li><a href="#">ê³ ê° ì •ë³´ ìˆ˜ì •</a></li>
 
-            <li><a href="#">¿î¼ÛÀå</a></li> -->
+            <li><a href="#">ìš´ì†¡ìž¥</a></li> -->
 
 				</ul>
 
@@ -87,11 +87,11 @@
 
 				<h1>Post Guard</h1>
 
-				<p>°³ÀÎ´ÜÀ§ÀÇ ÅÃ¹èº¸°üÇÔ ºí¶óºí¶ó</p>
+				<p>ê°œì¸ë‹¨ìœ„ì˜ íƒë°°ë³´ê´€í•¨ ë¸”ë¼ë¸”ë¼</p>
 
 				<ul class="actions">
 
-					<li><a href="product.jsp" class="button scrolly">»óÇ° ¼Ò°³ ¹Ù·Î °¡±â</a>
+					<li><a href="product.jsp" class="button scrolly">ìƒí’ˆ ì†Œê°œ ë°”ë¡œ ê°€ê¸°</a>
 
 					</li>
 
@@ -117,8 +117,8 @@
 
 						<h2>Safe</h2>
 
-						<p>¾ÈÀüÇÏ°Ô º¸°ü ºí¶óºí¶ó ¾ÆÀÌÄÜÀÌ¶û Ä³Ä¡ÇÁ¶óÀÌÁî ¹®±¸ ³Ö±â ¾ÆÀÌÄÜ ±¸¸®¸é °Á ±ò²ûÇÏ°Ô ¹®±¸·Î °¡µµ µÉ °Í
-							°°¾Æ¿©~!</p>
+						<p>ì•ˆì „í•˜ê²Œ ë³´ê´€ ë¸”ë¼ë¸”ë¼ ì•„ì´ì½˜ì´ëž‘ ìºì¹˜í”„ë¼ì´ì¦ˆ ë¬¸êµ¬ ë„£ê¸° ì•„ì´ì½˜ êµ¬ë¦¬ë©´ ê± ê¹”ë”í•˜ê²Œ ë¬¸êµ¬ë¡œ ê°€ë„ ë  ê²ƒ
+							ê°™ì•„ì—¬~!</p>
 
 					</div>
 
@@ -136,7 +136,7 @@
 
 						<h2>Personal</h2>
 
-						<p>°³ÀÎ ´ÜÀ§ ºí¶óºí¶ó ¿©±âµµ ¸¶Âù°¡Áö·Î ¾ÆÀÌÄÜÀÌ¶û ¹®±¸ ³Ö±â~!</p>
+						<p>ê°œì¸ ë‹¨ìœ„ ë¸”ë¼ë¸”ë¼ ì—¬ê¸°ë„ ë§ˆì°¬ê°€ì§€ë¡œ ì•„ì´ì½˜ì´ëž‘ ë¬¸êµ¬ ë„£ê¸°~!</p>
 
 					</div>
 
@@ -152,9 +152,9 @@
 
 					<div class="inner">
 
-						<h2>Èì ¿©±â´Â ¹¹°¡ ÁÁÀ»±î¿ä Æí¸®ÇÔ? ¹üÁË¿¹¹æ?</h2>
+						<h2>í  ì—¬ê¸°ëŠ” ë­ê°€ ì¢‹ì„ê¹Œìš” íŽ¸ë¦¬í•¨? ë²”ì£„ì˜ˆë°©?</h2>
 
-						<p>¿©±âµµ ºí¶óºí¶ó</p>
+						<p>ì—¬ê¸°ë„ ë¸”ë¼ë¸”ë¼</p>
 
 					</div>
 
@@ -178,9 +178,9 @@
 
 				<li>&copy; POST GUARD; All rights reserved.</li>
 
-				<li>È¸»ç ¼Ò°³</li>
+				<li>íšŒì‚¬ ì†Œê°œ</li>
 
-				<li>°í°´ ¼¾ÅÍ</li>
+				<li>ê³ ê° ì„¼í„°</li>
 
 			</ul>
 

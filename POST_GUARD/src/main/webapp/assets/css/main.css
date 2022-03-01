@@ -221,7 +221,7 @@ textarea,
 li {
   color: rgb(9, 41, 97);
   font-family: "mainfont";
-  font-size: 35px;
+  font-size: 30px;
   font-weight: normal;
   line-height: 1.75;
 }
@@ -1096,6 +1096,8 @@ textarea {
   outline: 0; 
   text-decoration: none;
   width: 100%;
+  font-size: 20px;
+  margin-bottom : 10px;
 }
 
 input[type="text"]:invalid,
@@ -1145,7 +1147,7 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 select {
-  height: 2.75em;
+  height: 1.75em;
 }
 
 textarea {

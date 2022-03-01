@@ -70,7 +70,7 @@
                   </div>
                 </div>
                 <div class="loginAlertBox">
-                	<span id = "loginAlertId"class="loginAlert hide">아이디 또는 비밀번호가 틀렸습니다.</span>
+                	<span id = "loginAlertId" class="loginAlert hide">아이디 또는 비밀번호가 틀렸습니다.</span>
                 </div>
                 <ul class="actions">
                   <li class="loginbtn">

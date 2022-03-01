@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +9,7 @@
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <title>POST-GUARD | ¼­ºñ½º½ÅÃ»</title>
+    <title>POST-GUARD | ì„œë¹„ìŠ¤ì‹ ì²­</title>
   </head>
   <body>
     <section id="sidebar">
@@ -23,21 +23,21 @@
             </li>
             <div class="box_container">
               <div class="box1">
-                <li><a href="product.jsp">»óÇ° ¼Ò°³</a></li>
-                <li><a href="service.jsp">¼­ºñ½º ½ÅÃ»</a></li>
-                <li><a href="as.jsp">AS ½ÅÃ»</a></li>
+                <li><a href="product.jsp">ìƒí’ˆ ì†Œê°œ</a></li>
+                <li><a href="service.jsp">ì„œë¹„ìŠ¤ ì‹ ì²­</a></li>
+                <li><a href="as.jsp">AS ì‹ ì²­</a></li>
                 <li><a href="faq.jsp">FAQ</a></li>
               </div>
               <div class="box2">
-                <li><a href="join.jsp">È¸¿ø°¡ÀÔ</a></li>
-                <li><a href="login.jsp">·Î±×ÀÎ</a></li>
+                <li><a href="join.jsp">íšŒì›ê°€ìž…</a></li>
+                <li><a href="login.jsp">ë¡œê·¸ì¸</a></li>
               </div>
             </div>
 
-            <!-- <li><a href="#">ÅÃ¹è ¿¹¾à</a></li>
-                <li><a href="#">°í°´ Á¤º¸ ¼öÁ¤</a></li>
-                <li><a href="#">°í°´ Á¤º¸ ¼öÁ¤</a></li>
-                <li><a href="#">¿î¼ÛÀå</a></li> -->
+            <!-- <li><a href="#">íƒë°° ì˜ˆì•½</a></li>
+                <li><a href="#">ê³ ê° ì •ë³´ ìˆ˜ì •</a></li>
+                <li><a href="#">ê³ ê° ì •ë³´ ìˆ˜ì •</a></li>
+                <li><a href="#">ìš´ì†¡ìž¥</a></li> -->
           </ul>
         </nav>
       </div>

@@ -28,11 +28,11 @@ const handleXhr = (id, pw) => {
           AlertMessage.classList.remove("hide");
         }
       } else {
-        console.log("응답실패");
+        console.log("response fail");
       }
     } else {
       //요청실패
-      console.log("요청실패");
+      console.log("request fail");
     }
   };
 };

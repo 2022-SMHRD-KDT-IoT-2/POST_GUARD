@@ -22,3 +22,15 @@
   margin: 0 auto;
   line-height: 1.5em;
 }
+
+.idCheckMessage,
+.pwCheckMessage,
+.idEmptyMessage {
+	font-size: 15px;
+	color : red;
+}
+
+.pwInputMessage {
+	font-size: 15px;
+	color : red;
+}
