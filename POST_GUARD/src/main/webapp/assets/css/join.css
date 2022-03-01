@@ -25,7 +25,10 @@
 
 .idCheckMessage,
 .pwCheckMessage,
-.idEmptyMessage {
+.idEmptyMessage,
+.emailCheckMessage,
+.nameCheckMessage,
+.phoneCheckMessage {
 	font-size: 15px;
 	color : red;
 }
@@ -33,4 +36,8 @@
 .pwInputMessage {
 	font-size: 15px;
 	color : red;
+}
+
+.borderbottomgreen {
+	border-bottom : 1px solid green;
 }

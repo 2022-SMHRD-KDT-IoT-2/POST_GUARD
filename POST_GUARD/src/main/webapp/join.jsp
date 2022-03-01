@@ -56,13 +56,16 @@
                   <div class="field">
                     <label for="name">이름</label>
                     <input type="text" name="mem_name" id="name" required maxlength="30"/>
+                    <div class="nameCheckMessageBox">
+                    	<span id="nameCheckMessageId" class="nameCheckMessage hide">× 이름을 입력해주세요.</span>
+                    </div>
                   </div>
                   <div class="field">
                     <label for="id">아이디</label>
                     <input type="text" name="mem_id" id="id" required maxlength="30"/>
                     <div class="idCheckMessageBox">
-                    	<span id="idCheckMessageId" class="idCheckMessage hide">중복된 ID 입니다.</span>
-                    	<span id="idEmptyMessageId" class="idEmptyMessage hide">ID를 입력해주세요.</span>
+                    	<span id="idCheckMessageId" class="idCheckMessage hide">× 중복된 ID 입니다.</span>
+                    	<span id="idEmptyMessageId" class="idEmptyMessage hide">× ID를 입력해주세요.</span>
                     </div>
                   </div>
                   <div class="field">
@@ -80,16 +83,22 @@
                     />
                     <div class="pwCheckMessageBox">
                     	<span id="pwInputMessageId" class="pwInputMessage hide">× 확인을 위해 비밀번호를 다시 입력해주세요.</span>
-                    	<span id="pwCheckMessageId" class="pwCheckMessage hide">비밀번호를 확인해주세요.</span>
+                    	<span id="pwCheckMessageId" class="pwCheckMessage hide">× 비밀번호를 확인해주세요.</span>
                     </div>
                   </div>
                   <div class="field">
                     <label for="email">메일 주소</label>
                     <input type="email" name="mem_email" id="email" required maxlength="50"/>
+                    <div class="emailCheckMessageBox">
+                    	<span id="emailCheckMessageId" class="emailCheckMessage hide">× 이메일을 입력해주세요.</span>
+                    </div>
                   </div>
                   <div class="field">
                     <label for="tel">전화번호</label>
                     <input type="text" name="mem_phone" id="tel" required />
+                    <div class="phoneCheckMessageBox">
+                    	<span id="phoneCheckMessageId" class="phoneCheckMessage hide">× 전화번호를 입력해주세요.</span>
+                    </div>
                   </div>
                   <div class="field">
                     <label for="address">주소</label>

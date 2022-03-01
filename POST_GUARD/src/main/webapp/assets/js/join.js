@@ -6,8 +6,11 @@ const pwCheckMessage = document.querySelector("#pwCheckMessageId");
 const pwInputMessage = document.querySelector("#pwInputMessageId");
 const idCheckMessage = document.querySelector("#idCheckMessageId");
 const idEmptyMessage = document.querySelector("#idEmptyMessageId");
+const nameCheckMessage = document.querySelector("#nameCheckMessageId");
 const email = document.querySelector("#email");
+const emailCheckMessage = document.querySelector("#emailCheckMessageId");
 const phone = document.querySelector("#tel");
+const phoneCheckMessage = document.querySelector("#phoneCheckMessageId");
 const addr = document.querySelector("#address");
 const joinBtn = document.querySelector(".join");
 
@@ -82,15 +85,17 @@ const passwordConfirm = () => {
   }
 };
 
-const idEmptyCheck = (e) => {
+const idInputCheck = (e) => {
   let {
     target: { value },
   } = e;
 
   if (value === "") {
     idEmptyMessage.classList.remove("hide");
+    id.style.borderBottom = "1px solid rgba(0, 0, 0, 0.514)";
   } else {
     idEmptyMessage.classList.add("hide");
+    id.style.borderBottom = "1px solid green";
   }
 };
 
@@ -129,6 +134,48 @@ const pwInputCheck = (e) => {
   }
 };
 
+const emailInputCheck = (e) => {
+  let {
+    target: { value },
+  } = e;
+
+  if (value === "") {
+    emailCheckMessage.classList.remove("hide");
+    email.style.borderBottom = "1px solid rgba(0, 0, 0, 0.514)";
+  } else {
+    emailCheckMessage.classList.add("hide");
+    email.style.borderBottom = "1px solid green";
+  }
+};
+
+const nameInputCheck = (e) => {
+  let {
+    target: { value },
+  } = e;
+
+  if (value === "") {
+    nameCheckMessage.classList.remove("hide");
+    username.style.borderBottom = "1px solid rgba(0, 0, 0, 0.514)";
+  } else {
+    nameCheckMessage.classList.add("hide");
+    username.style.borderBottom = "1px solid green";
+  }
+};
+
+const phoneInputCheck = (e) => {
+  let {
+    target: { value },
+  } = e;
+
+  if (value === "") {
+    phoneCheckMessage.classList.remove("hide");
+    phone.style.borderBottom = "1px solid rgba(0, 0, 0, 0.514)";
+  } else {
+    phoneCheckMessage.classList.add("hide");
+    phone.style.borderBottom = "1px solid green";
+  }
+};
+
 const handleJoin = (e) => {
   e.preventDefault();
   passwordConfirm();
@@ -145,8 +192,14 @@ const handleJoin = (e) => {
 };
 
 joinBtn.addEventListener("click", handleJoin);
-id.addEventListener("focus", idEmptyCheck);
-id.addEventListener("change", idEmptyCheck);
+id.addEventListener("focus", idInputCheck);
+id.addEventListener("input", idInputCheck);
+username.addEventListener("focus", nameInputCheck);
+username.addEventListener("input", nameInputCheck);
 pw.addEventListener("input", passwordDetect);
 pwCheck.addEventListener("focus", pwInputCheck);
 pwCheck.addEventListener("input", pwInputCheck);
+email.addEventListener("focus", emailInputCheck);
+email.addEventListener("input", emailInputCheck);
+phone.addEventListener("focus", phoneInputCheck);
+phone.addEventListener("input", phoneInputCheck);
