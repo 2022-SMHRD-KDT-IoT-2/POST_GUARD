@@ -44,12 +44,12 @@ public class JoinCon extends HttpServlet {
 		MemberDAO dao = new MemberDAO();
 		int cnt = dao.join(mem_id, mem_pw, mem_name, mem_phone, mem_email, mem_addr);
 
+		
+		// 프론트단에서 페이지 이동 시켜줄거에요!!
 		if (cnt > 0) {
 			out.print("joinSuccess");
-//			response.sendRedirect(""); 프론트단에서 페이지 이동하게
 		} else {
 			out.print("joinFailure");
-//			response.sendRedirect(""); 프론드안에서 페이지 이동하게
 		}
 
 	}
