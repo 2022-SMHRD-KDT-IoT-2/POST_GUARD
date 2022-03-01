@@ -63,11 +63,13 @@ const handleXhr = (id, pw, username, phone, email, addr) => {
 };
 
 const joinFail = () => {
-  if (!idPass) {
-    idCheckMessage.classList.remove("hide");
-  }
-  if (!pwPass) {
-    pwCheckMessage.classList.remove("hide");
+  if (id.value !== "") {
+    if (!idPass) {
+      idCheckMessage.classList.remove("hide");
+    }
+    if (!pwPass) {
+      pwCheckMessage.classList.remove("hide");
+    }
   }
 };
 
