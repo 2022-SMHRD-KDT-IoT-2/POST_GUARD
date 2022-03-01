@@ -29,8 +29,8 @@
                 <li><a href="faq.jsp">FAQ</a></li>
               </div>
               <div class="box2">
-                <li><a href="join.html">회원가입</a></li>
-                <li><a href="login.html">로그인</a></li>
+                <li><a href="join.jsp">회원가입</a></li>
+                <li><a href="login.jsp">로그인</a></li>
               </div>
             </div>
 
