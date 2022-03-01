@@ -124,7 +124,7 @@ public class MemberDAO {
 				String addr = rs.getString(6);
 
 				if (mem_pw.equals(getMem_pw)) {
-					vo = new MemberVO(mem_id, mem_pw, mem_name, phone, email, addr);
+					vo = new MemberVO(getMem_id, getMem_pw, mem_name, phone, email, addr);
 				}
 			}
 		} catch (Exception e) {

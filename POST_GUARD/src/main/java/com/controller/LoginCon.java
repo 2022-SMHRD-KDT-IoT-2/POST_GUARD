@@ -27,7 +27,7 @@ public class LoginCon extends HttpServlet {
 
 		if (vo != null) {
 			HttpSession session = request.getSession();
-			session.setAttribute("loginvo", vo);
+			session.setAttribute("userInfo", vo);
 			
 			//일단 주석처리 해놓을게여 
 			// response.sendRedirect("main.jsp");
