@@ -98,12 +98,14 @@ const passwordDetect = (e) => {
     target: { value },
   } = e;
 
-  if (value === pwCheck.value) {
-    pwInputMessage.innerText = "✓ 비밀번호가 일치합니다.";
-    pwInputMessage.style.color = "green";
-  } else {
-    pwInputMessage.innerText = "× 확인을 위해 비밀번호를 다시 입력해주세요.";
-    pwInputMessage.style.color = "red";
+  if (value !== "") {
+    if (value === pwCheck.value) {
+      pwInputMessage.innerText = "✓ 비밀번호가 일치합니다.";
+      pwInputMessage.style.color = "green";
+    } else {
+      pwInputMessage.innerText = "× 확인을 위해 비밀번호를 다시 입력해주세요.";
+      pwInputMessage.style.color = "red";
+    }
   }
 };
 
