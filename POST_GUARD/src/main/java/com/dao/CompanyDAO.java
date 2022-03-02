@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+
+import com.vo.CompanyVO;
 
 public class CompanyDAO {
 	Connection conn = null;
@@ -39,6 +42,36 @@ public class CompanyDAO {
 		} catch (Exception e2) {
 			e2.printStackTrace();
 		}
+	}
+	public ArrayList<CompanyVO> print_company() {
+		ArrayList<CompanyVO> al = new ArrayList<CompanyVO>();
+		try {
+			DB();
+			
+			String sql = "select * from t_company";
+			
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				
+				int company_seq =rs.getInt(1);
+				String company_name = rs.getString(2);
+				String company_addr = rs.getString(3);
+				String company_tel = rs.getString(4);
+				String company_ceo = rs.getString(5);
+				String company_homepage = rs.getString(6);
+				
+				CompanyVO vo  = new CompanyVO(company_seq, company_homepage, company_homepage, company_homepage, company_homepage, company_homepage);
+				al.add(vo);
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			close();
+		}
+		return al;
 	}
 	
 	public int enroll_company(String company_name, String company_addr, String company_tel, String company_ceo, String company_homepage) {

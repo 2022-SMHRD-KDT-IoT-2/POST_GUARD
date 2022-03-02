@@ -43,7 +43,7 @@
       </div>
     </section>
     
-	<footer id="footer" class="wrapper">
+    	<footer id="footer" class="wrapper">
 		<div class="footer__inner">
 			<ul class="menu">
 				<li style="font-size : 20px">&copy; POST GUARD; All rights reserved.</li>

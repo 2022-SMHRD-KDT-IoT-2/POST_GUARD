@@ -107,8 +107,8 @@
                       <input
                         type="button"
                         class="button addr addr--search"
-                        style="font-size : 13px;"
                         value="주소검색"
+                        style="font-size : 13px;"
                       />
                     </div>
                   </div>
@@ -126,7 +126,7 @@
       </section>
     </div>
     
-	<footer id="footer" class="wrapper">
+    <footer id="footer" class="wrapper">
 		<div class="footer__inner">
 			<ul class="menu">
 				<li style="font-size : 20px">&copy; POST GUARD; All rights reserved.</li>
