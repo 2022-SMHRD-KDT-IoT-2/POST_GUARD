@@ -2,7 +2,7 @@ package com.vo;
 
 public class ASVO {
 
-	//AS게시판 
+	//AS게시판입니다. 
 	private int as_seq;
 	private String as_title;
 	private String as_content;
