@@ -14,7 +14,7 @@ public class RequestDAO {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
-			String url = "jdbc:oracle:thin:@project-db-stu-ddns.net:1524:xe";
+			String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
 			String dbid = "campus_d_5_0216";
 			String dbpw = "smhrd5";
 
