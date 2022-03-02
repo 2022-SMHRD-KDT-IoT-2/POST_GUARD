@@ -11,9 +11,7 @@ const email = document.querySelector("#email");
 const emailCheckMessage = document.querySelector("#emailCheckMessageId");
 const phone = document.querySelector("#tel");
 const phoneCheckMessage = document.querySelector("#phoneCheckMessageId");
-const addr = document.querySelector("#address");
 const joinBtn = document.querySelector(".join");
-
 // ✓
 
 let idPass = false; // 아이디 중복 여부를 판단하기 위한 변수
@@ -177,6 +175,11 @@ const phoneInputCheck = (e) => {
 };
 
 const handleJoin = (e) => {
+  // 회원가입 버튼을 눌렀을 때 주소정보들을 가져와 등록함.
+  const postCode = document.querySelector("#sample6_postcode");
+  const address = document.querySelector("#sample6_address");
+  const detailaddress = document.querySelector("#sample6_detailAddress");
+  let addr = postCode.value + address.value + detailaddress.value;
   e.preventDefault();
   passwordConfirm();
   if (pwPass) {
@@ -186,7 +189,7 @@ const handleJoin = (e) => {
       username.value,
       phone.value,
       email.value,
-      addr.value
+      addr
     );
   }
 };
