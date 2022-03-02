@@ -78,92 +78,17 @@
 	<!-- Wrapper -->
 
 	<div id="wrapper">
-
 		<!-- Intro -->
-
 		<section id="intro" class="wrapper fullscreen fade-up">
-
 			<div class="inner">
-
 				<h1>Post Guard</h1>
-
 				<p>개인단위의 택배보관함 블라블라</p>
-
 				<ul class="actions">
-
 					<li><a href="product.jsp" class="button scrolly">상품 소개 바로 가기</a>
-
 					</li>
-
 				</ul>
-
 			</div>
-
 		</section>
-
-
-
-		<!-- One -->
-
-		<section id="product" class="wrapper style2 spotlights">
-
-			<section>
-
-				<a href="#" class="pro"></a>
-
-				<div class="content">
-
-					<div class="inner">
-
-						<h2>Safe</h2>
-
-						<p>안전하게 보관 블라블라 아이콘이랑 캐치프라이즈 문구 넣기 아이콘 구리면 걍 깔끔하게 문구로 가도 될 것
-							같아여~!</p>
-
-					</div>
-
-				</div>
-
-			</section>
-
-			<section>
-
-				<a href="#" class="pro"></a>
-
-				<div class="content">
-
-					<div class="inner">
-
-						<h2>Personal</h2>
-
-						<p>개인 단위 블라블라 여기도 마찬가지로 아이콘이랑 문구 넣기~!</p>
-
-					</div>
-
-				</div>
-
-			</section>
-
-			<section>
-
-				<a href="#" class="pro"></a>
-
-				<div class="content">
-
-					<div class="inner">
-
-						<h2>흠 여기는 뭐가 좋을까요 편리함? 범죄예방?</h2>
-
-						<p>여기도 블라블라</p>
-
-					</div>
-
-				</div>
-
-			</section>
-
-		</section>
-
 	</div>
 
 

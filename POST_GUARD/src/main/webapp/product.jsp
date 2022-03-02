@@ -42,7 +42,9 @@
         </nav>
       </div>
     </section>
-    <h1>이미지 들어감</h1>
+    <div class="productImg__container">
+    	<img  style="width : 100%; height : 100%;"src="assets/css/images/detailpage.png"/>
+    </div>
     
     <footer id="footer" class="wrapper">
 		<div class="footer__inner">
