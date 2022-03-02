@@ -1,0 +1,43 @@
+.join__container {
+  height: 100%;
+  width: 30%;
+  margin: 0 auto;
+  padding: 8px 0px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.addr {
+  margin-top: 10px;
+  height: 30px;
+  padding: 5px 50px;
+}
+
+.addr__container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.joinbtn {
+  margin: 0 auto;
+  line-height: 1.5em;
+}
+
+.idCheckMessage,
+.pwCheckMessage,
+.idEmptyMessage,
+.emailCheckMessage,
+.nameCheckMessage,
+.phoneCheckMessage {
+	font-size: 15px;
+	color : red;
+}
+
+.pwInputMessage {
+	font-size: 15px;
+	color : red;
+}
+
+.borderbottomgreen {
+	border-bottom : 1px solid green;
+}
