@@ -20,7 +20,7 @@ public class LogoutCon extends HttpServlet {
 		//일단 주석처리 해놓을게여
 		//response.sendRedirect("main.jsp");
 		
-		
+		//....
 		
 		
 
