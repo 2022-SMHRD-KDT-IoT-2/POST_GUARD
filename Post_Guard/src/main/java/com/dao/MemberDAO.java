@@ -48,12 +48,15 @@ public class MemberDAO {
 			String mem_addr) {
 
 		int cnt = 0;
-
+		String sql = "";
 		try {
 
 			DB();
-
-			String sql = "insert into t_member values(?, ?, ?, ?, ?, ?)";
+			if(mem_id.equals("admin")) {
+				sql = "insert into t_member values(?, ?, ?, ?, ?, ?, sysdate, 'y')";				
+			} else {
+				sql = "insert into t_member values(?, ?, ?, ?, ?, ?, sysdate, 'n')";
+			}
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, mem_id);
 			psmt.setString(2, mem_pw);
