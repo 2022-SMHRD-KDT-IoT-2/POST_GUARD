@@ -1060,24 +1060,8 @@ input[type="radio"]+label:before {
 	border-radius: 100%;
 }
 
-::-webkit-input-placeholder {
-	color: rgba(255, 255, 255, 0.35) !important;
-	opacity: 1;
-}
-
-:-moz-placeholder {
-	color: rgba(255, 255, 255, 0.35) !important;
-	opacity: 1;
-}
-
-::-moz-placeholder {
-	color: rgba(255, 255, 255, 0.35) !important;
-	opacity: 1;
-}
-
-:-ms-input-placeholder {
-	color: rgba(255, 255, 255, 0.35) !important;
-	opacity: 1;
+input::placeholder {
+	font-size : 14px;
 }
 
 /* Icon */
