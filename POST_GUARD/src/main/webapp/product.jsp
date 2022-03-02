@@ -43,5 +43,15 @@
       </div>
     </section>
     <h1>이미지 들어감</h1>
+    
+	<footer id="footer" class="wrapper">
+		<div class="footer__inner">
+			<ul class="menu">
+				<li style="font-size : 20px">&copy; POST GUARD; All rights reserved.</li>
+				<li style="font-size : 20px">회사 소개</li>
+				<li style="font-size : 20px">고객 센터</li>
+			</ul>
+		</div>
+	</footer>
   </body>
 </html>

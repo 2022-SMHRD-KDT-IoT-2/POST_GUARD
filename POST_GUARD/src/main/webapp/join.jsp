@@ -107,6 +107,7 @@
                       <input
                         type="button"
                         class="button addr addr--search"
+                        style="font-size : 13px;"
                         value="주소검색"
                       />
                     </div>
@@ -115,7 +116,7 @@
                 <ul class="actions">
                   <li class="joinbtn">
                     <!-- 자바스크립트로 페이지 이동할 예정~! -->
-                    <button class="join">회원가입</button>
+                    <button class="join" style="font-size : 20px;">회원가입</button>
                   </li>
                 </ul>
               </form>
@@ -124,6 +125,16 @@
         </div>
       </section>
     </div>
+    
+	<footer id="footer" class="wrapper">
+		<div class="footer__inner">
+			<ul class="menu">
+				<li style="font-size : 20px">&copy; POST GUARD; All rights reserved.</li>
+				<li style="font-size : 20px">회사 소개</li>
+				<li style="font-size : 20px">고객 센터</li>
+			</ul>
+		</div>
+	</footer>
     <script src="assets/js/join.js"></script>
   </body>
 </html>

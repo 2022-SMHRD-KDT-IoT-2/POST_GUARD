@@ -74,7 +74,7 @@
                 </div>
                 <ul class="actions">
                   <li class="loginbtn">
-                    <button class="login">로그인</button>
+                    <button class="login" style="font-size: 20px;">로그인</button>
                   </li>
                 </ul>
               </form>
@@ -83,6 +83,16 @@
         </div>
       </section>
     </div>
+    
+	<footer id="footer" class="wrapper">
+		<div class="footer__inner">
+			<ul class="menu">
+				<li style="font-size : 20px">&copy; POST GUARD; All rights reserved.</li>
+				<li style="font-size : 20px">회사 소개</li>
+				<li style="font-size : 20px">고객 센터</li>
+			</ul>
+		</div>
+	</footer>
     <script src="assets/js/login.js"></script>
   </body>
 </html>

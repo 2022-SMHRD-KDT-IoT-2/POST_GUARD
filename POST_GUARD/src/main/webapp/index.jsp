@@ -169,23 +169,14 @@
 
 
 	<!-- Footer -->
-
-	<footer id="footer" class="wrapper style1-alt">
-
-		<div class="inner">
-
+	<footer id="footer" class="wrapper">
+		<div class="footer__inner">
 			<ul class="menu">
-
-				<li>&copy; POST GUARD; All rights reserved.</li>
-
-				<li>회사 소개</li>
-
-				<li>고객 센터</li>
-
+				<li style="font-size : 20px">&copy; POST GUARD; All rights reserved.</li>
+				<li style="font-size : 20px">회사 소개</li>
+				<li style="font-size : 20px">고객 센터</li>
 			</ul>
-
 		</div>
-
 	</footer>
 
 
