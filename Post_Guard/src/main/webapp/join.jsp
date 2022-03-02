@@ -88,7 +88,7 @@
 								</div>
 								<div class="field">
 									<label for="tel">전화번호</label> <input type="text"
-										name="mem_phone" id="tel" required />
+										name="mem_phone" id="tel" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" required maxlength="11" />
 									<div class="phoneCheckMessageBox">
 										<span id="phoneCheckMessageId" class="phoneCheckMessage hide">×
 											전화번호를 입력해주세요.</span>
@@ -96,12 +96,12 @@
 								</div>
 								<div class="field">
 									<label for="address">주소</label> <input type="text"
-										id="sample6_postcode" placeholder="우편번호"> <input
-										type="text" id="sample6_address" placeholder="주소"> <input
+										id="sample6_postcode" placeholder="우편번호" readonly> <input
+										type="text" id="sample6_address" placeholder="주소" readonly> <input
 										type="text" id="sample6_detailAddress" placeholder="상세주소">
 									<div class="addr__container">
 										<input type="button" class="button addr addr-search"
-											style="font-size: 13px;" value="우편번호 찾기"
+											value="우편번호 찾기"
 											onclick="openDaumPostCode()">
 									</div>
 								</div>
@@ -109,7 +109,7 @@
 							<ul class="actions">
 								<li class="joinbtn">
 									<!-- 자바스크립트로 페이지 이동할 예정~! -->
-									<button class="join" style="font-size: 20px;">회원가입</button>
+									<button class="join" style="font-size: 15px;">회원가입</button>
 								</li>
 							</ul>
 						</form>
@@ -170,6 +170,7 @@
 					}).open();
 		}
 	</script>
+	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </body>
 </html>
 
