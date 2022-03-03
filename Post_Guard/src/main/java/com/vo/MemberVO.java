@@ -3,7 +3,7 @@ package com.vo;
 
 // PostVO -> MemberVO 로 파일명 변경
 // PostVO 라는 파일명 적절하지 않음.. VO객체 내용만 봐도 멤버관련된 필드들
-
+//...
 public class MemberVO {
 	private String mem_id;
 	private String mem_pw;
