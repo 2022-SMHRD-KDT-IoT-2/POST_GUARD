@@ -23,7 +23,7 @@ public class LoginCon extends HttpServlet {
 			throws ServletException, IOException {
 
 		// login 컨트롤러입니다.
-		
+		PrintWriter out = response.getWriter();
 		request.setCharacterEncoding("UTF-8");
 
 		StringBuffer sb = new StringBuffer();
@@ -37,8 +37,8 @@ public class LoginCon extends HttpServlet {
 		JsonParser parser = new JsonParser();
 		JsonElement element = parser.parse(sb.toString());
 
-		String mem_id = element.getAsJsonObject().get("mem_id").getAsString();
-		String mem_pw = element.getAsJsonObject().get("mem_pw").getAsString();
+		String mem_id = element.getAsJsonObject().get("id").getAsString();
+		String mem_pw = element.getAsJsonObject().get("pw").getAsString();
 
 		MemberDAO dao = new MemberDAO();
 		MemberVO vo = dao.login(mem_id, mem_pw);
@@ -46,11 +46,10 @@ public class LoginCon extends HttpServlet {
 		if (vo != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("userInfo", vo);
-
-			// 일단 주석처리 해놓을게여
-			// response.sendRedirect("main.jsp");
+			out.print("loginSuccess");
+			
 		} else {
-			// response.sendRedirect("main.jsp");
+			out.print("loginFailure");
 		}
 	}
 
