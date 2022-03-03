@@ -49,7 +49,7 @@ public class FaqCon extends HttpServlet {
 		 * MemberVO vo = (MemberVO)session.getAttribute("t_member");
 		 */
 		FaqDAO dao = new FaqDAO();
-		int cnt = dao.write_FAQ(article_file, article_file, article_file, mem_id);
+		int cnt = dao.write_FAQ(article_title, article_content, article_file, mem_id);
 
 		PrintWriter out = response.getWriter();
 
