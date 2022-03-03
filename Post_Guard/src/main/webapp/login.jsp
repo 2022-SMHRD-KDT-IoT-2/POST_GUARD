@@ -103,7 +103,7 @@
 	</footer>
     <script src="assets/js/login.js"></script>
     <script type="text/javascript">
-  		var naver_id_login = new naver_id_login("yM9Km9V1RKBifED86IwM", "http://127.0.0.1:8081/POST_GUARD/navercallback.jsp");
+  		var naver_id_login = new naver_id_login("yM9Km9V1RKBifED86IwM", "http://localhost:8081/POST_GUARD/navercallback.jsp");
   		var state = naver_id_login.getUniqState();
   		naver_id_login.setButton("white", 3,40);
   		naver_id_login.setDomain("http://localhost:8081/POST_GUARD/login.jsp");
