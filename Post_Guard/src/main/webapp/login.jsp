@@ -14,21 +14,14 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <link rel="stylesheet" href="assets/css/main.css" />
     <title>POST-GUARD | 로그인</title>
   </head>
   <body>
   <%
   	MemberDAO dao = new MemberDAO();
-  	String clientId = "yM9Km9V1RKBifED86IwM";//애플리케이션 클라이언트 아이디값";
-  	String redirectURI = URLEncoder.encode("http://127.0.0.1:8081/POST_GUARD/navercallback.jsp", "UTF-8");
-  	SecureRandom random = new SecureRandom();
-  	String state = new BigInteger(130, random).toString();
-  	String apiURL = "https://nid.naver.com/oauth2.0/authorize?response_type=code";
-  	apiURL += "&client_id=" + clientId;
-  	apiURL += "&redirect_uri=" + redirectURI;
-  	apiURL += "&state=" + state;
-  	session.setAttribute("state", state);
   %>
   
     <section id="sidebar">
@@ -87,10 +80,11 @@
                 </div>
                 <ul class="actions">
                   <li class="loginbtn">
-                    <button class="login" style="font-size: 20px;">로그인</button>
+                    <button class="login" style="font-size: 15px;">로그인</button>
                   </li>
                 </ul>
-                <a href="<%=apiURL%>"><img height="50" src="http://static.nid.naver.com/oauth/small_g_in.PNG"/></a>
+                <div id="naver_id_login" class="n_loginbtn__container">
+                </div>
               </form>
             </section>
           </div>
@@ -108,5 +102,14 @@
 		</div>
 	</footer>
     <script src="assets/js/login.js"></script>
+    <script type="text/javascript">
+  		var naver_id_login = new naver_id_login("yM9Km9V1RKBifED86IwM", "http://localhost:8081/POST_GUARD/navercallback.jsp");
+  		var state = naver_id_login.getUniqState();
+  		naver_id_login.setButton("white", 2,40);
+  		naver_id_login.setDomain("http://localhost:8081/POST_GUARD/login.jsp");
+  		naver_id_login.setState(state);
+  		naver_id_login.setPopup();
+  		naver_id_login.init_naver_id_login();
+    </script>
   </body>
 </html>
