@@ -135,7 +135,12 @@ public class MemberDAO {
 		} finally {
 			close();
 		}
+		// 로그인 성공 시 vo 객체 리턴
 		return vo;
-
+	}
+	
+	public MemberVO social_login(String social_mem_id, String social_mem_name) {
+		MemberVO vo = new MemberVO(social_mem_id, "X", social_mem_name, "X", "X", "X");
+		return vo;
 	}
 }
