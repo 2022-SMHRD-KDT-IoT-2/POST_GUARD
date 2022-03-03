@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="com.dao.MemberDAO" %>
+<%@ page import="com.vo.MemberVO" %>
 <!DOCTYPE html>
 
 <html>
@@ -17,6 +19,9 @@
 </head>
 
 <body class="is-preload">
+<%
+	MemberVO userInfo = (MemberVO)session.getAttribute("userInfo");
+%>
 
 	<!-- Sidebar -->
 
@@ -34,8 +39,14 @@
 							<li><a href="faq.jsp">FAQ</a></li>
 						</div>
 						<div class="box2">
+						<%if(userInfo == null) {%>
 							<li><a href="join.jsp">회원가입</a></li>
 							<li><a href="login.jsp">로그인</a></li>
+						<%} else { %>
+							<li><a href="mypage.jsp"><%=userInfo.getMem_name() %></a></li>
+							<li><a href="">로그아웃</a>
+						<%} %>
+							
 						</div>
 					</div>
 

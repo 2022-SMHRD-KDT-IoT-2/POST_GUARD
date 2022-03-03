@@ -33,24 +33,23 @@ public class LoginCon extends HttpServlet {
 		while ((line = reader.readLine()) != null) {
 			sb.append(line);
 		}
-		
+
 		JsonParser parser = new JsonParser();
 		JsonElement element = parser.parse(sb.toString());
 
+		MemberDAO dao = new MemberDAO();
+		MemberVO vo = null;
+
 		String mem_id = element.getAsJsonObject().get("id").getAsString();
 		String mem_pw = element.getAsJsonObject().get("pw").getAsString();
-
-		MemberDAO dao = new MemberDAO();
-		MemberVO vo = dao.login(mem_id, mem_pw);
+		vo = dao.login(mem_id, mem_pw);
 
 		if (vo != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("userInfo", vo);
 			out.print("loginSuccess");
-			
 		} else {
 			out.print("loginFailure");
 		}
 	}
-
 }

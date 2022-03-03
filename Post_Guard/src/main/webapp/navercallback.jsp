@@ -21,9 +21,40 @@
     let name = naver_id_login.getProfileData('name');
 //    let mobile = naver_id_login.getProfileData('mobile');
 
-    
-    window.close();
+//	백엔드랑 통신
+	  let xhr = new XMLHttpRequest();
+	
+	  const userObj = { id: id, name: name };
+	
+	  xhr.open("post", "SocialLoginCon");
+	  xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+	
+	  xhr.send(JSON.stringify(userObj)); // 문자열로 보내기
+	
+	  xhr.onreadystatechange = function () {
+	    if (xhr.readyState === XMLHttpRequest.DONE) {
+	      //요청성공
+	      if (xhr.status === 200) {
+	        //응답성공
+	        console.log(xhr.responseText);
+	        if (xhr.responseText === "socialLoginSuccess") {
+	          // 로그인 성공
+	          window.opener.location.href = "index.jsp";
+	          window.close();
+	        } else {
+	          // 로그인 실패
+	          AlertMessage.classList.remove("hide");
+	        }
+	      } else {
+	        console.log("response fail");
+	      }
+	    } else {
+	      //요청실패
+	      console.log("request fail");
+	    }
+	  };
   }
+  
 </script>
 </body>
 </html>

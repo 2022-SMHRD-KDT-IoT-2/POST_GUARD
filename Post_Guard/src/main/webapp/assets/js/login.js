@@ -6,8 +6,7 @@ const AlertMessage = document.querySelector("#loginAlertId");
 // 비동기 통신
 const handleXhr = (id, pw) => {
   let xhr = new XMLHttpRequest();
-
-  const userObj = { id: id, pw: pw };
+  const userObj = { id: id, pw: pw};
 
   xhr.open("post", "LoginCon");
   xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
@@ -23,7 +22,6 @@ const handleXhr = (id, pw) => {
         if (xhr.responseText === "loginSuccess") {
           // 로그인 성공
           location.href = "index.jsp";
-		  console.log("맞는데 왜 안돼");
         } else {
           // 로그인 실패
           AlertMessage.classList.remove("hide");
