@@ -22,39 +22,39 @@
   <body>
   <%
   	MemberDAO dao = new MemberDAO();
+ 	MemberVO userInfo = (MemberVO)session.getAttribute("userInfo");
   %>
-  
-    <section id="sidebar">
-      <div class="inner">
-        <nav>
-          <ul>
-            <li>
-              <a href="index.jsp"
-                ><img class="mainlogo" src="./images/logo.png"
-              /></a>
-            </li>
-            <!-- 아래 li 태그 나중에 수정하기. 이유 : ul 또는 ol 태그 없이 li를 사용중..? 오우쉣.. -->
-            <div class="box_container">
-              <div class="box1">
-                <li><a href="product.jsp">상품 소개</a></li>
-                <li><a href="service.jsp">서비스 신청</a></li>
-                <li><a href="as.jsp">AS 신청</a></li>
-                <li><a href="faq.jsp">FAQ</a></li>
-              </div>
-              <div class="box2">
-                <li><a href="join.jsp">회원가입</a></li>
-                <li><a href="login.jsp">로그인</a></li>
-              </div>
-            </div>
-
-            <!-- <li><a href="#">택배 예약</a></li>
-                <li><a href="#">고객 정보 수정</a></li>
-                <li><a href="#">고객 정보 수정</a></li>
-                <li><a href="#">운송장</a></li> -->
-          </ul>
-        </nav>
-      </div>
-    </section>
+	<section id="sidebar">
+		<div class="inner">
+			<nav>
+				<ul>
+					<li><a href="index.jsp"><img
+							class="mainlogo" src="./images/logo.png" /></a></li>
+					<div class="box_container">
+						<div class="box1">
+							<li><a href="product.jsp">상품 소개</a></li>
+							<li><a href="service.jsp">서비스 신청</a></li>
+							<li><a href="as.jsp">AS 신청</a></li>
+							<li><a href="faq.jsp">FAQ</a></li>
+						</div>
+						<div class="box2">
+						<%if(userInfo == null) {%>
+							<li><a href="join.jsp">회원가입</a></li>
+							<li><a href="login.jsp">로그인</a></li>
+						<%} else { %>
+							<li><a href="mypage.jsp"><%=userInfo.getMem_name() %></a></li>
+							<li><a href="LogoutCon">로그아웃</a>
+						<%} %>
+						</div>
+					</div>
+					<!-- <li><a href="#">택배 예약</a></li>
+		            <li><a href="#">고객 정보 수정</a></li>
+		            <li><a href="#">고객 정보 수정</a></li>
+		            <li><a href="#">운송장</a></li> -->
+				</ul>
+			</nav>
+		</div>
+	</section>
 
     <div id="wrapper">
       <section id="three" class="wrapper style1 fade-up">

@@ -22,9 +22,6 @@
 <%
 	MemberVO userInfo = (MemberVO)session.getAttribute("userInfo");
 %>
-
-	<!-- Sidebar -->
-
 	<section id="sidebar">
 		<div class="inner">
 			<nav>
@@ -44,32 +41,18 @@
 							<li><a href="login.jsp">로그인</a></li>
 						<%} else { %>
 							<li><a href="mypage.jsp"><%=userInfo.getMem_name() %></a></li>
-							<li><a href="">로그아웃</a>
+							<li><a href="LogoutCon">로그아웃</a>
 						<%} %>
-							
 						</div>
 					</div>
-
-
-
 					<!-- <li><a href="#">택배 예약</a></li>
-
-            <li><a href="#">고객 정보 수정</a></li>
-
-            <li><a href="#">고객 정보 수정</a></li>
-
-            <li><a href="#">운송장</a></li> -->
-
+		            <li><a href="#">고객 정보 수정</a></li>
+		            <li><a href="#">고객 정보 수정</a></li>
+		            <li><a href="#">운송장</a></li> -->
 				</ul>
-
 			</nav>
-
 		</div>
-
 	</section>
-
-
-
 	<!-- Wrapper -->
 
 	<div id="wrapper">
