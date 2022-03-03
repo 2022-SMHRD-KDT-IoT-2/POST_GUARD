@@ -20,9 +20,10 @@ const handleXhr = (id, pw) => {
       if (xhr.status === 200) {
         //응답성공
         console.log(xhr.responseText);
-        if (xhr.responseText === "true") {
+        if (xhr.responseText === "loginSuccess") {
           // 로그인 성공
-          location.herf = "index.jsp";
+          location.href = "index.jsp";
+		  console.log("맞는데 왜 안돼");
         } else {
           // 로그인 실패
           AlertMessage.classList.remove("hide");
