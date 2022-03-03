@@ -14,6 +14,9 @@ public class LogoutCon extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		//·Î±×¾Æ¿ô 
+		
+		request.setCharacterEncoding("UTF-8");
+		
 		HttpSession userInfo = request.getSession();
 		userInfo.removeAttribute("userInfo");
 		
