@@ -26,7 +26,7 @@
 			<nav>
 				<ul>
 					<li><a href="index.jsp"><img
-							class="mainlogo" src="./images/logo.png" /></a></li>
+							class="mainlogo" src="./images/logo(white).png" /></a></li>
 					<div class="box_container">
 						<div class="box1">
 							<li><a href="product.jsp">상품 소개</a></li>
@@ -53,9 +53,14 @@
 		</div>
 	</section>
 	<!-- Wrapper -->
+	    <div class="main__container">
+	    <div class="main__image">
+    		<img  style="width : 100%; height : 100%;" src="./images/main2.png"/>
+    	</div>
+    </div>
 
-	<div id="wrapper">
-		<!-- Intro -->
+	<!-- <div id="wrapper">
+		Intro
 		<section id="intro" class="wrapper fullscreen fade-up">
 			<div class="inner">
 				<h1>Post Guard</h1>
@@ -67,7 +72,7 @@
 			</div>
 		</section>
 	</div>
-
+ -->
 
 
 	<!-- Footer -->
