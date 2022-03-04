@@ -1,0 +1,88 @@
+.mypage__container {
+	width : 100%;
+	height : 100vh;
+	padding : 100px;
+	display : flex;
+}
+
+.mypage__section1,
+.mypage__section2 {
+	padding-top : 20px;
+}
+
+.mypage__section1 {
+	width : 20%;
+
+}
+
+.mypage__section1 ul {
+	list-style : none;
+	padding-left : 0;
+}
+
+.mypage__section1 ul li {
+	font-size : 25px;
+	font-weight : 600;
+	line-height : 50px;
+}
+
+.mypage__section2 {
+	width : 80%;
+}
+
+.mypage__section2--inner {
+	height : 80%;
+	width : 100%;
+	padding : 20px;
+	display : flex;
+	flex-direction : column;
+	justify-content : space-around;
+	align-items : center;
+	font-size : 25px;
+	font-weight: 600;
+}
+
+.mypage__info-name,
+.mypage__info-contact {
+	
+	padding : 20px;
+	width: 50%;
+	border-radius : 10px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.mypage__info-name-font {
+	font-size : 20px;
+}
+
+.mypage__info-phone-font {
+	font-size : 20px;
+}
+
+.mypage__info-nameDetail {
+	display : flex;
+	flex-direction : column;
+	font-size : 18px;
+	font-weight : 300;
+}
+
+.mypage__info-phoneDetail {
+	display : flex;
+	flex-direction : column;
+	font-size : 18px;
+	font-weight : 300;
+}
+
+.mypage__info-nameDetail-id,
+.mypage__info-nameDetail-name,
+.mypage__info-nameDetail-addr,
+.mypage__info-phoneDetail-email,
+.mypage__info-phoneDetail-phone {
+	width : 100%;
+	padding : 5px;
+	
+}
+
+.mypage__info-userinfo {
+	margin-left : 15px;
+}
