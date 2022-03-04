@@ -59,7 +59,7 @@
 	font-size : 20px;
 }
 
-.mypage__info-nameDetail {
+.mypage__info-userDetail {
 	display : flex;
 	flex-direction : column;
 	font-size : 18px;
