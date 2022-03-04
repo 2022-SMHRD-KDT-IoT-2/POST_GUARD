@@ -43,17 +43,16 @@ public class CompanyDAO {
 			e2.printStackTrace();
 		}
 	}
-	public ArrayList<CompanyVO> print_company() {
+	public ArrayList<CompanyVO> select_companys() {
 		ArrayList<CompanyVO> al = new ArrayList<CompanyVO>();
 		try {
 			DB();
 			
 			String sql = "select * from t_company";
-			
+			psmt = conn.prepareStatement(sql);
 			rs = psmt.executeQuery();
 			
 			while(rs.next()) {
-				
 				int company_seq =rs.getInt(1);
 				String company_name = rs.getString(2);
 				String company_addr = rs.getString(3);
@@ -61,7 +60,8 @@ public class CompanyDAO {
 				String company_ceo = rs.getString(5);
 				String company_homepage = rs.getString(6);
 				
-				CompanyVO vo  = new CompanyVO(company_seq, company_homepage, company_homepage, company_homepage, company_homepage, company_homepage);
+				CompanyVO vo  = new CompanyVO(company_seq, company_name, company_addr, company_tel,
+						company_ceo, company_homepage);
 				al.add(vo);
 			}
 		}
