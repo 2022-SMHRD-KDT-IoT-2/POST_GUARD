@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>POST-GUARD | 고객 정보 관리</title>
+<title>POST-GUARD | 운송장 번호 등록</title>
 </head>
 <body>
 

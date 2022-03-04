@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>POST-GUARD | 고객 정보 관리</title>
+<title>POST-GUARD | 택배사 등록</title>
 </head>
 <body>
 
