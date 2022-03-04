@@ -55,7 +55,7 @@
 	<!-- Wrapper -->
 	    <div class="main__container">
 	    <div class="main__image">
-    		<img  style="width : 100%; height : 100%;" src="./images/main2.png"/>
+    		<img  style="width : 100%; height : 100%;" src="./images/main.png"/>
     	</div>
     </div>
 
@@ -79,7 +79,7 @@
 	<footer id="footer">
 		<div class="footer__inner">
 			<div class="footer__up">
-				<img class="footerlogo" src="./images/footerlogo.png" />
+				<img class="footerlogo" src="./images/logo(navy).png" />
 				<div class="footer__up-textrow1">
 					<a href="product.jsp"><span>상품 소개</span></a>
 				</div>

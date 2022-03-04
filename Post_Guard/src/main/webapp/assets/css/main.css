@@ -21,15 +21,15 @@
 	width: device-width;
 }
 /* Wrapper */
-.wrapper h1 {
+/* .wrapper h1 {
 	color: rgb(9, 41, 97);
-}
+} */
 
-.wrapper>.inner {
+/* .wrapper>.inner {
 	padding: 5em 5em 3em 5em;
 	width: 100%;
 	color: rgb(92, 92, 92);
-}
+} */
 
 .wrapper>.footer__inner {
 	display : flex;
