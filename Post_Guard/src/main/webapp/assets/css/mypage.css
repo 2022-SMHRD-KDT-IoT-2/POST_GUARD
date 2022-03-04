@@ -42,7 +42,7 @@
 	font-weight: 600;
 }
 
-.mypage__info-name,
+.mypage__info-user,
 .mypage__info-contact {
 	
 	padding : 20px;
@@ -59,7 +59,7 @@
 	font-size : 20px;
 }
 
-.mypage__info-nameDetail {
+.mypage__info-userDetail {
 	display : flex;
 	flex-direction : column;
 	font-size : 18px;
@@ -73,9 +73,9 @@
 	font-weight : 300;
 }
 
-.mypage__info-nameDetail-id,
-.mypage__info-nameDetail-name,
-.mypage__info-nameDetail-addr,
+.mypage__info-userDetail-id,
+.mypage__info-userDetail-name,
+.mypage__info-userDetail-addr,
 .mypage__info-phoneDetail-email,
 .mypage__info-phoneDetail-phone {
 	width : 100%;
@@ -85,4 +85,19 @@
 
 .mypage__info-userinfo {
 	margin-left : 15px;
+}
+
+.mypage__edit {
+	width : 100%;
+}
+
+.editdoneBtn {
+	all : unset;
+	width : 200px;
+	margin-top : 30px;
+	padding : 10px;
+	border : 1px solid rgb(9, 41, 97);
+	border-radius : 20px;
+	text-align : center;
+	cursor : pointer;
 }

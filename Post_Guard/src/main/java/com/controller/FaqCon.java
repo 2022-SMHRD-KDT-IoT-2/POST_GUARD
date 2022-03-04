@@ -1,5 +1,7 @@
 package com.controller;
 
+
+// 게시글등록
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;

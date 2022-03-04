@@ -49,17 +49,17 @@
 		</div>
 	</section>
 	
+	<!-- 자스에서 리다이렉트 시키기 -->
+<form class="mypage__edit" action="#" method="post">
 	<div class="mypage__container">
 		<div class="mypage__section1">
 			<ul>
-				<li><a href="reservation.jsp">발송 예약</a></li>
-				<li><a href="enrollnumber.jsp">운송장 번호 등록</a></li>
-				<%if(!userInfo.isSocial()) { %>
-				<li><a class="editLink" href="edit.jsp">회원 정보 수정</a></li>
-				<%} %>
+				<li><a href="#">발송 예약</a></li>
+				<li><a href="#">운송장 번호 등록</a></li>
+				<li><a href="edit.jsp">회원 정보 수정</a></li>
 				<%if(userInfo.getMem_id().equals("admin")) { %>
-				<li><a href="enrollcompany.jsp">택배사 등록 - 관리자 전용</a></li>
-				<li><a href="manageuser.jsp">고객 정보 관리 - 관리자 전용</a></li>
+				<li><a href="#">택배사 등록 - 관리자 전용</a></li>
+				<li><a href="#">고객 정보 관리 - 관리자 전용</a></li>
 				<%} %>
 			</ul>
 		</div>
@@ -73,13 +73,20 @@
 							<span>ID</span>
 							<span class="mypage__info-userinfo"><%=userInfo.getMem_id() %></span>
 						</div>
+						<div class="mypage__info-userDetail-pw">
+							<span>PASSWORD</span>
+							<input class="edit_pw" type="text" value=<%=userInfo.getMem_pw() %> required >
+						</div>
 						<div class="mypage__info-userDetail-name">
 							<span>이름</span>
-							<span class="mypage__info-userinfo"><%=userInfo.getMem_name() %></span>
+							<!-- 수정 하게 -->
+							<input class="edit_name" type="text" value=<%=userInfo.getMem_name() %> required >
 						</div>
 						<div class="mypage__info-userDetail-addr">
 							<span>주소</span>
-							<span class="mypage__info-userinfo"><%=userInfo.getMem_addr() %></span>
+							<!-- 수정 하게 -->
+							<input class="edit_addr" type="text" value=<%=userInfo.getMem_addr() %> required >
+							<!-- 주소 선택 버튼 -->
 						</div>
 					</div>
 				</div>
@@ -88,17 +95,21 @@
 					<div class="mypage__info-phoneDetail">
 						<div class="mypage__info-phoneDetail-email">
 							<span>E-MAIL</span>
-							<span class="mypage__info-userinfo"><%=userInfo.getMem_email() %></span>
+							<!-- 수정 하게 -->
+							<input class="edit_email" type="text" value=<%=userInfo.getMem_email() %> required >
 						</div>
 						<div class="mypage__info-phoneDetail-phone">
 							<span>PHONE</span>
-							<span class="mypage__info-userinfo"><%=userInfo.getMem_phone() %></span>
+							<!-- 수정 하게 -->
+							<input class="edit_phone" type="text" value=<%=userInfo.getMem_phone() %> required >
 						</div>
 					</div>			
 				</div>
+				<button class="editdoneBtn">정보 수정</button>
 			</div>
 		</div>
 	</div>
+	</form>
 	
 		<!-- Footer -->
 	<footer id="footer">
@@ -131,6 +142,6 @@
 			</div>
 		</div>
 	</footer>
-	<script src="assets/js/auth.js"></script>
+	<script src="assets/js/edit.js"></script>
 </body>
 </html>
