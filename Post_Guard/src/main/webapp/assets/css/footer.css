@@ -1,17 +1,79 @@
-/* Footer */
-#footer>.inner a {
-	border-bottom-color: rgba(255, 255, 255, 0.15);
+#footer {
+	height: auto;
+	width: 100%;
+	display: flex;
+	justify-content : center;
+	background-color : #F8F9FA;
 }
 
-#footer>.inner a:hover {
-	border-bottom-color: transparent;
+.footer__inner {
+	width: 60%;
 }
 
-#footer>.inner .menu {
-	font-size: 0.3em;
-	color: rgba(255, 255, 255, 0.15);
+.footer__up {
+	display: flex;
+	align-items : center;
 }
 
-#header+#wrapper+#footer>.inner {
-	margin: 0 auto;
+.footer__down {
+	font-size : 12px;
+}
+
+.footerlogo {
+	width : 100px;
+	height : 100px;
+}
+
+.footer__icons {
+	padding-top : 15px;
+	padding-bottom : 15px;
+}
+
+.fa-brands {
+	margin-right : 30px;
+}
+
+.footerlogo,
+.footer__up-textrow1,
+.footer__up-textrow2,
+.footer__up-textrow3,
+.footer__up-textrow4 {
+	margin-right : 30px;
+}
+
+.footer__up-textrow1 {
+	height : 100px;
+	display: flex;
+	flex-direction : column;
+	justify-content: space-around;
+	font-size : 15px;
+	font-weight : 600;
+}
+.footer__up-textrow2 {
+	height : 100px;
+	display: flex;
+	flex-direction : column;
+	justify-content: space-around;
+	font-size : 15px;
+	font-weight : 600;
+}
+.footer__up-textrow3 {
+	height : 100px;
+	display: flex;
+	flex-direction : column;
+	justify-content: space-around;
+	font-size : 15px;
+	font-weight : 400;
+}
+.footer__up-textrow4 {
+	height : 100px;
+	display: flex;
+	flex-direction : column;
+	justify-content: space-around;
+	font-size : 15px;
+	font-weight : 400;
+}
+
+hr {
+	margin : 0;
 }
