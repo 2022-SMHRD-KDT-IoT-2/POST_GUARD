@@ -153,7 +153,7 @@ public class MemberDAO {
 				String addr = rs.getString(6);
 
 				if (mem_pw.equals(getMem_pw)) {
-					vo = new MemberVO(getMem_id, getMem_pw, mem_name, phone, email, addr);
+					vo = new MemberVO(getMem_id, getMem_pw, mem_name, phone, email, addr, false);
 				}
 			}
 		} catch (Exception e) {
@@ -166,7 +166,7 @@ public class MemberDAO {
 	}
 	
 	public MemberVO social_login(String social_mem_id, String social_mem_name) {
-		MemberVO vo = new MemberVO(social_mem_id, "X", social_mem_name, "X", "X", "X");
+		MemberVO vo = new MemberVO(social_mem_id, "X", social_mem_name, "X", "X", "X", true);
 		return vo;
 	}
 }

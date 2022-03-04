@@ -43,6 +43,7 @@ public class EditCon extends HttpServlet {
 
 		String mem_id = userInfo.getMem_id();
 		String mem_pw = userInfo.getMem_pw();
+		boolean isSocial = userInfo.isSocial();
 		String mem_name = element.getAsJsonObject().get("username").getAsString();
 		String mem_addr = element.getAsJsonObject().get("addr").getAsString();
 		String mem_email = element.getAsJsonObject().get("email").getAsString();
@@ -51,7 +52,7 @@ public class EditCon extends HttpServlet {
 		int cnt = dao.update(mem_id, mem_name, mem_addr, mem_email, mem_phone);
 		
 		if(cnt > 0) {
-			vo = new MemberVO(mem_id, mem_pw, mem_name, mem_phone, mem_email, mem_addr);
+			vo = new MemberVO(mem_id, mem_pw, mem_name, mem_phone, mem_email, mem_addr, isSocial);
 			session.setAttribute("userInfo", vo);
 			out.print("updateSuccess");
 		} else {
