@@ -44,7 +44,6 @@
 
 .mypage__info-user,
 .mypage__info-contact {
-	
 	padding : 20px;
 	width: 50%;
 	border-radius : 10px;
@@ -74,13 +73,13 @@
 }
 
 .mypage__info-userDetail-id,
+.mypage__info-userDetail-pw,
 .mypage__info-userDetail-name,
 .mypage__info-userDetail-addr,
 .mypage__info-phoneDetail-email,
 .mypage__info-phoneDetail-phone {
 	width : 100%;
-	padding : 5px;
-	
+	padding : 5px;	
 }
 
 .mypage__info-userinfo {
@@ -100,4 +99,51 @@
 	border-radius : 20px;
 	text-align : center;
 	cursor : pointer;
+}
+
+.company__enroll-container {
+	height : 80%;
+	width : 100%;
+	padding : 20px;
+	display : flex;
+	flex-direction : column;
+	align-items : center;
+	font-size : 25px;
+	font-weight: 600;
+}
+
+.company__enroll {
+	padding : 20px;
+	width: 50%;
+	border-radius : 10px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.company__enroll-text{
+	margin-bottom: 20px;
+}
+
+.company__enroll--notifi {
+	font-size: 18px;
+	font-weight : 300;
+}
+
+.enrollBtn {
+	all: unset;
+	width : 200px;
+	margin-top : 30px;
+	padding : 10px;
+	border : 1px solid rgb(9, 41, 97);
+	border-radius : 20px;
+	text-align : center;
+	cursor : pointer;
+}
+
+.company_enroll--input {
+	width : 100%;
+	padding : 5px;	
+}
+
+.company_enroll--input span {
+	font-size : 20px;
 }

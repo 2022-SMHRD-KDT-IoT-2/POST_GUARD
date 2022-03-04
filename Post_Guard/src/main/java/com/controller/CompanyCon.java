@@ -1,8 +1,12 @@
 package com.controller;
 
+import java.io.BufferedReader;
+
 // 택배사 등록하게 해주는 컨트롤러
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,6 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.dao.CompanyDAO;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 import com.vo.MemberVO;
 
 
@@ -19,13 +25,25 @@ public class CompanyCon extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		// 1. getParameter로 아이디 가져 오면 안됨.. 세션에서 가져와야함.. 왜냐하면 택배사 등록은 이미 로그인 한 상태에서 하는것이기때문에..
-		// 2. 시퀀스 삭제, 시퀀스는 데이터베이스에서 값이 추가되면 자동으로 생성되는 값이라서, 따로 프론트에서 받아서 등록하거나 할 필요가 없음.
-		String company_name = request.getParameter("company_name");
-		String company_addr = request.getParameter("company_addr");
-		String company_tel = request.getParameter("company_tel");
-		String company_ceo = request.getParameter("company_ceo");
-		String company_homepage = request.getParameter("company_homepage");
+		
+		StringBuffer sb = new StringBuffer(); // 읽어온 데이터 저장
+		String line = null; // 버펑안에 데이터 읽을떼 사용(임시저장)
+
+		BufferedReader reader = request.getReader(); // 요청데이터 읽을때 사용
+		while ((line = reader.readLine()) != null) { // 읽을 데이터가 있을때 반복수행
+			sb.append(line); // 읽어온데이터를 sb(stringbuffer) 에 추가
+		}
+
+		JsonParser parser = new JsonParser(); // 파싱(문자열 -> JSON)
+		JsonElement element = parser.parse(sb.toString()); // 버퍼데이터 문자열로 변경후 JSON으로 변경
+
+		String company_name = element.getAsJsonObject().get("companyName").getAsString(); 
+		String company_addr = element.getAsJsonObject().get("companyAddr").getAsString(); 
+		String company_tel = element.getAsJsonObject().get("companyTel").getAsString();
+		String company_ceo = element.getAsJsonObject().get("companyCEO").getAsString();
+		String company_homepage = element.getAsJsonObject().get("companyPage").getAsString();
+		PrintWriter out = response.getWriter();
+		
 		
 		int cnt = 0;
 		CompanyDAO dao = new CompanyDAO();
@@ -34,16 +52,15 @@ public class CompanyCon extends HttpServlet {
 		
 		if(vo.getMem_id().equals("admin")) {
 		   cnt = dao.enroll_company(company_name, company_addr, company_tel, company_ceo, company_homepage); 
-		   // 택배사 등록할 때 시퀀스 값 매개변수로 줄 필요 없음. 이유 : 시퀀스는 테이블에서 자동으로 생성되는 데이터
-		   // 즉 프론트에서 꺼내기만 하면 되는 데이터지, 백엔드에서 어디에 넣거나 해 줄 필요가 없다는 의미
 		} else {
-			System.out.println("권한이 없습니다");
+			out.print("AccessDeny");
 		}
+		
 		if(cnt > 0) {
-			response.sendRedirect("");
+			out.print("EnrollSuccess");
 		}
 		else {
-			response.sendRedirect("");
+			out.print("EnrollFailure");
 		}
 	}
 

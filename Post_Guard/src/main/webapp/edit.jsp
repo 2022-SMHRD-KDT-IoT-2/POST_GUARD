@@ -70,23 +70,23 @@
 					<span class="mypage__info-user-font">기본정보</span>
 					<div class="mypage__info-userDetail">
 						<div class="mypage__info-userDetail-id">
-							<span>ID</span>
+							<span style="font-weight : 600;">ID</span>
 							<span class="mypage__info-userinfo"><%=userInfo.getMem_id() %></span>
 						</div>
 						<div class="mypage__info-userDetail-pw">
-							<span>PASSWORD</span>
+							<span style="font-weight : 600;">PASSWORD</span>
 							<input class="edit_pw" type="text" value=<%=userInfo.getMem_pw() %> required >
 						</div>
 						<div class="mypage__info-userDetail-name">
-							<span>이름</span>
+							<span style="font-weight : 600;">이름</span>
 							<!-- 수정 하게 -->
 							<input class="edit_name" type="text" value=<%=userInfo.getMem_name() %> required >
 						</div>
 						<div class="mypage__info-userDetail-addr">
-							<span>주소</span>
+							<span style="font-weight : 600;">주소</span>
 							<!-- 수정 하게 -->
 							<input class="edit_addr" type="text" value=<%=userInfo.getMem_addr() %> required >
-							<!-- 주소 선택 버튼 -->
+							<!-- 주소 선택 버튼 넣어야함 ㅠㅠ - 종재 -->
 						</div>
 					</div>
 				</div>
@@ -94,12 +94,12 @@
 					<span class="mypage__info-phone-font">연락처정보</span>		
 					<div class="mypage__info-phoneDetail">
 						<div class="mypage__info-phoneDetail-email">
-							<span>E-MAIL</span>
+							<span style="font-weight : 600;">E-MAIL</span>
 							<!-- 수정 하게 -->
 							<input class="edit_email" type="text" value=<%=userInfo.getMem_email() %> required >
 						</div>
 						<div class="mypage__info-phoneDetail-phone">
-							<span>PHONE</span>
+							<span style="font-weight : 600;">PHONE</span>
 							<!-- 수정 하게 -->
 							<input class="edit_phone" type="text" value=<%=userInfo.getMem_phone() %> required >
 						</div>

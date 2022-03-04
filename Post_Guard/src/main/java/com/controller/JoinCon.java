@@ -36,8 +36,6 @@ public class JoinCon extends HttpServlet {
 		JsonParser parser = new JsonParser(); // 파싱(문자열 -> JSON)
 		JsonElement element = parser.parse(sb.toString()); // 버퍼데이터 문자열로 변경후 JSON으로 변경
 
-		request.setCharacterEncoding("euc-kr");
-
 		String mem_id = element.getAsJsonObject().get("id").getAsString(); 
 		String mem_pw = element.getAsJsonObject().get("pw").getAsString(); 
 		String mem_name = element.getAsJsonObject().get("username").getAsString();
