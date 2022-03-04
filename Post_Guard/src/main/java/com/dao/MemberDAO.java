@@ -75,20 +75,20 @@ public class MemberDAO {
 		return cnt;
 	}
 
-	public int update(String mem_pw, String mem_phone, String mem_email, String mem_addr, String mem_id) {
+	// 비밀번호 제외 수정
+	public int update(String mem_id, String mem_name, String mem_addr, String mem_email, String mem_phone) {
 		int cnt = 0;
-
 		try {
 
 			DB();
 
-			String sql = "update t_member set mem_pw = ?, mem_phone = ?, mem_email = ?, mem_addr = ? where mem_id = ?";
+			String sql = "update t_member set mem_name = ?, mem_addr = ?, mem_email = ?, mem_phone = ? where mem_id = ?";
 
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, mem_pw);
-			psmt.setString(2, mem_phone);
+			psmt.setString(1, mem_name);
+			psmt.setString(2, mem_addr);
 			psmt.setString(3, mem_email);
-			psmt.setString(4, mem_addr);
+			psmt.setString(4, mem_phone);
 			psmt.setString(5, mem_id);
 
 			cnt = psmt.executeUpdate();
@@ -96,7 +96,33 @@ public class MemberDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
+			try {
+				close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return cnt;
+	}
+	
+	// 비밀번호 수정
+	public int passwordUpdate(String mem_id, String mem_pw) {
+		int cnt = 0;
+		try {
 
+			DB();
+
+			String sql = "update t_member set mem_pw = ?  where mem_id = ?";
+
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, mem_pw);
+			psmt.setString(2, mem_id);
+
+			cnt = psmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
 			try {
 				close();
 			} catch (Exception e2) {
