@@ -55,7 +55,7 @@
 				<li><a href="#">발송 예약</a></li>
 				<li><a href="#">운송장 번호 등록</a></li>
 				<%if(!userInfo.isSocial()) { %>
-				<li><a href="edit.jsp">회원 정보 수정</a></li>
+				<li><a class="editLink" href="edit.jsp">회원 정보 수정</a></li>
 				<%} %>
 				<%if(userInfo.getMem_id().equals("admin")) { %>
 				<li><a href="#">택배사 등록 - 관리자 전용</a></li>
@@ -131,5 +131,6 @@
 			</div>
 		</div>
 	</footer>
+	<script src="assets/js/auth.js"></script>
 </body>
 </html>
