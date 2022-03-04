@@ -1,14 +1,16 @@
 const editDoneBtn = document.querySelector(".editdoneBtn");
+const password = document.querySelector(".edit_pw");
 const username = document.querySelector(".edit_name");
 const address = document.querySelector(".edit_addr");
 const email = document.querySelector(".edit_email");
 const phone = document.querySelector(".edit_phone");
 
-const handleXhr = (username, address, email, phone) => {
+const handleXhr = (username, password, address, email, phone) => {
   let xhr = new XMLHttpRequest();
 
   const userObj = {
     username: username,
+    password: password,
     phone: phone,
     email: email,
     addr: address,
@@ -42,7 +44,13 @@ const handleXhr = (username, address, email, phone) => {
 const handleEdit = (e) => {
   console.log("click!");
   e.preventDefault();
-  handleXhr(username.value, address.value, email.value, phone.value);
+  handleXhr(
+    username.value,
+    password.value,
+    address.value,
+    email.value,
+    phone.value
+  );
 };
 
 editDoneBtn.addEventListener("click", handleEdit);
