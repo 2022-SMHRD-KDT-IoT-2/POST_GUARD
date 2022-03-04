@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="UTF-8"%>
 <%@ page import="com.dao.MemberDAO" %>
 <%@ page import="com.vo.MemberVO" %>
 <!DOCTYPE html>
@@ -25,49 +25,49 @@
 							class="mainlogo" src="./images/logo.png" /></a></li>
 					<div class="box_container">
 						<div class="box1">
-							<li><a href="product.jsp">»óÇ° ¼Ò°³</a></li>
-							<li><a href="service.jsp">¼­ºñ½º ½ÅÃ»</a></li>
-							<li><a href="as.jsp">AS ½ÅÃ»</a></li>
+							<li><a href="product.jsp">ìƒí’ˆ ì†Œê°œ</a></li>
+							<li><a href="service.jsp">ì„œë¹„ìŠ¤ ì‹ ì²­</a></li>
+							<li><a href="as.jsp">AS ì‹ ì²­</a></li>
 							<li><a href="faq.jsp">FAQ</a></li>
 						</div>
 						<div class="box2">
 						<%if(userInfo == null) {%>
-							<li><a href="join.jsp">È¸¿ø°¡ÀÔ</a></li>
-							<li><a href="login.jsp">·Î±×ÀÎ</a></li>
+							<li><a href="join.jsp">íšŒì›ê°€ìž…</a></li>
+							<li><a href="login.jsp">ë¡œê·¸ì¸</a></li>
 						<%} else { %>
 							<li><a href="mypage.jsp"><%=userInfo.getMem_name() %></a></li>
-							<li><a href="LogoutCon">·Î±×¾Æ¿ô</a>
+							<li><a href="LogoutCon">ë¡œê·¸ì•„ì›ƒ</a>
 						<%} %>
 						</div>
 					</div>
-					<!-- <li><a href="#">ÅÃ¹è ¿¹¾à</a></li>
-		            <li><a href="#">°í°´ Á¤º¸ ¼öÁ¤</a></li>
-		            <li><a href="#">°í°´ Á¤º¸ ¼öÁ¤</a></li>
-		            <li><a href="#">¿î¼ÛÀå</a></li> -->
+					<!-- <li><a href="#">íƒë°° ì˜ˆì•½</a></li>
+		            <li><a href="#">ê³ ê° ì •ë³´ ìˆ˜ì •</a></li>
+		            <li><a href="#">ê³ ê° ì •ë³´ ìˆ˜ì •</a></li>
+		            <li><a href="#">ìš´ì†¡ìž¥</a></li> -->
 				</ul>
 			</nav>
 		</div>
 	</section>
 	
-	<!-- ÀÚ½º¿¡¼­ ¸®´ÙÀÌ·ºÆ® ½ÃÅ°±â -->
+	<!-- ìžìŠ¤ì—ì„œ ë¦¬ë‹¤ì´ë ‰íŠ¸ ì‹œí‚¤ê¸° -->
 <form class="mypage__edit" action="#" method="post">
 	<div class="mypage__container">
 		<div class="mypage__section1">
 			<ul>
-				<li><a href="#">¹ß¼Û ¿¹¾à</a></li>
-				<li><a href="#">¿î¼ÛÀå ¹øÈ£ µî·Ï</a></li>
-				<li><a href="edit.jsp">È¸¿ø Á¤º¸ ¼öÁ¤</a></li>
+				<li><a href="#">ë°œì†¡ ì˜ˆì•½</a></li>
+				<li><a href="#">ìš´ì†¡ìž¥ ë²ˆí˜¸ ë“±ë¡</a></li>
+				<li><a href="edit.jsp">íšŒì› ì •ë³´ ìˆ˜ì •</a></li>
 				<%if(userInfo.getMem_id().equals("admin")) { %>
-				<li><a href="#">ÅÃ¹è»ç µî·Ï - °ü¸®ÀÚ Àü¿ë</a></li>
-				<li><a href="#">°í°´ Á¤º¸ °ü¸® - °ü¸®ÀÚ Àü¿ë</a></li>
+				<li><a href="#">íƒë°°ì‚¬ ë“±ë¡ - ê´€ë¦¬ìž ì „ìš©</a></li>
+				<li><a href="#">ê³ ê° ì •ë³´ ê´€ë¦¬ - ê´€ë¦¬ìž ì „ìš©</a></li>
 				<%} %>
 			</ul>
 		</div>
 		<div class="mypage__section2">
 			<div class="mypage__section2--inner">
-				<span><%=userInfo.getMem_name() %>´ÔÀÇ °èÁ¤ Á¤º¸</span>
+				<span><%=userInfo.getMem_name() %>ë‹˜ì˜ ê³„ì • ì •ë³´</span>
 				<div class="mypage__info-user">
-					<span class="mypage__info-user-font">±âº»Á¤º¸</span>
+					<span class="mypage__info-user-font">ê¸°ë³¸ì •ë³´</span>
 					<div class="mypage__info-userDetail">
 						<div class="mypage__info-userDetail-id">
 							<span>ID</span>
@@ -78,34 +78,34 @@
 							<input class="edit_pw" type="text" value=<%=userInfo.getMem_pw() %> required >
 						</div>
 						<div class="mypage__info-userDetail-name">
-							<span>ÀÌ¸§</span>
-							<!-- ¼öÁ¤ ÇÏ°Ô -->
+							<span>ì´ë¦„</span>
+							<!-- ìˆ˜ì • í•˜ê²Œ -->
 							<input class="edit_name" type="text" value=<%=userInfo.getMem_name() %> required >
 						</div>
 						<div class="mypage__info-userDetail-addr">
-							<span>ÁÖ¼Ò</span>
-							<!-- ¼öÁ¤ ÇÏ°Ô -->
+							<span>ì£¼ì†Œ</span>
+							<!-- ìˆ˜ì • í•˜ê²Œ -->
 							<input class="edit_addr" type="text" value=<%=userInfo.getMem_addr() %> required >
-							<!-- ÁÖ¼Ò ¼±ÅÃ ¹öÆ° -->
+							<!-- ì£¼ì†Œ ì„ íƒ ë²„íŠ¼ -->
 						</div>
 					</div>
 				</div>
 				<div class="mypage__info-contact">
-					<span class="mypage__info-phone-font">¿¬¶ôÃ³Á¤º¸</span>		
+					<span class="mypage__info-phone-font">ì—°ë½ì²˜ì •ë³´</span>		
 					<div class="mypage__info-phoneDetail">
 						<div class="mypage__info-phoneDetail-email">
 							<span>E-MAIL</span>
-							<!-- ¼öÁ¤ ÇÏ°Ô -->
+							<!-- ìˆ˜ì • í•˜ê²Œ -->
 							<input class="edit_email" type="text" value=<%=userInfo.getMem_email() %> required >
 						</div>
 						<div class="mypage__info-phoneDetail-phone">
 							<span>PHONE</span>
-							<!-- ¼öÁ¤ ÇÏ°Ô -->
+							<!-- ìˆ˜ì • í•˜ê²Œ -->
 							<input class="edit_phone" type="text" value=<%=userInfo.getMem_phone() %> required >
 						</div>
 					</div>			
 				</div>
-				<button class="editdoneBtn">Á¤º¸ ¼öÁ¤</button>
+				<button class="editdoneBtn">ì •ë³´ ìˆ˜ì •</button>
 			</div>
 		</div>
 	</div>
@@ -117,22 +117,22 @@
 			<div class="footer__up">
 				<img class="footerlogo" src="./images/footerlogo.png" />
 				<div class="footer__up-textrow1">
-					<a href="product.jsp"><span>»óÇ° ¼Ò°³</span></a>
+					<a href="product.jsp"><span>ìƒí’ˆ ì†Œê°œ</span></a>
 				</div>
 				<div class="footer__up-textrow2">
-					<a href="service.jsp"><span>¼­ºñ½º ½ÅÃ»</span></a>
+					<a href="service.jsp"><span>ì„œë¹„ìŠ¤ ì‹ ì²­</span></a>
 				</div>
 				<div class="footer__up-textrow3">
-					<a href="#"><span>È¸»ç ¼Ò°³</span></a>
+					<a href="#"><span>íšŒì‚¬ ì†Œê°œ</span></a>
 				</div>
 				<div class="footer__up-textrow4">
-					<a href="#"><span>Ã¤¿ë</span></a>
+					<a href="#"><span>ì±„ìš©</span></a>
 				</div>
 			</div>
 			<hr>
 			<div class="footer__down">
-				<span>±¤ÁÖ µ¿±¸ ¿¹¼ú±æ 31-15 ±¤ÁÖ¾ÆÆ®¼¾ÅÍ 4Ãþ (POST-GUARD)
- »ç¾÷ÀÚ µî·Ï¹øÈ£ : 375-87-00088 Á÷¾÷Á¤º¸Á¦°ø»ç¾÷ ½Å°í¹øÈ£ : J1200020200016</span>
+				<span>ê´‘ì£¼ ë™êµ¬ ì˜ˆìˆ ê¸¸ 31-15 ê´‘ì£¼ì•„íŠ¸ì„¼í„° 4ì¸µ (POST-GUARD)
+ ì‚¬ì—…ìž ë“±ë¡ë²ˆí˜¸ : 375-87-00088 ì§ì—…ì •ë³´ì œê³µì‚¬ì—… ì‹ ê³ ë²ˆí˜¸ : J1200020200016</span>
 				<div class="footer__icons">
 					<a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2xl"></i></a>
 					<a href="https://twitter.com/"><i class="fa-brands fa-twitter fa-2xl"></i></a>
