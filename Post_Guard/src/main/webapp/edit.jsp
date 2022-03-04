@@ -54,12 +54,13 @@
 	<div class="mypage__container">
 		<div class="mypage__section1">
 			<ul>
-				<li><a href="#">발송 예약</a></li>
-				<li><a href="#">운송장 번호 등록</a></li>
+				<li><a href="reservation.jsp">발송 예약</a></li>
+				<li><a href="enrollnumber.jsp">운송장 번호 등록</a></li>
+				<li><a href="mytrackingnum.jsp">등록한 운송장 번호</a></li>
 				<li><a href="edit.jsp">회원 정보 수정</a></li>
 				<%if(userInfo.getMem_id().equals("admin")) { %>
-				<li><a href="#">택배사 등록 - 관리자 전용</a></li>
-				<li><a href="#">고객 정보 관리 - 관리자 전용</a></li>
+				<li><a href="enrollcompany.jsp">택배사 등록 - 관리자 전용</a></li>
+				<li><a href="manageuser.jsp">고객 정보 관리 - 관리자 전용</a></li>
 				<%} %>
 			</ul>
 		</div>
