@@ -17,6 +17,7 @@ import com.google.gson.JsonParser;
 import com.vo.MemberVO;
 
 
+// FAQ 게시글 댓글 등록
 @WebServlet("/Faq_commentCon")
 public class Faq_commentCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
