@@ -114,7 +114,6 @@ public class ASDAO {
 	}
 
 	// 댓글 보여주는 기능
-	// 해당 글에서만 댓글 보여야 하니까 변수로 글번호 줬어여
 	public ArrayList<ASReplyVO> getAS_cmt_content(int as_seq) {
 
 		ArrayList<ASReplyVO> arr_vo = new ArrayList<ASReplyVO>();
@@ -198,7 +197,7 @@ public class ASDAO {
 	}
 
 	// AS게시판에 글 등록!
-	public int write_AS(String as_title, String as_content, String as_file, String mem_id, String as_date) {
+	public int write_AS(String as_category, String as_title, String as_content, String as_file, String mem_id, String as_date) {
 
 		int cnt = 0;
 
@@ -212,8 +211,7 @@ public class ASDAO {
 			psmt.setString(2, as_content);
 			psmt.setString(3, as_file);
 			psmt.setString(4, mem_id);
-			// 이 부분 잘 모르겠어요 내일 수정 마저 진행하겠습니다!
-			// psmt.setString(5, as_category);
+			psmt.setString(5, as_category);
 
 			cnt = psmt.executeUpdate();
 
