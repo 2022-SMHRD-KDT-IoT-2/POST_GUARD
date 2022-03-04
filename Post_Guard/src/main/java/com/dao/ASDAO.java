@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import com.vo.ASReplyVO;
 import com.vo.ASVO;
 
+// AS게시판 DAO (글+댓글) 
 public class ASDAO {
 
 	Connection conn = null;
@@ -47,111 +48,6 @@ public class ASDAO {
 		}
 	}
 
-	// AS게시판 DAO
-	// 조회수 증가 기능
-	public void updateAS_cnt(int as_seq) {
-
-		try {
-			DB();
-
-			String sql = "UPDATE T_AS SET AS_CNT = AS_CNT+1 WHERE AS_SEQ = ?";
-			psmt = conn.prepareStatement(sql);
-			psmt.setInt(1, as_seq);
-
-			psmt.executeUpdate();
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-
-			try {
-				close();
-			} catch (Exception e2) {
-				e2.printStackTrace();
-			}
-
-		}
-	}
-
-	// 제목 클릭했을 때 내용 보여주는 기능
-	public ASVO getAS_content(int as_seq) {
-
-		ASVO vo = null;
-
-		try {
-
-			DB();
-
-			String sql = "SELECT AS_DATE, AS_CATEGORY, AS_TITLE, MEM_ID, AS_CONTENT FROM T_AS WHERE AS_SEQ = ?";
-			psmt = conn.prepareStatement(sql);
-			psmt.setInt(1, as_seq);
-
-			rs = psmt.executeQuery();
-
-			if (rs.next()) {
-
-				String getAs_category = rs.getString(1);
-				String getAs_title = rs.getString(2);
-				String getMem_id = rs.getString(3);
-				String getAs_content = rs.getString(4);
-
-				vo = new ASVO(getAs_category, getAs_title, getMem_id, getAs_content);
-
-			}
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-
-			try {
-				close();
-			} catch (Exception e2) {
-				e2.printStackTrace();
-			}
-
-		}
-		return vo;
-	}
-
-	// 댓글 보여주는 기능
-	public ArrayList<ASReplyVO> getAS_cmt_content(int as_seq) {
-
-		ArrayList<ASReplyVO> arr_vo = new ArrayList<ASReplyVO>();
-
-		try {
-
-			DB();
-
-			String sql = "select AS_CMT_DATE, MEM_ID, AS_CMT_CONTENT from T_AS_CMT where AS_CMT_SEQ = ?";
-			psmt = conn.prepareStatement(sql);
-			psmt.setInt(1, as_seq);
-
-			rs = psmt.executeQuery();
-
-			while (rs.next()) {
-
-				String getAS_cmt_content = rs.getString(1);
-				String getMem_id = rs.getString(2);
-
-				ASReplyVO vo = new ASReplyVO(getAS_cmt_content, getMem_id);
-				arr_vo.add(vo);
-
-			}
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-
-			try {
-				close();
-			} catch (Exception e2) {
-				e2.printStackTrace();
-			}
-
-		}
-		return arr_vo;
-	}
-
 	// AS게시판 목록
 	public ArrayList<ASVO> getAS_list() {
 
@@ -161,7 +57,7 @@ public class ASDAO {
 
 			DB();
 
-			String sql = "select as_seq, as_category, as_title, mem_id, as_date, as_cnt from t_as";
+			String sql = "select AS_SEQ, AS_CATEGORY, AS_TITLE, MEM_ID, AS_DATE, AS_CNT from T_AS";
 			psmt = conn.prepareStatement(sql);
 
 			psmt.executeUpdate();
@@ -193,11 +89,11 @@ public class ASDAO {
 
 		}
 		return arr_vo;
-
 	}
 
-	// AS게시판에 글 등록!
-	public int write_AS(String as_category, String as_title, String as_content, String as_file, String mem_id, String as_date) {
+	// AS 게시판에 글 등록
+	public int write_AS(String as_category, String as_title, String as_content, String as_file, String mem_id,
+			String as_date) {
 
 		int cnt = 0;
 
@@ -205,7 +101,7 @@ public class ASDAO {
 
 			DB();
 
-			String sql = "insert into t_as values(as_seq.nextval, ?, ?, sysdate, ?, ?, ?)";
+			String sql = "insert into T_AS values(as_seq.nextval, ?, ?, sysdate, ?, ?, ?)";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, as_title);
 			psmt.setString(2, as_content);
@@ -224,9 +120,245 @@ public class ASDAO {
 			} catch (Exception e2) {
 				e2.printStackTrace();
 			}
+		}
+		return cnt; 
+	}
+
+	// 조회수 증가 기능
+	public void updateAS_cnt(int as_seq) {
+
+		try {
+			DB();
+
+			String sql = "update T_AS set AS_CNT = AS_CNT+1 where AS_SEQ = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, as_seq);
+
+			psmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+
+			try {
+				close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
 
 		}
-		return cnt;
-
 	}
+
+	// 제목 클릭했을 때 내용 보여주는 기능
+	public ArrayList<ASVO> getAS_content(int as_seq) {
+		ArrayList<ASVO> arr_vo = new ArrayList<ASVO>();
+
+		try {
+
+			DB();
+
+			String sql = "select * from T_AS where AS_SEQ = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, as_seq);
+
+			rs = psmt.executeQuery();
+
+			if (rs.next()) {
+
+				String getAs_category = rs.getString(1);
+				String getAs_title = rs.getString(2);
+				String getMem_id = rs.getString(3);
+				String getAs_content = rs.getString(4);
+
+				ASVO vo = new ASVO(getAs_category, getAs_title, getMem_id, getAs_content);
+				arr_vo.add(vo);
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+
+			try {
+				close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+
+		}
+		return arr_vo;
+	}
+
+	// 글 수정
+	public void update_AS(String as_category, String as_title, String as_content, String as_file, int as_seq) {
+		try {
+
+			DB();
+
+			String sql = "update T_AS set AS_TITLE=?, AS_CONTENT=?, AS_FILE=?, AS_CATEGORY =? where AS_SEQ = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, as_title);
+			psmt.setString(2, as_content);
+			psmt.setString(3, as_file);
+			psmt.setString(4, as_category);
+			psmt.setInt(5, as_seq);
+
+			psmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+
+			try {
+				close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
+
+	// 글 삭제
+	public void delete_AS(int as_seq) {
+
+		try {
+
+			DB();
+
+			String sql_AS = "delete from T_AS where =" + as_seq;
+			String sql_AS_cmt = "delete from T_AS_COMMENT where AS_SEQ" + as_seq;
+			psmt = conn.prepareStatement(sql_AS);
+			psmt.executeUpdate();
+			psmt = conn.prepareStatement(sql_AS_cmt);
+			psmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+
+			try {
+				close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
+
+	// 댓글 보여주는 기능
+	public ArrayList<ASReplyVO> getAS_cmt_content(int as_cmt_seq, String mem_id, String as_cmt_content) {
+
+		ArrayList<ASReplyVO> arr_vo = new ArrayList<ASReplyVO>();
+
+		try {
+
+			DB();
+
+			String sql = "select * from T_AS_COMMENT where AS_CMT_SEQ = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, as_cmt_seq);
+
+			rs = psmt.executeQuery();
+
+			while (rs.next()) {
+
+				String getAS_cmt_content = rs.getString(1);
+				String getMem_id = rs.getString(2);
+
+				ASReplyVO vo = new ASReplyVO(getAS_cmt_content, getMem_id);
+				arr_vo.add(vo);
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+
+			try {
+				close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+
+		}
+		return arr_vo;
+	}
+
+	//댓글 작성 
+	public int write_AS_cmt(String as_cmt_content, String mem_id) {
+
+		int cnt = 0;
+
+		try {
+
+			DB();
+
+			String sql = "insert into T_AS_COMMENT values(as_cmt_seq.nextval, ?, ?, sysdate)";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, mem_id);
+			psmt.setString(2, as_cmt_content);
+
+			cnt = psmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+
+			try {
+				close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return cnt; 
+	}
+
+	// 댓글 수정
+	public void update_AS_cmt(String as_cmt_content, int as_cmt_seq) {
+		try {
+
+			DB();
+
+			String sql = "update T_AS_COMMENT set AS_CMT_CONTENT=? where AS_CMT_SEQ = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, as_cmt_content);
+			psmt.setInt(2, as_cmt_seq);
+
+			psmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+
+			try {
+				close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
+
+	// 댓글 삭제
+	public void delete_AS_cmt(int as_cmt_seq) {
+
+		try {
+
+			DB();
+
+			String sql = "delete from T_AS where AS_CMT_SEQ = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, as_cmt_seq);
+
+			psmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+
+			try {
+				close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
+
 }
