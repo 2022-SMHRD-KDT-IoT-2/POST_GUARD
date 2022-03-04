@@ -54,6 +54,7 @@
 			<ul>
 				<li><a href="reservation.jsp">발송 예약</a></li>
 				<li><a href="enrollnumber.jsp">운송장 번호 등록</a></li>
+				<li><a href="mytrackingnum.jsp">등록한 운송장 번호</a></li>
 				<%if(!userInfo.isSocial()) { %>
 				<li><a class="editLink" href="edit.jsp">회원 정보 수정</a></li>
 				<%} %>
