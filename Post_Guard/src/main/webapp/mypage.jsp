@@ -55,8 +55,10 @@
 				<li>발송 예약</li>
 				<li>운송장 번호 등록</li>
 				<li>회원 정보 수정</li>
+				<%if(userInfo.getMem_id().equals("admin")) { %>
 				<li>택배사 등록 - 관리자 전용</li>
 				<li>고객 정보 관리 - 관리자 전용</li>
+				<%} %>
 			</ul>
 		</div>
 		<div class="mypage__section2">
