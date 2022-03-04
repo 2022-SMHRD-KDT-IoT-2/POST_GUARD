@@ -9,6 +9,7 @@
 <script src="https://kit.fontawesome.com/44ebe7b134.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="assets/css/main.css" />
 <link rel="stylesheet" href="assets/css/sidebar.css" />
+<link rel="stylesheet" href="assets/css/mypage.css" />
 <link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
 <title>POST-GUARD | MYPAGE</title>
 </head>
@@ -47,6 +48,53 @@
 			</nav>
 		</div>
 	</section>
+	
+	<div class="mypage__container">
+		<div class="mypage__section1">
+			<ul>
+				<li>발송 예약</li>
+				<li>운송장 번호 등록</li>
+				<li>회원 정보 수정</li>
+				<li>택배사 등록 - 관리자 전용</li>
+				<li>고객 정보 관리 - 관리자 전용</li>
+			</ul>
+		</div>
+		<div class="mypage__section2">
+			<div class="mypage__section2--inner">
+				<span><%=userInfo.getMem_name() %>님의 계정 정보</span>
+				<div class="mypage__info-name">
+					<span class="mypage__info-name-font">기본정보</span>
+					<div class="mypage__info-nameDetail">
+						<div class="mypage__info-nameDetail-id">
+							<span>ID</span>
+							<span class="mypage__info-userinfo"><%=userInfo.getMem_id() %></span>
+						</div>
+						<div class="mypage__info-nameDetail-name">
+							<span>이름</span>
+							<span class="mypage__info-userinfo"><%=userInfo.getMem_name() %></span>
+						</div>
+						<div class="mypage__info-nameDetail-addr">
+							<span>주소</span>
+							<span class="mypage__info-userinfo"><%=userInfo.getMem_addr() %></span>
+						</div>
+					</div>
+				</div>
+				<div class="mypage__info-contact">
+					<span class="mypage__info-phone-font">연락처정보</span>		
+					<div class="mypage__info-phoneDetail">
+						<div class="mypage__info-phoneDetail-email">
+							<span>E-MAIL</span>
+							<span class="mypage__info-userinfo"><%=userInfo.getMem_email() %></span>
+						</div>
+						<div class="mypage__info-phoneDetail-phone">
+							<span>PHONE</span>
+							<span class="mypage__info-userinfo"><%=userInfo.getMem_phone() %></span>
+						</div>
+					</div>			
+				</div>
+			</div>
+		</div>
+	</div>
 	
 		<!-- Footer -->
 	<footer id="footer">
