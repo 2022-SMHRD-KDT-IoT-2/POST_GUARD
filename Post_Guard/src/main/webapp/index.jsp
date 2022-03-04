@@ -7,17 +7,14 @@
 <html>
 
 <head>
-
 <title>POST-GUARD</title>
-
 <meta charset="utf-8" />
-
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
-
 <link rel="stylesheet" href="assets/css/main.css" />
 <link rel="stylesheet" href="assets/css/button.css" />
 <link rel="stylesheet" href="assets/css/sidebar.css" />
+<link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
 </head>
 
 <body class="is-preload">
@@ -74,13 +71,34 @@
 
 
 	<!-- Footer -->
-	<footer id="footer" class="wrapper">
+	<footer id="footer">
 		<div class="footer__inner">
-			<ul class="menu">
-				<li style="font-size : 20px">&copy; POST GUARD; All rights reserved.</li>
-				<li style="font-size : 20px">회사 소개</li>
-				<li style="font-size : 20px">고객 센터</li>
-			</ul>
+			<div class="footer__up">
+				<img class="footerlogo" src="./images/footerlogo.png" />
+				<div class="footer__up-textrow1">
+					<a href="product.jsp"><span>상품 소개</span></a>
+				</div>
+				<div class="footer__up-textrow2">
+					<a href="service.jsp"><span>서비스 신청</span></a>
+				</div>
+				<div class="footer__up-textrow3">
+					<a href="#"><span>회사 소개</span></a>
+				</div>
+				<div class="footer__up-textrow4">
+					<a href="#"><span>채용</span></a>
+				</div>
+			</div>
+			<hr>
+			<div class="footer__down">
+				<span>광주 동구 예술길 31-15 광주아트센터 4층 (POST-GUARD)
+ 사업자 등록번호 : 375-87-00088 직업정보제공사업 신고번호 : J1200020200016</span>
+				<div class="footer__icons">
+					<a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+					<a href="https://twitter.com/"><i class="fa-brands fa-twitter fa-2xl"></i></a>
+					<a href="https://ko-kr.facebook.com/"><i class="fa-brands fa-facebook-square fa-2xl"></i></a>
+				</div>
+				<span>&copy; POST GUARD; All rights reserved.</span>
+			</div>
 		</div>
 	</footer>
 
@@ -93,6 +111,7 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/index.js"></script>
+	
 </body>
 
 </html>
