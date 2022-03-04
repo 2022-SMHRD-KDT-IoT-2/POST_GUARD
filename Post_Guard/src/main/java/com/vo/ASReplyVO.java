@@ -11,8 +11,8 @@ public class ASReplyVO {
 	// ex) 2022/03/02 ADMIN 2022/03/03일 수거 예정입니다.
 	public ASReplyVO(String as_cmt_content, String mem_id) {
 		super();
-		this.mem_id = mem_id;
 		this.as_cmt_content = as_cmt_content;
+		this.mem_id = mem_id;
 
 	}
 
