@@ -13,6 +13,7 @@
     <script src="https://kit.fontawesome.com/44ebe7b134.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/sidebar.css" />
+    <link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
     <title>POST-GUARD | 서비스신청</title>
   </head>
   <body>
