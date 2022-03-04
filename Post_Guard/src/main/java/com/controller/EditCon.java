@@ -42,7 +42,7 @@ public class EditCon extends HttpServlet {
 		MemberDAO dao = new MemberDAO();
 
 		String mem_id = userInfo.getMem_id();
-		String mem_pw = userInfo.getMem_pw();
+		String mem_pw = element.getAsJsonObject().get("password").getAsString();
 		boolean isSocial = userInfo.isSocial();
 		String mem_name = element.getAsJsonObject().get("username").getAsString();
 		String mem_addr = element.getAsJsonObject().get("addr").getAsString();

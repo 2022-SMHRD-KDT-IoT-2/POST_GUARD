@@ -66,19 +66,23 @@
 		<div class="mypage__section2">
 			<div class="mypage__section2--inner">
 				<span><%=userInfo.getMem_name() %>님의 계정 정보</span>
-				<div class="mypage__info-name">
-					<span class="mypage__info-name-font">기본정보</span>
-					<div class="mypage__info-nameDetail">
-						<div class="mypage__info-nameDetail-id">
+				<div class="mypage__info-user">
+					<span class="mypage__info-user-font">기본정보</span>
+					<div class="mypage__info-userDetail">
+						<div class="mypage__info-userDetail-id">
 							<span>ID</span>
 							<span class="mypage__info-userinfo"><%=userInfo.getMem_id() %></span>
 						</div>
-						<div class="mypage__info-nameDetail-name">
+						<div class="mypage__info-userDetail-pw">
+							<span>PASSWORD</span>
+							<input class="edit_pw" type="text" value=<%=userInfo.getMem_pw() %> required >
+						</div>
+						<div class="mypage__info-userDetail-name">
 							<span>이름</span>
 							<!-- 수정 하게 -->
 							<input class="edit_name" type="text" value=<%=userInfo.getMem_name() %> required >
 						</div>
-						<div class="mypage__info-nameDetail-addr">
+						<div class="mypage__info-userDetail-addr">
 							<span>주소</span>
 							<!-- 수정 하게 -->
 							<input class="edit_addr" type="text" value=<%=userInfo.getMem_addr() %> required >

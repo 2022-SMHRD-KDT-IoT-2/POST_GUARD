@@ -42,7 +42,7 @@
 	font-weight: 600;
 }
 
-.mypage__info-name,
+.mypage__info-user,
 .mypage__info-contact {
 	
 	padding : 20px;
@@ -73,9 +73,9 @@
 	font-weight : 300;
 }
 
-.mypage__info-nameDetail-id,
-.mypage__info-nameDetail-name,
-.mypage__info-nameDetail-addr,
+.mypage__info-userDetail-id,
+.mypage__info-userDetail-name,
+.mypage__info-userDetail-addr,
 .mypage__info-phoneDetail-email,
 .mypage__info-phoneDetail-phone {
 	width : 100%;
