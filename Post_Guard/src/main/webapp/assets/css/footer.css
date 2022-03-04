@@ -1,0 +1,17 @@
+/* Footer */
+#footer>.inner a {
+	border-bottom-color: rgba(255, 255, 255, 0.15);
+}
+
+#footer>.inner a:hover {
+	border-bottom-color: transparent;
+}
+
+#footer>.inner .menu {
+	font-size: 0.3em;
+	color: rgba(255, 255, 255, 0.15);
+}
+
+#header+#wrapper+#footer>.inner {
+	margin: 0 auto;
+}
