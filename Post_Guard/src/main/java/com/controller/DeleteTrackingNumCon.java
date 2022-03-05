@@ -12,26 +12,22 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.dao.DeliveryDAO;
-import com.dao.MemberDAO;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.vo.MemberVO;
 
 /**
- * Servlet implementation class EnrollTrackingNumCon
+ * Servlet implementation class DeleteTrackingNumCon
  */
-
-// 운송장 번호를 등록하는 컨트롤러 입니다.
-@WebServlet("/EnrollTrackingNumCon")
-public class EnrollTrackingNumCon extends HttpServlet {
+@WebServlet("/DeleteTrackingNumCon")
+public class DeleteTrackingNumCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 		request.setCharacterEncoding("UTF-8");
 		DeliveryDAO dao = new DeliveryDAO();
 		PrintWriter out = response.getWriter();
-		HttpSession session = request.getSession();
-		MemberVO userInfo = (MemberVO)session.getAttribute("userInfo");
 
 		StringBuffer sb = new StringBuffer();
 		String line = null;
@@ -44,10 +40,10 @@ public class EnrollTrackingNumCon extends HttpServlet {
 		JsonParser parser = new JsonParser();
 		JsonElement element = parser.parse(sb.toString());
 
-		String delivery_no = element.getAsJsonObject().get("trackingNumber").getAsString();
+		String delivery_no = element.getAsJsonObject().get("seq").getAsString();
 		
 		
-		int cnt = dao.enroll_tracking_num(delivery_no, userInfo.getMem_id(), "n");
+		int cnt = dao.delete_tracking_num(delivery_no);
 
 		
 		if (cnt > 0) {
