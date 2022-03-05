@@ -147,3 +147,30 @@
 .company_enroll--input span {
 	font-size : 20px;
 }
+
+.tracking__section--inner{
+	height : 80%;
+	width : 100%;
+	padding : 20px;
+	display : flex;
+	flex-direction : column;
+	align-items : center;
+	font-size : 25px;
+	font-weight: 600;
+}
+
+.tracking__detail {
+	width : 100%;
+	padding : 5px;	
+}
+
+.tracingnum--container {
+	display: flex;
+	align-items: center;
+	justify-content : space-between;
+}
+
+.trackingnum {
+	display : flex;
+	width : 255px;
+}
