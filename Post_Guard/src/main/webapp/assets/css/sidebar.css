@@ -38,7 +38,7 @@ body.is-ie #sidebar>.inner {
 
 #sidebar nav>ul {
 	list-style: none;
-	/* padding: 0; */
+padding: 0; 
 	padding: 0px 100px 0px 100px;
 	display: flex;
 	justify-content: space-between;

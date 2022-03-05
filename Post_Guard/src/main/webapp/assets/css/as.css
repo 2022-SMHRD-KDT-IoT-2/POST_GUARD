@@ -1,0 +1,123 @@
+@charset "EUC-KR";
+
+body {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: white;
+  font-weight: 300;
+}
+
+/* p {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+a {
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+a,
+a:hover {
+  text-decoration: none !important;
+}
+
+/* .content {
+  padding: 7rem 0;
+} */
+
+h2 {
+  font-size: 40px;
+  color: #092961;
+}
+
+.AS{
+	width : 100px;
+	height:200px;
+}
+.AS_table_col {
+ background-color:#fafafa; 
+ 
+}
+.AS_table_col thead tr{
+/*  padding-bottom: 300px;
+  border-top: none;
+  border-bottom: none !important;  */
+  color: #092961;
+  font-size: 15px;
+  letter-spacing: 0.2rem;
+}
+.AS_table_col tbody th,
+.AS_table_col tbody td {
+	
+  color: #092961;
+  font-weight: 400;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-weight: 300;
+  border: none; 
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.AS_table_col tbody th a,
+.AS_table_col tbody td a {
+  color: rgba(255, 255, 255, 0.3);
+}
+.AS_table_col tbody th .more,
+.AS_table_col tbody td .more {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+.AS_table_col tbody tr {
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.AS_table_col tbody tr:hover td,
+.AS_table_col tbody tr:focus td {
+  color:#092961;
+}
+.AS_table_col tbody tr:hover td a,
+.AS_table_col tbody tr:focus td a {
+  color: #fdd114;
+}
+.AS_table_col tbody tr:hover td .more,
+.AS_table_col tbody tr:focus td .more {
+  color: #fdd114;
+}
+.AS_table_col .td-box-wrap {
+  padding: 0;
+}
+.AS_table_col .box {
+  background: #092961;
+  border-radius: 4px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.AS_table_col .box td,
+.AS_table_col .box th {
+  border: none !important;
+}
