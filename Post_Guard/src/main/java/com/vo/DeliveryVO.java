@@ -3,15 +3,15 @@ package com.vo;
 public class DeliveryVO {
 	private int my_delivery_seq;
 	private String delivery_no;
-	private int receiver_id;
+	private String receiver_id;
 	private String reg_date;
-	private char delivery_status;
+	private String delivery_status;
 	private int rq_seq;
 	private String receipt_time;
 	
 	
 	
-	public DeliveryVO(int my_delivery_seq, String delivery_no, int receiver_id, String reg_date, char delivery_status,
+	public DeliveryVO(int my_delivery_seq, String delivery_no, String receiver_id, String reg_date, String delivery_status,
 			int rq_seq, String receipt_time) {
 		super();
 		this.my_delivery_seq = my_delivery_seq;
@@ -29,13 +29,13 @@ public class DeliveryVO {
 	public String getDelivery_no() {
 		return delivery_no;
 	}
-	public int getReceiver_id() {
+	public String getReceiver_id() {
 		return receiver_id;
 	}
 	public String getReg_date() {
 		return reg_date;
 	}
-	public char getDelivery_status() {
+	public String getDelivery_status() {
 		return delivery_status;
 	}
 	public int getRq_seq() {
