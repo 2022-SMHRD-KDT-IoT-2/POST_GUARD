@@ -92,8 +92,8 @@ public class ASDAO {
 	}
 
 	// AS 게시판에 글 등록
-	public int write_AS(String as_category, String as_title, String as_content, String as_file, String mem_id,
-			String as_date) {
+	public int write_AS(String as_category, String as_title, String as_content, String mem_id
+			) {
 
 		int cnt = 0;
 
@@ -101,11 +101,11 @@ public class ASDAO {
 
 			DB();
 
-			String sql = "insert into T_AS values(as_seq.nextval, ?, ?, sysdate, ?, ?, ?)";
+			String sql = "insert into T_AS (as_title, as_content, as_date, as_file, as_cnt, mem_id, as_category, as_progress) values (?, ?, sysdate, 'noFile', 0, ?, ?, '진행중')";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, as_title);
 			psmt.setString(2, as_content);
-			psmt.setString(3, as_file);
+			psmt.setString(3, "noFile");
 			psmt.setString(4, mem_id);
 			psmt.setString(5, as_category);
 
@@ -218,18 +218,22 @@ public class ASDAO {
 	}
 
 	// 글 삭제
-	public void delete_AS(int as_seq) {
-
+	public int delete_AS(int as_seq) {
+		int cnt = 0; 
+		int doneDelete = 0;
 		try {
 
 			DB();
-
+			
 			String sql_AS = "delete from T_AS where =" + as_seq;
-			String sql_AS_cmt = "delete from T_AS_COMMENT where AS_SEQ" + as_seq;
 			psmt = conn.prepareStatement(sql_AS);
-			psmt.executeUpdate();
-			psmt = conn.prepareStatement(sql_AS_cmt);
-			psmt.executeUpdate();
+			doneDelete = psmt.executeUpdate();
+			
+			if(doneDelete > 0) {
+				String sql_AS_cmt = "delete from T_AS_COMMENT where AS_SEQ=" + as_seq;
+				psmt = conn.prepareStatement(sql_AS_cmt);
+				cnt = psmt.executeUpdate();
+			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -241,6 +245,7 @@ public class ASDAO {
 				e2.printStackTrace();
 			}
 		}
+		return cnt; 
 	}
 
 	// 댓글 보여주는 기능
