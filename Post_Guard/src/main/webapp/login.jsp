@@ -73,8 +73,8 @@
                 	<span id = "loginAlertId" class="loginAlert hide">아이디 또는 비밀번호가 틀렸습니다.</span>
                 </div>
                 <ul class="actions">
-                  <li class="loginbtn">
-                    <button class="login" style="font-size: 15px;">로그인</button>
+                  <li class="loginbtnContainer">
+                    <button class="login loginBtn" style="font-size: 15px;">로그인</button>
                   </li>
                 </ul>
                 <div id="naver_id_login" class="n_loginbtn__container">
