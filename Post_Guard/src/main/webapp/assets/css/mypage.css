@@ -31,7 +31,7 @@
 }
 
 .mypage__section2--inner {
-	height : 80%;
+	height : auto;
 	width : 100%;
 	padding : 20px;
 	display : flex;
@@ -93,8 +93,9 @@
 .editdoneBtn {
 	all : unset;
 	width : 200px;
-	margin-top : 30px;
-	padding : 10px;
+	margin-top : 10px;
+	font-size: 20px;
+	padding : 5px;
 	border : 1px solid rgb(9, 41, 97);
 	border-radius : 20px;
 	text-align : center;

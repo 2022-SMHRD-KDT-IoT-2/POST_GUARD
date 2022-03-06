@@ -41,3 +41,9 @@
 .borderbottomgreen {
 	border-bottom : 1px solid green;
 }
+
+.daumBtn {
+	all : unset;
+	cursor: pointer;
+	font-size: 20px;
+}
