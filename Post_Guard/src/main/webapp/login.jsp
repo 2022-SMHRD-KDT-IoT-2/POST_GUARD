@@ -95,7 +95,7 @@
     </div>
     
 	<!-- Footer -->
-	<footer id="footer">
+	<footer id="footer" style="position : absolute; bottom : 0;">
 		<div class="footer__inner">
 			<div class="footer__up">
 				<img class="footerlogo" src="./images/footerlogo.png" />

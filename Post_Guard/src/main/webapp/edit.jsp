@@ -90,7 +90,7 @@
 								<input type="text" id="sample6_address" placeholder="주소" readonly> 
 								<input type="text" id="sample6_detailAddress" placeholder="상세주소">
 								<div class="addr__container">
-									<input type="button" class=""
+									<input type="button" class="daumBtn"
 										value="우편번호 찾기"
 										onclick="openDaumPostCode()">
 								</div>
