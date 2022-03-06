@@ -49,7 +49,7 @@ ArrayList<ASReplyVO> arr_reply = dao.getAS_cmt_content();
 
             <tbody>
               <tr scope="row">
-                <td><%= %></td>
+                <td></td>
                 <td><a href="#">제목 </a></td>
                 <td>
 
