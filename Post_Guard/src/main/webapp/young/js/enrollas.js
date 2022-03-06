@@ -20,6 +20,7 @@ const handleXMLHTTPRequest = (as_title, as_content, as_category) => {
 
   xhr.onreadystatechange = function () {
     if (xhr.readyState === XMLHttpRequest.DONE) {
+      console.log("request");
       //요청성공
       if (xhr.status === 200) {
         if (xhr.responseText === "success") {

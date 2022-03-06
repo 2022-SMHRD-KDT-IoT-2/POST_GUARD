@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ page import="com.vo.MemberVO" %>
 <!doctype html>
 <html lang="en">
   <head>
@@ -20,6 +21,7 @@
     <title>Contact Form #4</title>
   </head>
   <body>
+  <% MemberVO vo = (MemberVO)session.getAttribute("userInfo");%>
   
 
   <div class="content">
@@ -44,7 +46,7 @@
                   <label for="name" class="col-form-label">작성자 아이디</label>
                   
                   <!--  input -->
-                  <input type="text" class="form-control" name="name" id="id" placeholder="Your name">
+                  <input type="text" class="form-control" name="name" id="id" value="<%=vo.getMem_id()%>" disabled>
                 </div>
                 <div class="col-md-6 form-group">
                   <label for="name" class="col-form-label">Organization</label>

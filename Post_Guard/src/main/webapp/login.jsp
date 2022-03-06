@@ -23,9 +23,6 @@
     <title>POST-GUARD | 로그인</title>
   </head>
   <body>
-  <%
- 	MemberVO userInfo = (MemberVO)session.getAttribute("userInfo");
-  %>
 	<section id="sidebar">
 		<div class="inner">
 			<nav>
@@ -40,13 +37,8 @@
 							<li><a href="faq.jsp">FAQ</a></li>
 						</div>
 						<div class="box2">
-						<%if(userInfo == null) {%>
 							<li><a href="join.jsp">회원가입</a></li>
 							<li><a href="login.jsp">로그인</a></li>
-						<%} else { %>
-							<li><a href="mypage.jsp"><%=userInfo.getMem_name() %></a></li>
-							<li><a href="LogoutCon">로그아웃</a>
-						<%} %>
 						</div>
 					</div>
 					<!-- <li><a href="#">택배 예약</a></li>
