@@ -26,8 +26,10 @@ public class SocialLoginCon extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 소셜 로그인 컨트롤러입니다!
+		MemberDAO dao = new MemberDAO();
 		PrintWriter out = response.getWriter();
 		request.setCharacterEncoding("UTF-8");
+		MemberVO vo = null;
 
 		StringBuffer sb = new StringBuffer();
 		String line = null;
@@ -42,9 +44,19 @@ public class SocialLoginCon extends HttpServlet {
 
 		String social_mem_id = element.getAsJsonObject().get("id").getAsString();
 		String social_mem_name = element.getAsJsonObject().get("name").getAsString();
+		
+		String compareId = dao.return_id(social_mem_id);
 
-		MemberDAO dao = new MemberDAO();
-		MemberVO vo = dao.social_login(social_mem_id, social_mem_name); 
+		if(social_mem_id.equals(compareId)) {
+			// 이미 소셜 로그인을 전에 한 적이 있는 사람이면? -> 로그인
+			vo = dao.social_login(social_mem_id, "socialpw");
+		} else {
+			// 처음 소셜 로그인을 이용하는 사람이면? -> 회원가입 -> 로그인
+			int cnt = dao.join(social_mem_id, "socialpw", social_mem_name, "01000000000", "social", "social");
+			if (cnt > 0) {				
+				vo = dao.social_login(social_mem_id, "socialpw");
+			}
+		}
 
 		if (vo != null) {
 			HttpSession session = request.getSession();

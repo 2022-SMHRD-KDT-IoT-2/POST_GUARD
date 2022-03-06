@@ -40,8 +40,6 @@ public class AuthCon extends HttpServlet {
 		JsonParser parser = new JsonParser();
 		JsonElement element = parser.parse(sb.toString());
 
-		MemberDAO dao = new MemberDAO();
-
 		String mem_pw = userInfo.getMem_pw();
 		String input_pw = element.getAsJsonObject().get("pw").getAsString();
 		
