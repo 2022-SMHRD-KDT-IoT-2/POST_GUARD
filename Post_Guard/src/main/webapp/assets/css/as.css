@@ -81,11 +81,11 @@ h2 {
 
 .AS_table_col tbody th a,
 .AS_table_col tbody td a {
-  color: rgba(255, 255, 255, 0.3);
+  color:#000000;
 }
 .AS_table_col tbody th .more,
 .AS_table_col tbody td .more {
-  color: rgba(255, 255, 255, 0.3);
+  color: #000000;
   font-size: 11px;
   font-weight: 900;
   text-transform: uppercase;

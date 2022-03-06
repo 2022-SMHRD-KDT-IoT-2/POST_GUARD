@@ -26,12 +26,11 @@
   </head>
   <body>
   
-  <%
-/* ASDAO dao = new ASDAO(); 
+
+<!--  ASDAO dao = new ASDAO(); 
 ASVO vo = dao.getAS_content(as_seq); 
 ArrayList<ASReplyVO> arr_reply = dao.getAS_cmt_content(); 
-*/
-		%>
+-->
     <div class="content">
       <div class="container">
         <h1 class="mb-5">AS 신청</h1>
@@ -50,10 +49,10 @@ ArrayList<ASReplyVO> arr_reply = dao.getAS_cmt_content();
 
             <tbody>
               <tr scope="row">
-                <td></td>
-                <td><a href="#"></a></td>
+                <td><%= %></td>
+                <td><a href="#">제목 </a></td>
                 <td>
-                  Web Designer
+
                 </td>
                 <td>+63 983 0962 971</td>
                 <td>NY University</td>
@@ -66,7 +65,7 @@ ArrayList<ASReplyVO> arr_reply = dao.getAS_cmt_content();
       </div>
     </div>
     
-   <button name = "enrollASList" value ="AS등록">게시글 등록</button>
+   <a href="enrollas.jsp"><button name = "enrollASList" value ="AS등록">게시글 등록</button></a>
 
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/popper.min.js"></script>

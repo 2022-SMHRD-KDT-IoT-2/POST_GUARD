@@ -105,9 +105,8 @@ public class ASDAO {
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, as_title);
 			psmt.setString(2, as_content);
-			psmt.setString(3, "noFile");
-			psmt.setString(4, mem_id);
-			psmt.setString(5, as_category);
+			psmt.setString(3, mem_id);
+			psmt.setString(4, as_category);
 
 			cnt = psmt.executeUpdate();
 
