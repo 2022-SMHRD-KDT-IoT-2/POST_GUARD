@@ -109,7 +109,6 @@ public class MemberDAO {
 	public int passwordUpdate(String mem_id, String mem_pw) {
 		int cnt = 0;
 		try {
-
 			DB();
 
 			String sql = "update t_member set mem_pw = ?  where mem_id = ?";
@@ -165,8 +164,63 @@ public class MemberDAO {
 		return vo;
 	}
 	
-	public MemberVO social_login(String social_mem_id, String social_mem_name) {
-		MemberVO vo = new MemberVO(social_mem_id, "X", social_mem_name, "X", "X", "X", true);
+	public MemberVO social_login(String mem_id, String mem_pw) {
+		MemberVO vo = null;
+		try {
+
+			DB();
+
+			String sql = "select * from t_member where mem_id = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, mem_id);
+
+			rs = psmt.executeQuery();
+
+			if (rs.next()) {
+				String getMem_id = rs.getString(1);
+				String getMem_pw = rs.getString(2);
+				String mem_name = rs.getString(3);
+				String phone = rs.getString(4);
+				String email = rs.getString(5);
+				String addr = rs.getString(6);
+
+				if (mem_pw.equals(getMem_pw)) {
+					vo = new MemberVO(getMem_id, getMem_pw, mem_name, phone, email, addr, true);
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		// 로그인 성공 시 vo 객체 리턴
 		return vo;
+	}
+	
+	public String return_id (String mem_id) {
+		String id = "";
+		try {
+			DB();
+
+			String sql = "select mem_id from t_member where mem_id = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, mem_id);
+			
+			rs = psmt.executeQuery();
+			
+			if(rs.next()) {
+				String getMem_id = rs.getString(1);
+				id = getMem_id;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return id;
 	}
 }

@@ -39,6 +39,7 @@
 	        console.log(xhr.responseText);
 	        if (xhr.responseText === "socialLoginSuccess") {
 	          // 로그인 성공
+	          // 받은 데이터를 기반으로 회원가입 시켜 버리고 로그인
 	          window.opener.location.href = "index.jsp";
 	          window.close();
 	        } else {
