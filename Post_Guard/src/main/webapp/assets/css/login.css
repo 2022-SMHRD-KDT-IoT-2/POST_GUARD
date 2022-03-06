@@ -6,7 +6,7 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.loginbtn {
+.loginbtnContainer {
   margin: 0 auto;
   line-height: 1.5em;
 }
@@ -31,4 +31,16 @@
 	width : 100%;
 	display : flex;
 	justify-content : center;
+}
+
+.loginBtn {
+	display: flex;
+	all : unset;
+	cursor : pointer;
+	width : 185px;
+	height : 40px;
+	text-align : center;
+	line-height : 40px;
+	border : 1px solid black;
+	margin-bottom : 5px;
 }
