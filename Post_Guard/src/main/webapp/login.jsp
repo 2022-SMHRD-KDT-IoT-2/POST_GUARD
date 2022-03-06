@@ -24,7 +24,6 @@
   </head>
   <body>
   <%
-  	MemberDAO dao = new MemberDAO();
  	MemberVO userInfo = (MemberVO)session.getAttribute("userInfo");
   %>
 	<section id="sidebar">
