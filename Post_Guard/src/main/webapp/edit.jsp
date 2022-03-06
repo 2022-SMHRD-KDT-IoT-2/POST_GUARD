@@ -84,10 +84,17 @@
 							<input class="edit_name" type="text" value=<%=userInfo.getMem_name() %> required >
 						</div>
 						<div class="mypage__info-userDetail-addr">
-							<span style="font-weight : 600;">주소</span>
-							<!-- 수정 하게 -->
-							<input class="edit_addr" type="text" value=<%=userInfo.getMem_addr() %> required >
-							<!-- 주소 선택 버튼 넣어야함 ㅠㅠ - 종재 -->
+							<div class="field">
+								<span style="font-weight : 600;">주소</span>
+								<input type="text" id="sample6_postcode" placeholder="우편번호" readonly> 
+								<input type="text" id="sample6_address" placeholder="주소" readonly> 
+								<input type="text" id="sample6_detailAddress" placeholder="상세주소">
+								<div class="addr__container">
+									<input type="button" class="button addr addr-search"
+										value="우편번호 찾기"
+										onclick="openDaumPostCode()">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -144,5 +151,46 @@
 		</div>
 	</footer>
 	<script src="assets/js/edit.js"></script>
+	<script>
+		function openDaumPostCode() {
+			new daum.Postcode(
+					{
+						oncomplete : function(data) {
+							var addr = "";
+							var extraAddr = "";
+							if (data.userSelectedType === "R") {
+								addr = data.roadAddress;
+							} else {
+								addr = data.jibunAddress;
+							}
+							if (data.userSelectedType === "R") {
+								if (data.bname !== ""
+										&& /[동|로|가]$/g.test(data.bname)) {
+									extraAddr += data.bname;
+								}
+								if (data.buildingName !== ""
+										&& data.apartment === "Y") {
+									extraAddr += extraAddr !== "" ? ", "
+											+ data.buildingName
+											: data.buildingName;
+								}
+								if (extraAddr !== "") {
+									extraAddr = " (" + extraAddr + ")";
+								}
+								document
+										.getElementById("sample6_detailAddress").value = extraAddr;
+							} else {
+								document
+										.getElementById("sample6_detailAddress").value = "";
+							}
+							document.getElementById("sample6_postcode").value = data.zonecode;
+							document.getElementById("sample6_address").value = addr;
+							document.getElementById("sample6_detailAddress")
+									.focus();
+						},
+					}).open();
+		}
+	</script>
+	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </body>
 </html>

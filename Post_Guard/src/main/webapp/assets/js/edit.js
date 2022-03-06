@@ -42,12 +42,15 @@ const handleXhr = (username, password, address, email, phone) => {
 };
 
 const handleEdit = (e) => {
-  console.log("click!");
+  const postCode = document.querySelector("#sample6_postcode");
+  const address = document.querySelector("#sample6_address");
+  const detailaddress = document.querySelector("#sample6_detailAddress");
+  let addr = postCode.value + address.value + detailaddress.value;
   e.preventDefault();
   handleXhr(
     username.value,
     password.value,
-    address.value,
+    addr,
     email.value,
     phone.value
   );

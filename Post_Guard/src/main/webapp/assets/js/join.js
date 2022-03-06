@@ -179,7 +179,7 @@ const handleJoin = (e) => {
   const postCode = document.querySelector("#sample6_postcode");
   const address = document.querySelector("#sample6_address");
   const detailaddress = document.querySelector("#sample6_detailAddress");
-  let addr = postCode.value + address.value + detailaddress;
+  let addr = postCode.value + address.value + detailaddress.value;
   e.preventDefault();
   passwordConfirm();
   if (pwPass) {
