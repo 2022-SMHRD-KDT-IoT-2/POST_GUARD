@@ -15,11 +15,8 @@
 <head>
 <!-- Required meta tags -->
 <meta charset="utf-8" />
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<link
-	href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap"
-	rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/fonts/icomoon/style.css" />
 <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
 
@@ -37,9 +34,32 @@
 
 	<%
 	ASDAO dao = new ASDAO();
-	MemberVO vo = (MemberVO) session.getAttribute("userInfo");
+	MemberVO userInfo = (MemberVO) session.getAttribute("userInfo");
 	ArrayList<ASDAO> arr_dao = new ArrayList<ASDAO>();
 	%>
+	
+			<div class="inner">
+			<nav>
+				<ul>
+					<li><a href="index.jsp"><img
+							class="mainlogo" src="./images/logo(white).png" /></a></li>
+					<div class="box_container">
+						<div class="box1">
+							<li><a href="product.jsp">상품 소개</a></li>
+							<li><a href="service.jsp">서비스 신청</a></li>
+							<li><a href="as.jsp">AS 신청</a></li>
+							<li><a href="faq.jsp">FAQ</a></li>
+						</div>
+						<div class="box2">
+						<%if(userInfo == null) {%>
+							<li><a href="join.jsp">회원가입</a></li>
+							<li><a href="login.jsp">로그인</a></li>
+						<%} else { %>
+							<li><a href="mypage.jsp"><%=userInfo.getMem_name() %></a></li>
+							<li><a href="LogoutCon">로그아웃</a>
+						<%} %>
+						</div>
+					</div>
 
 	<div class="content">
 		<div class="container">

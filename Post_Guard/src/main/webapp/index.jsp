@@ -16,59 +16,7 @@
 <link rel="stylesheet" href="assets/css/sidebar.css" />
 <link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
 </head>
-<style>
 
-.mainlogo {
- width: 180px;
- height: 200px;
-}
-
-.box1 li {
-
-font-size:40px;
-
-}
-
-.box2 li {
-
-font-size:35px;
-}
-
-
-.main__container{
-
-  margin-right: -20px;
-  margin-bottom: -20px; !important
-}
-
-
-.footerlogo{
-    
-    width: 150px;
-    height: 150px;
-   
-    
-}
-.footer__up-textrow1{
-font-size:25px;
-}
-
-.footer__up-textrow2{
-font-size:25px;
-}
-.footer__up-textrow3{
-font-size:25px;
-}
-.footer__up-textrow4{
-font-size:25px;
-}
-
-.footer__down{
-font-size:13px;
-}
-
-
-</style>
 <body class="is-preload">
 <%
 	MemberVO userInfo = (MemberVO)session.getAttribute("userInfo");

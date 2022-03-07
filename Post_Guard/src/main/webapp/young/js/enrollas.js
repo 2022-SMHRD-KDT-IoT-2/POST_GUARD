@@ -25,7 +25,7 @@ const handleXMLHTTPRequest = (as_title, as_content, as_category) => {
       if (xhr.status === 200) {
         if (xhr.responseText === "success") {
           alert("등록이 완료되었습니다. ");
-          locaion.href = "as.jsp";
+           location.href = "as.jsp"
         } else {
           alert("등록을 실패했습니다. ");
         }
