@@ -6,70 +6,75 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="com.dao.MemberDAO"%>
 <%@ page import="com.vo.MemberVO"%>
+<%@ page import="com.vo.ASVO"%>
+<%@ page import="com.dao.ASDAO"%>
+<%@ page import="com.vo.ASReplyVO"%>
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/fonts/icomoon/style.css" />
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap"
+	rel="stylesheet" />
+<link rel="stylesheet" href="assets/fonts/icomoon/style.css" />
+<link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <!-- Style -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+<!-- Style -->
+<link rel="stylesheet" href="assets/css/style.css" />
 
-    <title>AS 신청</title>
-  </head>
-  <body>
-  
+<title>AS 신청</title>
+</head>
+<body>
 
-<!--  ASDAO dao = new ASDAO(); 
-ASVO vo = dao.getAS_content(as_seq); 
-ArrayList<ASReplyVO> arr_reply = dao.getAS_cmt_content(); 
--->
-    <div class="content">
-      <div class="container">
-        <h1 class="mb-5">AS 신청</h1>
+	<%
+	ASDAO dao = new ASDAO();
+	MemberVO vo = (MemberVO) session.getAttribute("userInfo");
+	ArrayList<ASVO> arr_vo = new ArrayList<ASVO>();
+	%>
+	
+	<div class="content">
+		<div class="container">
+			<h1 class="mb-5">AS 신청</h1>
 
-        <div class="table-responsive">
-          <table class="table table-striped custom-table">
-            <thead>
-              <tr>
-                <th scope="col">글 번호</th>
-                <th scope="col">카테고리</th>
-                <th scope="col">제목</th>
-                <th scope="col">작성자</th>
-                <th scope="col">답변 유무</th>
-              </tr>
-            </thead>
+	 <a href="enrollas.jsp"><button name = "enrollASList" value ="AS등록">게시글 등록</button></a>
+			<div class="table-responsive">
+				<table class="table table-striped custom-table">
+					<thead>
+						<tr>
+							<th scope="col">글 번호</th>
+							<th scope="col">카테고리</th>
+							<th scope="col">제목</th>
+							<th scope="col">작성자</th>
+							<th scope="col">답변 유무</th>
+						</tr>
+					</thead>
 
-            <tbody>
-              <tr scope="row">
-                <td></td>
-                <td><a href="#">제목 </a></td>
-                <td>
+					<tbody>
+						<tr scope="row">
+							<td>seq</td>
+							<td>category</td>
+							<td><a href="#">title</a></td>
+							<td><%= vo.getMem_id() %></td>
+							<td>Y/N</td>
+						</tr>
 
-                </td>
-                <td>+63 983 0962 971</td>
-                <td>NY University</td>
-              </tr>
 
-           
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-    
-   <a href="enrollas.jsp"><button name = "enrollASList" value ="AS등록">게시글 등록</button></a>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
 
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/asmain.js"></script>
-  </body>
+
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/asmain.js"></script>
+</body>
 </html>
