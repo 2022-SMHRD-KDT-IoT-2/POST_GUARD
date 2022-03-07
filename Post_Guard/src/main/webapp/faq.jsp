@@ -21,12 +21,12 @@ body {
 }
 
 .faq-cat-content {
-    margin-top: 50px;
-    margin-bottom: 100px;
+    margin-top: 50px; 
+    margin-bottom: 100px; <!-- 하단 footer와의 마진 수치-->
 }
 
 .faq-cat-tabs li a {
-    margin-top: 30px;
+    margin-top: 30px; <!-- 상단 배너와 탭 사이의 마진 수치-->
     padding: 15px 10px 15px 10px;
     background-color: #ffffff;
     border: 1px solid #dddddd;
