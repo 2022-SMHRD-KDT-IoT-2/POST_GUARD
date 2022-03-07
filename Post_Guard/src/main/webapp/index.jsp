@@ -32,7 +32,6 @@ font-size:40px;
 .box2 li {
 
 font-size:35px;
-
 }
 
 

@@ -497,14 +497,6 @@ font-size:13px;
                                     </div>
                                 </div>
                             </div>
-
-
-                      
-                            
-                            
-                    
-                            
-                            
                           </div>
 					       </div>
 					    </div>    
