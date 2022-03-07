@@ -21,11 +21,12 @@ body {
 }
 
 .faq-cat-content {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 .faq-cat-tabs li a {
+    margin-top: 30px;
     padding: 15px 10px 15px 10px;
     background-color: #ffffff;
     border: 1px solid #dddddd;
