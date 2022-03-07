@@ -61,7 +61,9 @@
 				<li><a href="enrollcompany.jsp">택배사 등록 - 관리자 전용</a></li>
 				<li><a href="manageuser.jsp">고객 정보 관리 - 관리자 전용</a></li>
 				<%} %>
+				<li><span class="deleteMember">회원 탈퇴</span></li>
 			</ul>
+			<span class="hiddenId"><%=userInfo.getMem_id() %></span>
 		</div>
 		<div class="mypage__section2">
 			<div class="mypage__section2--inner">
@@ -132,5 +134,6 @@
 		</div>
 	</footer>
 	<script src="assets/js/auth.js"></script>
+	<script src="assets/js/deleteMember.js"></script>
 </body>
 </html>

@@ -223,4 +223,28 @@ public class MemberDAO {
 		}
 		return id;
 	}
+	
+	public int delete_user (String mem_id) {
+		int cnt = 0;
+		try {
+			DB();
+
+			String sql = "delete from t_member where mem_id = ?";
+
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, mem_id);
+
+			cnt = psmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return cnt;
+	}
 }
