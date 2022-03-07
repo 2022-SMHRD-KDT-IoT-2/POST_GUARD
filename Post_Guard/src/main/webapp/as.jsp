@@ -27,29 +27,26 @@
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 <!-- Style -->
 <link rel="stylesheet" href="assets/css/style.css" />
-
-<<<<<<< HEAD
 <title>AS 신청</title>
 </head>
 <body>
-=======
-    <title>AS 신청</title>
-  </head>
-   <body>
-  
->>>>>>> refs/remotes/origin/master
+
+	<title>AS 신청</title>
+</head>
+<body>
 
 	<%
 	ASDAO dao = new ASDAO();
 	MemberVO vo = (MemberVO) session.getAttribute("userInfo");
-	ArrayList<ASVO> arr_vo = new ArrayList<ASVO>();
+	ArrayList<ASDAO> arr_dao = new ArrayList<ASDAO>();
 	%>
-	
+
 	<div class="content">
 		<div class="container">
 			<h1 class="mb-5">AS 신청</h1>
 
-	 <a href="enrollas.jsp"><button name = "enrollASList" value ="AS등록">게시글 등록</button></a>
+			<a href="enrollas.jsp"><button name="enrollASList" value="AS등록">게시글
+					등록</button></a>
 			<div class="table-responsive">
 				<table class="table table-striped custom-table">
 					<thead>
@@ -64,12 +61,19 @@
 
 					<tbody>
 						<tr scope="row">
-							<td>seq</td>
-							<td>category</td>
-							<td><a href="#">title</a></td>
-							<td><%= vo.getMem_id() %></td>
-							<td>Y/N</td>
+
+							<%
+							for (int i = arr_dao.size() - 1; i >= 0; i--) {
+							%>
+						
+						<tr scope="row">
+							<td><a href="#?AS_seq=<%=arr_dao.get(i).getAS_list()%>"></a></td>
 						</tr>
+
+						<%
+						}
+						%>
+
 
 
 					</tbody>
