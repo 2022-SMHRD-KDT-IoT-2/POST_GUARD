@@ -33,7 +33,9 @@ public class ASVO {
 		this.as_content = as_content;
 
 	}
-	
+	public int getAs_seq() {
+		return as_seq;
+	}
 
 	public String getAs_title() {
 		return as_title;
