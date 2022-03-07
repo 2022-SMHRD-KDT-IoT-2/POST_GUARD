@@ -9,9 +9,12 @@
     <meta charset="utf-8" />
     <meta name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <script src="https://kit.fontawesome.com/44ebe7b134.js" crossorigin="anonymous"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/sidebar.css" />
     <link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
+    
     <title>POST-GUARD | FAQ</title>
   </head>
   <style>
@@ -32,14 +35,10 @@ font-size:35px;
 
 }  
   
-  
-body {
-    padding-top: 0px;
-}
 
 .faq-cat-content {
     margin-top: 50px; 
-    margin-bottom: 100px; <!-- 하단 footer와의 마진 수치-->
+    margin-bottom: 200px; <!-- 하단 footer와의 마진 수치-->
 }
 
 .faq-cat-tabs li a {
@@ -48,6 +47,12 @@ body {
     background-color: #ffffff;
     border: 1px solid #dddddd;
     color: #777777;
+}
+
+{
+
+  margin-right: -4px;
+  margin-bottom: -20px; !important
 }
 
 .nav-tabs>li {
@@ -96,8 +101,13 @@ border-bottom: none;
     width: 150px;
     height: 150px;
    
-    
+   }
+.panel-body{
+ font-size: 18px;
+
 }
+
+
 .footer__up-textrow1{
 font-size:25px;
 }
@@ -116,6 +126,13 @@ font-size:25px;
 font-size:13px;
 }
 
+.footer__inner {
+	color: rgb(9, 41, 97); !importnat
+	font-family: "mainfont";
+	font-size: 30px;
+	font-weight: normal;
+	line-height: 1.75;
+}
 
 </style>
 
@@ -503,7 +520,7 @@ font-size:13px;
 					</section>
 	
     
-	<!-- Footer -->
+<!-- Footer -->
 	<footer id="footer">
 		<div class="footer__inner">
 			<div class="footer__up">
@@ -536,7 +553,7 @@ font-size:13px;
 	</footer>
  </body>
  
- <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ 
  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 

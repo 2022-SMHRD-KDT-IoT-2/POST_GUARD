@@ -35,12 +35,11 @@ font-size:35px;
 }
 
 
-.main__image {
-  width: 1960px;
-  height: 1080px;
-  object-fit: cover;
-}
+.main__container{
 
+  margin-right: -20px;
+  margin-bottom: -20px; !important
+}
 
 
 .footerlogo{
