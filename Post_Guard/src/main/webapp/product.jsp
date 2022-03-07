@@ -44,12 +44,9 @@ font-size:35px;
 
 
 .footerlogo{
-    
     width: 150px;
     height: 150px;
-   
-    
-}
+   }
 .footer__up-textrow1{
 font-size:25px;
 }
