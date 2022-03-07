@@ -17,6 +17,56 @@
     <link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
     <title>POST-GUARD | Product</title>
   </head>
+  <style>
+
+.mainlogo {
+ width: 180px;
+ height: 200px;
+}
+
+.box1 li {
+
+font-size:40px;
+
+}
+
+.box2 li {
+
+font-size:35px;
+
+}
+
+.productImg__container {
+
+  margin-right: -4px;
+  margin-bottom: -20px; !important
+}
+
+
+.footerlogo{
+    width: 150px;
+    height: 150px;
+   }
+.footer__up-textrow1{
+font-size:25px;
+}
+
+.footer__up-textrow2{
+font-size:25px;
+}
+.footer__up-textrow3{
+font-size:25px;
+}
+.footer__up-textrow4{
+font-size:25px;
+}
+
+.footer__down{
+font-size:13px;
+}
+
+
+</style>
   <body>
 <%
 	MemberVO userInfo = (MemberVO)session.getAttribute("userInfo");
@@ -53,7 +103,7 @@
 		</div>
 	</section>
     <div class="productImg__container">
-    	<img  style="width : 100%; height : 100%;"src="assets/css/images/detailpage.png"/>
+    	<img id="detailimage" style="width : 100%; height : 100%;"src="assets/css/images/detailpage.png"/>
     </div>
     
 	<!-- Footer -->

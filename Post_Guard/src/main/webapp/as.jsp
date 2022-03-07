@@ -28,9 +28,16 @@
 <!-- Style -->
 <link rel="stylesheet" href="assets/css/style.css" />
 
+<<<<<<< HEAD
 <title>AS 신청</title>
 </head>
 <body>
+=======
+    <title>AS 신청</title>
+  </head>
+   <body>
+  
+>>>>>>> refs/remotes/origin/master
 
 	<%
 	ASDAO dao = new ASDAO();

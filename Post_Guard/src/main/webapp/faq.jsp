@@ -15,6 +15,23 @@
     <title>POST-GUARD | FAQ</title>
   </head>
   <style>
+.mainlogo {
+ width: 180px;
+ height: 200px;
+}
+
+.box1 li {
+
+font-size:40px;
+
+}
+
+.box2 li {
+
+font-size:35px;
+
+}  
+  
   
 body {
     padding-top: 0px;
@@ -73,6 +90,32 @@ body {
 #faqtabunderbar {
 border-bottom: none;
 }
+
+.footerlogo{
+    
+    width: 150px;
+    height: 150px;
+   
+    
+}
+.footer__up-textrow1{
+font-size:25px;
+}
+
+.footer__up-textrow2{
+font-size:25px;
+}
+.footer__up-textrow3{
+font-size:25px;
+}
+.footer__up-textrow4{
+font-size:25px;
+}
+
+.footer__down{
+font-size:13px;
+}
+
 
 </style>
 
@@ -454,14 +497,6 @@ border-bottom: none;
                                     </div>
                                 </div>
                             </div>
-
-
-                      
-                            
-                            
-                    
-                            
-                            
                           </div>
 					       </div>
 					    </div>    
