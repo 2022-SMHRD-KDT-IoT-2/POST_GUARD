@@ -65,6 +65,7 @@
 				<li><a href="enrollcompany.jsp">택배사 등록 - 관리자 전용</a></li>
 				<li><a href="manageuser.jsp">고객 정보 관리 - 관리자 전용</a></li>
 				<%} %>
+				
 			</ul>
 		</div>
 		<div class="mypage__section2">

@@ -175,3 +175,11 @@
 	display : flex;
 	width : 255px;
 }
+
+.deleteMember {
+	cursor : pointer;
+}
+
+.hiddenId{
+	visibility:hidden;
+}
