@@ -24,7 +24,7 @@
 
     <title>AS 신청</title>
   </head>
-  <body>
+   <body>
   
 
 <!--  ASDAO dao = new ASDAO(); 
