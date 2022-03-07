@@ -38,7 +38,7 @@ font-size:35px;
 
 .productImg__container {
 
-  margin-right: -4px;
+  margin-right: -20px;
   margin-bottom: -20px; !important
 }
 
