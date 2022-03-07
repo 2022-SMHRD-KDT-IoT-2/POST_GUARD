@@ -330,7 +330,7 @@ border-bottom: none;
                                 <div class="panel-heading">
                                     <a data-toggle="collapse" data-parent="#accordion-cat-3" href="#faq-cat-3-sub-1">
                                         <h4 class="panel-title">
-                                            포가드 예약 사용은 어떻게하나요?
+                                            POGUARD 예약 사용은 어떻게하나요?
                                             <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
                                         </h4>
                                     </a>
