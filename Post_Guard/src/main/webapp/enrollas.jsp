@@ -11,7 +11,6 @@
 
     <link rel="stylesheet" href="young/fonts/icomoon/style.css">
 
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="young/css/bootstrap.min.css">
     
@@ -32,30 +31,23 @@
           <h3 class="mb-3">AS 요청</h3>
           
         </div>
+        </div>
 
         <div class="col-md-6">
           <div class="box">
 <!--             <h3 class="heading">AS신청서를 작성해주세요.</h3> -->
             <form class="mb-5" method="post" id="contactForm" name="contactForm">
               <div class="row">
-                                <div class="col-md-6 form-group">
+               <div class="col-md-6 form-group">
                   <label for="budget" class="col-form-label">카테고리</label>
                   <!--  select -->
                   <select class="custom-select" id="category">
 				    <option value="수리요청">수거 요청</option>
-				    <option value="수거요청">수리 요청</option>
-<!-- 				    <option value="">$5,000 - $15,000</option>
-				    <option value="">$15,000 - $25,000</option> -->
   				  </select>
 <!--   				  <label for="date" class="col-form-label">방문 요청 날짜</label>
   				  <input type = "date" class="date" name ="date"/> -->
                 </div>
-              
-<!--                 <div class="col-md-6 form-group">
-                  <label for="name" class="col-form-label">Organization</label>
-                   input
-                  <input type="text" class="form-control" name="organization" id="organization" placeholder="Your organization">
-                </div> -->
+
               </div>
               <div class="row">
                 <div class="col-md-12 form-group">
@@ -81,13 +73,8 @@
                   <input type="text" class="form-control" name="name" id="id" value="<%=vo.getMem_id()%>" disabled>
                 </div>
 
-<!--                 <div class="col-md-6 form-group">
-                  <label for="message" class="col-form-label">Target Lunch</label>
-                   input
-                  <input type="text" class="form-control" name="date" id="date" placeholder="Example: January 15th">
 
-               
-                </div> -->
+                </div>
               </div>
 
               <div class="row">
@@ -97,17 +84,12 @@
                   <span class="submitting"></span>
                 </div>
               </div>
-            </form>
 
             <div id="form-message-warning mt-4"></div> 
             <div id="form-message-success">
-              AS신청이 완료되었습니다. 감사합니다. 
             </div>
           </div>
         </div>
-      </div>
-  </div>
-<!--     </div> -->
     
 
     <script src="young/js/jquery-3.3.1.min.js"></script>
