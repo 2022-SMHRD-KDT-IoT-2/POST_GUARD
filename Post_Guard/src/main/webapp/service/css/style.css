@@ -12,11 +12,6 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-body {
-  font-family: "Poppins-Regular";
-  font-size: 15px;
-  color: #fff;
-  margin: 0; }
 
 :focus {
   outline: none; }
@@ -27,7 +22,7 @@ textarea {
 input, textarea, select, button {
   font-family: "Poppins-Regular";
   font-size: 15px;
-  color: #fff; }
+  color: #000000; }
 
 p, h1, h2, h3, h4, h5, h6, ul {
   margin: 0; }
@@ -55,14 +50,9 @@ img {
   max-width: 100%;
   vertical-align: middle; }
 
-body {
-  background: url("../images/form-wizard-bg.png");
-  background-size: cover;
-  height: 100vh; }
-
 .wrapper {
   width: 1400px;
-  height: 100vh;
+  height: auto;
   margin: auto;
   display: flex; }
 
@@ -98,76 +88,18 @@ h3 {
   margin-top: 19px; }
 
 #wizard {
-  border: 1px solid #fff;
+  border: 1px solid #000000;
   border-radius: 10px;
   padding: 47px 57px 50px 50px;
   position: relative;
   background: rgba(255, 255, 255, 0.1); }
 
-.wizard > .steps ul {
-  content: "";
-  width: 60%;
-  height: 12px;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 6px;
-  position: absolute;
-  left: 50%;
-  bottom: -69px;
-  transform: translateX(-50%); }
-  .wizard > .steps ul:before {
-    content: '\f26b';
-    position: absolute;
-    font-size: 20px;
-    font-family: Material-Design-Iconic-Font;
-    bottom: 20px;
-    left: 29.4%;
-    transition: all 0.5s ease; }
-  .wizard > .steps ul:after {
-    content: "";
-    width: 33.33%;
-    height: 12px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 6px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all 0.5s ease; }
-  .wizard > .steps ul.step-2:before {
-    left: 62.5%;
-    transition: all 0.5s ease; }
-  .wizard > .steps ul.step-2:after {
-    width: 66.67%;
-    transition: all 0.5s ease; }
-  .wizard > .steps ul.step-3:before {
-    left: 96%;
-    transition: all 0.5s ease; }
-  .wizard > .steps ul.step-3:after {
-    width: 100%;
-    transition: all 0.5s ease; }
 
-.form-row {
-  display: flex;
-  margin-bottom: 29px;
-  align-items: center; }
-  .form-row:last-child {
-    margin-bottom: 0; }
-  .form-row label {
-    width: 34.9%;
-    margin-right: 40px; }
-  .form-row .form-holder {
-    width: 65.1%; }
 
-.form-holder {
-  position: relative; }
-  .form-holder i {
-    position: absolute;
-    bottom: 7px;
-    right: 20px;
-    font-size: 25px; }
 
 .form-control {
   height: 41px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(204, 204, 204, 1);
   background: none;
   border-radius: 5px;
   width: 100%;
@@ -199,67 +131,7 @@ textarea.form-control {
   padding: 8px 0;
   background: url("../images/textarea-bg.png") no-repeat right bottom 3px; }
 
-.actions ul {
-  display: flex;
-  margin-top: 39px;
-  justify-content: space-between; }
-.actions li a {
-  padding: 0;
-  border: none;
-  display: inline-flex;
-  height: 54px;
-  width: 180px;
-  letter-spacing: 1.3px;
-  align-items: center;
-  background: #e4bd37;
-  font-family: "Muli-Bold";
-  cursor: pointer;
-  position: relative;
-  padding-left: 34px;
-  text-transform: uppercase;
-  color: #fff;
-  border-radius: 27px;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s; }
-  .actions li a:before {
-    content: '\f2ee';
-    font-size: 18px;
-    position: absolute;
-    top: 17px;
-    right: 34px;
-    font-family: Material-Design-Iconic-Font;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0); }
-  .actions li a:hover {
-    background: #c9a630; }
-    .actions li a:hover:before {
-      -webkit-animation-name: hvr-icon-wobble-horizontal;
-      animation-name: hvr-icon-wobble-horizontal;
-      -webkit-animation-duration: 1s;
-      animation-duration: 1s;
-      -webkit-animation-timing-function: ease-in-out;
-      animation-timing-function: ease-in-out;
-      -webkit-animation-iteration-count: 1;
-      animation-iteration-count: 1; }
-.actions li[aria-disabled="true"] a {
-  opacity: 0;
-  transition: all 0.3s; }
-.actions li:first-child a {
-  width: 136px;
-  background: #fff;
-  color: #666;
-  font-family: "Muli-Bold";
-  padding-left: 57px; }
-  .actions li:first-child a:before {
-    content: '\f2ea';
-    left: 32px;
-    font-size: 18px; }
-  .actions li:first-child a:hover {
-    background: #e5e5e5; }
-.actions li:last-child a {
-  width: 154px; }
+
 
 @-webkit-keyframes hvr-icon-wobble-horizontal {
   16.65% {
@@ -299,40 +171,7 @@ textarea.form-control {
   100% {
     -webkit-transform: translateX(0);
     transform: translateX(0); } }
-.checkbox-circle {
-  display: flex;
-  justify-content: space-between; }
-  .checkbox-circle label {
-    cursor: pointer;
-    display: inline-block;
-    padding-left: 23px;
-    position: relative;
-    margin-right: 0;
-    width: auto; }
-  .checkbox-circle input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer; }
-  .checkbox-circle input:checked ~ .checkmark:after {
-    display: block; }
-  .checkbox-circle .checkmark {
-    position: absolute;
-    top: 4px;
-    left: 0;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.4); }
-    .checkbox-circle .checkmark:after {
-      content: "";
-      top: 3px;
-      left: 3px;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #fff;
-      position: absolute;
-      display: none; }
+
 
 @media (max-width: 1500px) {
   form {
