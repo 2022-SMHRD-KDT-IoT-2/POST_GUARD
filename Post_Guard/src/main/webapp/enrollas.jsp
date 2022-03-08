@@ -107,7 +107,7 @@
               <div class="row">
                 <div class="col-md-12">
                 <!--  input -->
-                  <input type="submit" value="AS신청서 접수하기" class="btn btn-block btn-primary rounded-0 py-2 px-4" id="submitBtn" onClick="window.open = asrequire.jsp">
+                  <input type="button" value="AS신청서 접수하기" class="btn btn-block btn-primary rounded-0 py-2 px-4" id="submitBtn" onClick = "location.href = 'asrequire.jsp'">
                   <span class="submitting"></span>
                 </div>
               </div>
@@ -115,6 +115,7 @@
             <div id="form-message-warning mt-4"></div> 
             <div id="form-message-success">
             </div>
+            
           </div>
         </div>
        
