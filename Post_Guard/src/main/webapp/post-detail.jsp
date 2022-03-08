@@ -1,3 +1,7 @@
+<%@page import="com.vo.ASVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.dao.ASDAO"%>
+<%@page import="com.vo.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -13,16 +17,22 @@
         
     </head>
     <body>
+   <% ASDAO dao = new ASDAO();
+	  MemberVO userInfo = (MemberVO) session.getAttribute("userInfo");
+	  ArrayList<ASVO> arr_vo = dao.getAS_list();
+	  
+	      
+    %>
       
         <div class="container">
             <hr/>
             <div class="row">
-                <div class="col-md-10">
+                <div class="col-md-10">\
                     <table class="table table-condensed">
                         <thead>
                             <tr align="center">
                                 <th width="10%">제목</th>
-                                <th width="60%">게시판 제목 입니다.</th>
+                                <th width="60%"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -37,12 +47,12 @@
                                 <td>글쓴이
                                 </td>
                                 <td>
-                                husk <span style='float:right'>조회 : 0</span>
+                               <%=userInfo.getMem_id()%>" disabled<span style='float:right'>조회 : 0</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <p>이름, 패스워드 내용을 적으시고 확인버튼을 누르세요.</p>
+                                   <!--  <input type="text" -->
                        
                                 </td>
                             </tr>

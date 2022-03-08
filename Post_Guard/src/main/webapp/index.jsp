@@ -34,6 +34,7 @@
 							<li><a href="as.jsp">AS 신청</a></li>
 							<li><a href="faq.jsp">FAQ</a></li>
 						</div>
+						
 						<div class="box2">
 						<%if(userInfo == null) {%>
 							<li><a href="join.jsp">회원가입</a></li>
