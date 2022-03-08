@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/sidebar.css" />
     <link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
+     
+    <link rel="stylesheet" href="service/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+	<link rel="stylesheet" href="service/vendor/date-picker/css/datepicker.min.css">
+	<link rel="stylesheet" href="service/css/style.css">
     <title>POST-GUARD | 서비스신청</title>
   </head>
   <style>
@@ -95,6 +99,127 @@ font-size:13px;
 			</nav>
 		</div>
 	</section>
+	
+	<div class="wrapper">
+			<div class="image-holder">
+				<img src="service/images/form-wizard.png" alt="">
+			</div>
+			<%if(userInfo != null) {%>
+            <form action="" method = "post">
+            	<div class="form-header">
+            		<a href="#">#Post-Guard 서비스 신청</a>
+            		<h3>서비스 신청</h3>
+            	</div>
+            	<div id="wizard">
+            		<h4></h4>
+            		 <section>
+	                 	                  
+	                    <div class="form-row">
+	                    	<label for="id">
+	                    		아이디 :
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<input type="text" class="form-control" style = "color : black" id = "id">
+	                    	</div>
+	                    </div>	
+	                    <div class="form-row">
+	                    	<label for="phone">
+	                    		전화번호 :
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<input type="text" class="form-control" style = "color : black" id = "tel">
+	                    	</div>
+	                    </div>	
+	                   	<div class="form-row">
+	                    	<label for="addr">
+	                    		주소 :
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<input type="text" class="form-control" style = "color : black" id ="addr">
+	                    	</div>
+	                    </div>	
+	                </section>
+            	
+            		<!-- SECTION 1 -->
+	                <h4></h4>
+	                <section>
+	                    <div class="form-row" style="margin-bottom: 26px;">
+	                    	<label for="Subscribe_path">
+	                    		가입경로 :
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<select name="Subpath" id="path" class="form-control">
+									<option value="Internet" class="option">인터넷</option>
+									<option value="Advertise" class="option">광고</option>
+									<option value="SNS" class="option">SNS</option>
+									<option value="Recommend Acquaintance"class="option">지인 추천</option>
+								</select>
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>	
+	                    <div class="form-row" style="margin-bottom: 38px">
+	                    	<label for="">
+	                    		박스 규격 :
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<select name="box_size" id="size" class="form-control" >
+	                    			<option value="규격 선택" class="option">사이즈를 선택하시오</option>
+	                    			<option value="1" class="option">22*19*9cm</option>
+									<option value="2" class="option">22*18*15cm</option>
+									<option value="3" class="option">34*25*21cm</option>
+									<option value="4호" class="option">41*31*28cm</option>
+									<option value="5호" class="option">48*38*34cm</option>
+								</select>
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>	             	
+	         			<div class="form-row" style="margin-bottom: 38px">
+	                    	<label for="">
+	                    		박스 규격 :
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<select name="box_size" id="size" class="form-control" >
+	                    			<option value="규격 선택" class="option">사이즈를 선택하시오</option>
+	                    			<option value="1" class="option">22*19*9cm</option>
+									<option value="2" class="option">22*18*15cm</option>
+									<option value="3" class="option">34*25*21cm</option>
+									<option value="4호" class="option">41*31*28cm</option>
+									<option value="5호" class="option">48*38*34cm</option>
+								</select>
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>	             		
+	                    
+	                    <div class="form-row" style = "margin-bottom: 38px">
+	                    
+							<label for = "payment">
+								결제수단 :
+							</label>
+								<div class = "form-holder">
+									<select name = "payment1" id = "pay" class = "form-control">
+										<option id = "c">신용카드</option>
+										<option id = "n">네이버 PAY</option>
+										<option id = "t">계좌이체</option>
+									</select>							
+								</div>
+						</div>		
+	                </section>
+	              </div>
+            </form>
+            <%} 
+			else { %>
+            	<div class="wrapper">
+					<div class="image-holder">
+						<a href = "login.jsp">로그인을 해주세요</a>
+					</div>
+				</div>
+            <%} %>
+		</div>
+		<script>
+			
+		</script>
+		
+		
 	<!-- Footer -->
 	<footer id="footer">
 		<div class="footer__inner">
