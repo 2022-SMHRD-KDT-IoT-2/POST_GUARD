@@ -6,18 +6,17 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
     <script src="https://kit.fontawesome.com/44ebe7b134.js" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/sidebar.css" />
     <link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
-     
+    <link rel="stylesheet" href="assets/css/sidebar.css" />
+    <link rel="stylesheet" href="service/css/style.css">
     <link rel="stylesheet" href="service/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
 	<link rel="stylesheet" href="service/vendor/date-picker/css/datepicker.min.css">
-	<link rel="stylesheet" href="service/css/style.css">
+	
     <title>POST-GUARD | 서비스신청</title>
   </head>
   <style>
@@ -63,6 +62,8 @@ font-size:13px;
 }
 
 
+
+
 </style>
   <body>
 <%
@@ -100,10 +101,8 @@ font-size:13px;
 		</div>
 	</section>
 	
-	<div class="wrapper">
-			<div class="image-holder">
-				<img src="service/images/form-wizard.png" alt="">
-			</div>
+	<div class="wrapper" style="margin-right: -50px">
+			
 			<%if(userInfo != null) {%>
             <form action="" method = "post">
             	<div class="form-header">
@@ -130,14 +129,20 @@ font-size:13px;
 	                    		<input type="text" class="form-control" style = "color : black" id = "tel">
 	                    	</div>
 	                    </div>	
-	                   	<div class="form-row">
-	                    	<label for="addr">
-	                    		주소 :
-	                    	</label>
-	                    	<div class="form-holder">
-	                    		<input type="text" class="form-control" style = "color : black" id ="addr">
-	                    	</div>
-	                    </div>	
+	                   <div class="field">
+									<label for="address">주소</label> 
+									<p></p>	
+									<input type="text" id="sample6_postcode" placeholder="우편번호" readonly style = "color : black" "margin-top: 10px;" >
+									<input type="text" id="sample6_address" placeholder="주소" readonly style = "color : black"> 
+									<input type="text" id="sample6_detailAddress" placeholder="상세주소" style = "color : black">
+									<div class="addr__container">
+										<input type="button" class="daumBtn"
+											value="우편번호 찾기"
+											onclick="openDaumPostCode()">
+									</div>
+								</div>
+								
+							
 	                </section>
             	
             		<!-- SECTION 1 -->
@@ -157,40 +162,7 @@ font-size:13px;
 								<i class="zmdi zmdi-caret-down"></i>
 	                    	</div>
 	                    </div>	
-	                    <div class="form-row" style="margin-bottom: 38px">
-	                    	<label for="">
-	                    		박스 규격 :
-	                    	</label>
-	                    	<div class="form-holder">
-	                    		<select name="box_size" id="size" class="form-control" >
-	                    			<option value="규격 선택" class="option">사이즈를 선택하시오</option>
-	                    			<option value="1" class="option">22*19*9cm</option>
-									<option value="2" class="option">22*18*15cm</option>
-									<option value="3" class="option">34*25*21cm</option>
-									<option value="4호" class="option">41*31*28cm</option>
-									<option value="5호" class="option">48*38*34cm</option>
-								</select>
-								<i class="zmdi zmdi-caret-down"></i>
-	                    	</div>
-	                    </div>	             	
-	         			<div class="form-row" style="margin-bottom: 38px">
-	                    	<label for="">
-	                    		박스 규격 :
-	                    	</label>
-	                    	<div class="form-holder">
-	                    		<select name="box_size" id="size" class="form-control" >
-	                    			<option value="규격 선택" class="option">사이즈를 선택하시오</option>
-	                    			<option value="1" class="option">22*19*9cm</option>
-									<option value="2" class="option">22*18*15cm</option>
-									<option value="3" class="option">34*25*21cm</option>
-									<option value="4호" class="option">41*31*28cm</option>
-									<option value="5호" class="option">48*38*34cm</option>
-								</select>
-								<i class="zmdi zmdi-caret-down"></i>
-	                    	</div>
-	                    </div>	             		
-	                    
-	                    <div class="form-row" style = "margin-bottom: 38px">
+	                   
 	                    
 							<label for = "payment">
 								결제수단 :
@@ -250,6 +222,49 @@ font-size:13px;
 				<span>&copy; POST GUARD; All rights reserved.</span>
 			</div>
 		</div>
+	
 	</footer>
   </body>
+  	<script src="assets/js/join.js"></script>
+	<script>
+		function openDaumPostCode() {
+			new daum.Postcode(
+					{
+						oncomplete : function(data) {
+							var addr = "";
+							var extraAddr = "";
+							if (data.userSelectedType === "R") {
+								addr = data.roadAddress;
+							} else {
+								addr = data.jibunAddress;
+							}
+							if (data.userSelectedType === "R") {
+								if (data.bname !== ""
+										&& /[동|로|가]$/g.test(data.bname)) {
+									extraAddr += data.bname;
+								}
+								if (data.buildingName !== ""
+										&& data.apartment === "Y") {
+									extraAddr += extraAddr !== "" ? ", "
+											+ data.buildingName
+											: data.buildingName;
+								}
+								if (extraAddr !== "") {
+									extraAddr = " (" + extraAddr + ")";
+								}
+								document
+										.getElementById("sample6_detailAddress").value = extraAddr;
+							} else {
+								document
+										.getElementById("sample6_detailAddress").value = "";
+							}
+							document.getElementById("sample6_postcode").value = data.zonecode;
+							document.getElementById("sample6_address").value = addr;
+							document.getElementById("sample6_detailAddress").focus();
+						},
+					}).open();
+		}
+	</script>
+	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  
 </html>
