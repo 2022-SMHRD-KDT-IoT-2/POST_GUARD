@@ -1,23 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <%@ page import="com.dao.MemberDAO" %>
 <%@ page import="com.vo.MemberVO" %>
 <!DOCTYPE html>
-
-<html>
-
-<head>
-<title>POST-GUARD</title>
-<meta charset="utf-8" />
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="assets/css/main.css" />
-<link rel="stylesheet" href="assets/css/button.css" />
-<link rel="stylesheet" href="assets/css/sidebar.css" />
-<link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
-</head>
-
-<style>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <script src="https://kit.fontawesome.com/44ebe7b134.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css" />
+    <link rel="stylesheet" href="service/css/style.css">
+    <link rel="stylesheet" href="service/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+	<link rel="stylesheet" href="service/vendor/date-picker/css/datepicker.min.css">
+	
+    <title>POST-GUARD | AS신청</title>
+  </head>
+  <style>
 
 .mainlogo {
  width: 180px;
@@ -33,23 +35,14 @@ font-size:40px;
 .box2 li {
 
 font-size:35px;
-}
 
-
-.main__container{
-
-  margin-right: -20px;
-  margin-bottom: -20px; !important
 }
 
 
 .footerlogo{
-    
     width: 150px;
     height: 150px;
-   
-    
-}
+   }
 .footer__up-textrow1{
 font-size:25px;
 }
@@ -69,9 +62,10 @@ font-size:13px;
 }
 
 
-</style>
 
-<body class="is-preload">
+
+</style>
+  <body>
 <%
 	MemberVO userInfo = (MemberVO)session.getAttribute("userInfo");
 %>
@@ -88,7 +82,6 @@ font-size:13px;
 							<li><a href="as.jsp">AS 신청</a></li>
 							<li><a href="faq.jsp">FAQ</a></li>
 						</div>
-						
 						<div class="box2">
 						<%if(userInfo == null) {%>
 							<li><a href="join.jsp">회원가입</a></li>
@@ -99,23 +92,49 @@ font-size:13px;
 						<%} %>
 						</div>
 					</div>
-					</div>
+					<!-- <li><a href="#">택배 예약</a></li>
+		            <li><a href="#">고객 정보 수정</a></li>
+		            <li><a href="#">고객 정보 수정</a></li>
+		            <li><a href="#">운송장</a></li> -->
 				</ul>
 			</nav>
 		</div>
+		
 	</section>
-	<!-- Wrapper -->
-	    <div class="main__container">
-	    <div class="main__image">
-    		<img  style="width : 100%; height : 100%;" src="./images/main.png"/>
-    	</div>
-    </div>
-
+	
+	<div class="wrapper" style="margin-right: -50px">
+			
+			<%if(userInfo != null) {%>
+            <form action="" method = "post">
+            	<div class="form-header">
+            		<br>
+            		<a href="index.jsp">메인으로 돌아가기</a>
+            		
+            	</div>
+            	<br>
+            	<div id="wizard">
+            			<h3>AS 신청이 완료되었습니다</h3>
+	              </div>
+            </form>
+            <%} 
+			else { %>
+            	<div class="wrapper">
+					<div class="image-holder">
+						<a href = "login.jsp">로그인을 해주세요</a>
+					</div>
+				</div>
+            <%} %>
+		</div>
+		<script>
+			
+		</script>
+		
+		
 	<!-- Footer -->
-	<footer id="footer">
+	<footer id="footer" style ="color : rgb(9, 41, 97)">
 		<div class="footer__inner">
 			<div class="footer__up">
-				<img class="footerlogo" src="./images/logo(navy).png" />
+				<img class="footerlogo" src="./images/footerlogo.png" />
 				<div class="footer__up-textrow1">
 					<a href="product.jsp"><span>상품 소개</span></a>
 				</div>
@@ -141,17 +160,9 @@ font-size:13px;
 				<span>&copy; POST GUARD; All rights reserved.</span>
 			</div>
 		</div>
+	
 	</footer>
-
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script src="assets/js/index.js"></script>
-</body>
+  </body>
+  	<script src="assets/js/join.js"></script>
+	  
 </html>
-
