@@ -52,16 +52,18 @@
 			</nav>
 		</div>
 	</section>
-	
-<!--   <div class="content"> -->
-
+			
+   		<div class="content" >
+   			
         <div class="col-md-6">
-          <div class="box">
-<!--             <h3 class="heading">AS신청서를 작성해주세요.</h3> -->
+        	
+          <div class="box" >
+            
             <form class="mb-5" method="post" id="contactForm" name="contactForm">
               <div class="row">
-               <div class="col-md-6 form-group">
-                  <label for="budget" class="col-form-label">카테고리</label>
+               <div class="col-md-6 form-group" >
+               <!-- <h3 class="heading">AS신청서를 작성해주세요.</h3> -->
+                  <label for="budget" class="col-form-label">AS TYPE</label>
                   <!--  select -->
                   <select class="custom-select" id="category">
 				    <option value="수리요청">수리 요청</option>
@@ -105,7 +107,7 @@
               <div class="row">
                 <div class="col-md-12">
                 <!--  input -->
-                  <input type="submit" value="AS신청서 접수하기" class="btn btn-block btn-primary rounded-0 py-2 px-4" id="submitBtn">
+                  <input type="button" value="AS신청서 접수하기" class="btn btn-block btn-primary rounded-0 py-2 px-4" id="submitBtn" onClick = "location.href = 'asrequire.jsp'">
                   <span class="submitting"></span>
                 </div>
               </div>
@@ -113,8 +115,10 @@
             <div id="form-message-warning mt-4"></div> 
             <div id="form-message-success">
             </div>
+            
           </div>
         </div>
+       
         		<!-- footer -->
 		<footer id="footer">
 			<div class="footer__inner">
