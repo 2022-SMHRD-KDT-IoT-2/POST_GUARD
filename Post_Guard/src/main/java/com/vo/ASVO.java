@@ -11,6 +11,7 @@ public class ASVO {
 	private int as_cnt;
 	private String mem_id;
 	private String as_category;
+	private String as_progress; 
 
 	// as요청 순번, 카테고리, 제목, 작성자, as요청 시간 보여주는 method
 	// ex) 01  [수리요청]  소리가 안나와요  yyyyy  22/03/02  조회수
@@ -25,14 +26,29 @@ public class ASVO {
 	}
 
 	// as카테고리, 제목, 작성자, 내용 보여주는 method
-	public ASVO(String as_category, String as_title, String mem_id, String as_content) {
+	public ASVO (String as_category, String as_title, String mem_id, String as_content, String as_progress) {
 		super();
 		this.as_category = as_category;
 		this.as_title = as_title;
 		this.mem_id = mem_id;
 		this.as_content = as_content;
-
+		this.as_progress=as_progress; 
 	}
+	
+	public ASVO (int as_seq, String as_category, String as_title, String mem_id, String as_progress) {
+		super();
+		this.as_seq = as_seq;
+		this.as_category = as_category;
+		this.as_title = as_title;
+		this.mem_id = mem_id;
+		this.as_progress = as_progress;
+	}
+	
+	public ASVO(int as_seq, String as_title) {
+		super();
+		this.as_seq=as_seq; 
+	}
+
 	public int getAs_seq() {
 		return as_seq;
 	}
@@ -55,6 +71,10 @@ public class ASVO {
 
 	public String getAs_category() {
 		return as_category;
+	}
+	
+	public String getAs_progress() {
+		return as_progress; 
 	}
 
 }
