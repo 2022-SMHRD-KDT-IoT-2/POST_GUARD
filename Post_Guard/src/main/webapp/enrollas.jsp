@@ -63,7 +63,7 @@
               <div class="row">
                <div class="col-md-6 form-group" >
                <!-- <h3 class="heading">AS신청서를 작성해주세요.</h3> -->
-                  <label for="budget" class="col-form-label">AS </label>
+                  <label for="budget" class="col-form-label">AS TYPE</label>
                   <!--  select -->
                   <select class="custom-select" id="category">
 				    <option value="수리요청">수리 요청</option>
