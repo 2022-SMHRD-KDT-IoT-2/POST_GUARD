@@ -190,7 +190,7 @@ margin-top: 50px;
             	</form>
         <%} 
         else { %>
-            	<div class="login">
+            	<div class="login" style =  "margin-left: 280px">
 					<div class="image-holder">
 						<a href = "login.jsp">로그인을 해주세요</a>
 					</div>
