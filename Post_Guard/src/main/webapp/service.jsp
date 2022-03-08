@@ -7,9 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    
     <script src="https://kit.fontawesome.com/44ebe7b134.js" crossorigin="anonymous"></script>
-    
     <link rel="stylesheet" href="assets/css/main.css" />
     <link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
     <link rel="stylesheet" href="assets/css/sidebar.css" />
@@ -22,6 +20,7 @@
   <style>
 
 .mainlogo {
+
  width: 180px;
  height: 200px;
 }
@@ -59,6 +58,11 @@ font-size:25px;
 
 .footer__down{
 font-size:13px;
+}
+.wrapper {
+margin-right: -280px;
+margin-bottom: 50px;
+margin-top: 50px; 
 }
 
 
@@ -102,14 +106,12 @@ font-size:13px;
 		
 	</section>
 	
-	<div class="wrapper" style="margin-right: -50px">
-			
-			<%if(userInfo != null) {%>
-            <form action="" method = "post">
-            	<div class="form-header">
-            		<a href="#">#Post-Guard 서비스 신청</a>
-            		<h3>서비스 신청</h3>
-            	</div>
+	
+				
+				
+			<div class="wrapper" >
+            	
+            	
             	<div id="wizard">
             		<h4></h4>
             		 <section>
@@ -133,7 +135,7 @@ font-size:13px;
 	                   <div class="field">
 									<label for="address">주소</label> 
 									<p></p>	
-									<input type="text" id="sample6_postcode" placeholder="우편번호" readonly style = "color : black" "margin-top: 10px;" >
+									<input type="text" id="sample6_postcode" placeholder="우편번호" readonly style = "color : black"  >
 									<input type="text" id="sample6_address" placeholder="주소" readonly style = "color : black"> 
 									<input type="text" id="sample6_detailAddress" placeholder="상세주소" style = "color : black">
 									<div class="addr__container">
@@ -141,9 +143,7 @@ font-size:13px;
 											value="우편번호 찾기"
 											onclick="openDaumPostCode()">
 									</div>
-								</div>
-								
-							
+						</div>
 	                </section>
             	
             		<!-- SECTION 1 -->
@@ -160,7 +160,7 @@ font-size:13px;
 									<option value="SNS" class="option">SNS</option>
 									<option value="Recommend Acquaintance"class="option">지인 추천</option>
 								</select>
-								<i class="zmdi zmdi-caret-down"></i>
+								
 	                    	</div>
 	                    </div>	
 	                   
@@ -175,23 +175,29 @@ font-size:13px;
 										<option id = "t"  style = "color : grey">계좌이체</option>
 									</select>							
 								</div>
-						</div>		
-	                </section>
-	              </div>
-            </form>
-            <%} 
-			else { %>
-            	<div class="wrapper">
+					 </section>
+	             </div>
+            </div>
+        
+        
+        <div class="submit" style = "margin-left: 600px">
+        <%if(userInfo != null) {%>
+            <form action="" method = "post">
+            	<div class="form-header">
+            		<a href="#">Post-Guard 서비스 신청</a>
+            		<h3>서비스 신청</h3>
+            	</div>
+            	</form>
+        <%} 
+        else { %>
+            	<div class="login">
 					<div class="image-holder">
 						<a href = "login.jsp">로그인을 해주세요</a>
 					</div>
 				</div>
             <%} %>
 		</div>
-		<script>
-			
-		</script>
-		
+	
 		
 	<!-- Footer -->
 	<footer id="footer">
