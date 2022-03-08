@@ -16,8 +16,8 @@
     
     <!-- Style -->
     <link rel="stylesheet" href="young/css/style.css">
-<link rel="stylesheet" href="assets/css/main.css" />
-<link rel="stylesheet" href="assets/css/sidebar.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/sidebar.css" />
 
     <title>AS 게시글 등록 페이지</title>
   </head>
@@ -54,13 +54,6 @@
 	</section>
 	
 <!--   <div class="content"> -->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-5 mr-auto">
-          <h3 class="mb-3">AS 요청</h3>
-          
-        </div>
-        </div>
 
         <div class="col-md-6">
           <div class="box">
@@ -156,7 +149,6 @@
 						</div>
 				</div>
 			</footer>
-    
 
     <script src="young/js/jquery-3.3.1.min.js"></script>
     <script src="young/js/popper.min.js"></script>
