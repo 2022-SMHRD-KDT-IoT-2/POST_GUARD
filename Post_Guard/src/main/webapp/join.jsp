@@ -69,7 +69,7 @@ font-size:13px;
 			<nav>
 				<ul>
 					<li><a href="index.jsp"><img
-							class="mainlogo" src="./images/logo.png" /></a></li>
+							class="mainlogo" src="./images/logo(white).png" /></a></li>
 					<div class="box_container">
 						<div class="box1">
 							<li><a href="product.jsp">상품 소개</a></li>

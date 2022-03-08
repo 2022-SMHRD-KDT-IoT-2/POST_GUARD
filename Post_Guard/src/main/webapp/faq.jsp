@@ -21,6 +21,8 @@
 .mainlogo {
  width: 180px;
  height: 200px;
+ padding-top: 20px;
+ vertical-align: baseline; !important 
 }
 
 .box1 li {
@@ -85,10 +87,7 @@ font-size:35px;
     font-weight: normal;
 }
 .mainlogo {
-    padding-top: 20px;
-    width: 150px;
-    height: 150px;
-    vertical-align: baseline; !important 
+    
     
 }
 
@@ -148,7 +147,7 @@ font-size:13px;
 				<ul>
 					<li><a href="index.jsp">
 					<img
-							class="mainlogo" src="./images/logo.png" /></a></li>
+							class="mainlogo" src="./images/logo(white).png" /></a></li>
 					<div class="box_container">
 						<div class="box1">
 							<li><a href="product.jsp">상품 소개</a></li>
