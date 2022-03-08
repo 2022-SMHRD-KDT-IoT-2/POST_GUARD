@@ -58,98 +58,121 @@ import="com.vo.MemberVO" %>
       </div>
     </section>
     <div class="serviceWrapper">
-      <div class="service__image--container">
-        <img class="service__image" src="./images/courier.png" />
-      </div>
       <div class="service__container">
-        <span class="service__h">개인정보입력</span>
-        <div class="form-row">
-          <label for="id"> 아이디 : </label>
-          <div class="form-holder">
-            <input
-              type="text"
-              class="form-control"
-              style="color: black"
-              id="id"
-            />
+        <div class="joinpath">
+          <div class="joinpath--h">
+            <span>가입 경로</span>
+          </div>
+          <div class="joinpath__inner">
+            <div class="joinpath--internet">
+              <p>인터넷</p>
+              <input type="radio" name="joinpathradio" value=" " />
+            </div>
+            <div class="joinpath--ad">
+              <p>광고</p>
+              <input type="radio" name="joinpathradio" value=" " />
+            </div>
+            <div class="joinpath--friends">
+              <p>지인추천</p>
+              <input type="radio" name="joinpathradio" value=" " />
+            </div>
+            <div class="joinpath--SNS">
+              <p>SNS</p>
+              <input type="radio" name="joinpathradio" value=" " />
+            </div>
           </div>
         </div>
-        <div class="form-row">
-          <label for="phone"> 전화번호 : </label>
-          <div class="form-holder">
-            <input
-              type="text"
-              class="form-control"
-              style="color: black"
-              id="tel"
-            />
+        <hr class="service__hr" />
+        <div class="payment">
+          <div class="payment--h">
+            <span>지불수단</span>
+          </div>
+          <div class="payment__inner">
+            <div class="payment--card">
+              <p>신용카드</p>
+              <input type="radio" name="paymentradio" value=" " />
+            </div>
+            <div class="payment--account">
+              <p>계좌이체</p>
+              <input type="radio" name="paymentradio" value=" " />
+            </div>
+            <div class="payment--noaccount">
+              <p>무통장입금</p>
+              <input type="radio" name="paymentradio" value=" " />
+            </div>
+            <div class="payment--phone">
+              <p>휴대폰소액결제</p>
+              <input type="radio" name="paymentradio" value=" " />
+            </div>
           </div>
         </div>
-        <div class="field">
-          <label for="address">주소</label>
-          <p></p>
-          <input
-            type="text"
-            id="sample6_postcode"
-            placeholder="우편번호"
-            readonly
-            style="color: black"
-          />
-          <input
-            type="text"
-            id="sample6_address"
-            placeholder="주소"
-            readonly
-            style="color: black"
-          />
-          <input
-            type="text"
-            id="sample6_detailAddress"
-            placeholder="상세주소"
-            style="color: black"
-          />
-          <div class="addr__container">
-            <input
-              type="button"
-              class="daumBtn"
-              value="우편번호 찾기"
-              onclick="openDaumPostCode()"
-            />
+        <hr class="service__hr" />
+        <div class="user">
+          <div class="user--h">
+            <span>신청자 정보</span>
+          </div>
+          <div class="user__inner">
+            <div class="form-row">
+              <label for="id"> 아이디 </label>
+              <div>
+                <input type="text" id="id" class="service--idinput" />
+              </div>
+            </div>
+            <div class="form-row">
+              <label for="phone"> 전화번호 </label>
+              <div class="form-holder">
+                <input type="text" id="tel" class="service--phoneinput" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="address">주소</label>
+              <input
+                type="text"
+                id="sample6_postcode"
+                placeholder="우편번호"
+                readonly
+                class="service--addinput1"
+              />
+              <input
+                type="text"
+                id="sample6_address"
+                placeholder="주소"
+                readonly
+                class="service--addinput2"
+              />
+              <input
+                type="text"
+                id="sample6_detailAddress"
+                placeholder="상세주소"
+                class="service--addinput3"
+              />
+              <div class="addr__container">
+                <input
+                  type="button"
+                  class="daumBtn"
+                  value="우편번호 찾기"
+                  onclick="openDaumPostCode()"
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div>
-          <div class="form-row">
-            <label for="Subscribe_path"> 가입경로 : </label>
-            <div class="form-holder">
-              <select name="Subpath" id="path">
-                <option value="Internet" class="option">인터넷</option>
-                <option value="Advertise" class="option">광고</option>
-                <option value="SNS" class="option">SNS</option>
-                <option value="Recommend Acquaintance" class="option">
-                  지인 추천
-                </option>
-              </select>
-            </div>
-          </div>
-          <label for="payment"> 결제수단 : </label>
-          <div class="form-holder">
-            <select name="payment1" id="pay" class="form-control">
-              <option id="c">신용카드</option>
-              <option id="n">네이버 PAY</option>
-              <option id="t">계좌이체</option>
-            </select>
-          </div>
           <div class="submit">
             <%if(userInfo != null) {%>
-            <form action="" method="post">
-              <div class="applyservice">
-                <a href="#" class="applyserviceBtn">서비스 신청</a>
+            <form>
+              <div class="service--login">
+                <div class="service__emptybox"></div>
+                <div class="applyservice">
+                  <a href="#" class="applyserviceBtn">서비스 신청</a>
+                </div>
               </div>
             </form>
             <%} else { %>
-            <div class="login">
-              <div class="image-holder">
-                <a href="login.jsp">로그인을 해주세요</a>
+            <div class="service--login">
+              <div class="service__emptybox"></div>
+              <div class="service--login__inner">
+                <a href="login.jsp">로그인이 필요한 서비스입니다.</a>
               </div>
             </div>
             <%} %>

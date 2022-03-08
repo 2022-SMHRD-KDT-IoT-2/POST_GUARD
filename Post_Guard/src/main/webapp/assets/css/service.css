@@ -10,12 +10,15 @@
 }
 
 .service__container{
-	width : 625px;
-	height : 625px;
-	padding : 10px;
+	width : 100%;
+	height : auto;
+	padding : 40px;
 	padding-top : 20px;
 	padding-bottom : 20px;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	margin : 0 auto;
+	margin-top : 100px;
+	margin-bottom: 100px;
 }
 
 .service__h {
@@ -37,6 +40,7 @@
 	display: flex;
 	justify-content : center;
 	align-items : center;
+	width : 100%;
 	
 }
 
@@ -50,4 +54,99 @@
 	text-align : center;
 	background-color : rgb(9, 41, 97);
 	color : white;
+}
+
+.joinpath,
+.payment,
+.user {
+	display:flex;
+	padding-top : 30px;
+	padding-bottom : 30px;
+}
+
+.joinpath__inner,
+.payment__inner {
+	display : flex;
+	justify-content : space-around;
+	margin-left : 10px;
+	width: 100%;
+}
+
+.user__inner {
+	width : 40%;
+	margin : 0 auto;
+}
+
+.joinpath--h,
+.payment--h,
+.user--h {
+	width : 10%;
+}
+
+.joinpath--h span,
+.payment--h span,
+.user--h span{
+	font-size : 24px;
+}
+
+.joinpath--internet,
+.joinpath--ad,
+.joinpath--friends,
+.joinpath--SNS,
+.payment--card,
+.payment--account,
+.payment--noaccount,
+.payment--phone {
+	border : 1px solid #d5d5d5;
+	border-radius: 5px;
+	width: 150px;
+	height : 90px;
+    padding: 10px;
+    font-size : 20px;
+    text-align : center;
+}
+
+
+.service__hr {
+	border : 0;
+	height : 2px;
+	background : #444444;
+}
+
+.service--idinput,
+.service--phoneinput,
+.service--addinput1,
+.service--addinput2,
+.service--addinput3 {
+	padding : 8px 16px !important;
+	background: rgb(255, 255, 255) !important; 
+	border: 2px solid #dfe2e5 !important;
+	border-left-width: 1 !important;
+	border-right-width: 1 !important;
+	border-top-width: 1 !important;
+	border-bottom-width: 1 !important;
+	height : 45px !important;
+	font-size : 1rem !important;
+	margin-bottom : 20px !important;
+	margin-top : 5px !important;
+}
+
+.service--login {
+	display:flex;
+	margin : 0 auto;
+	
+}
+
+.service__emptybox {
+	width : 10%;
+	height : 30px;
+}
+
+.service--login__inner {
+	width : 100%;
+	display:flex;
+	justify-content : center;
+}
+.service--login__inner a {
+	font-size : 20px;
 }
