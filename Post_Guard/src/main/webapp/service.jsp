@@ -184,7 +184,7 @@ margin-top: 50px;
         <%if(userInfo != null) {%>
             <form action="" method = "post">
             	<div class="form-header">
-            		<a href="#">Post-Guard 서비스 신청</a>
+            		<a href="servicesuccess.jsp">Post-Guard 서비스 신청</a>
             		<h3>서비스 신청</h3>
             	</div>
             	</form>
@@ -200,7 +200,7 @@ margin-top: 50px;
 	
 		
 	<!-- Footer -->
-	<footer id="footer">
+	<footer id="footer" style ="color : rgb(9, 41, 97)">
 		<div class="footer__inner">
 			<div class="footer__up">
 				<img class="footerlogo" src="./images/footerlogo.png" />
