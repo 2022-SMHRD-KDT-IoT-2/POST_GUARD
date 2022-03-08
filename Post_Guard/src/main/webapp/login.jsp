@@ -14,14 +14,15 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <script src="https://kit.fontawesome.com/44ebe7b134.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+     
+    
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/sidebar.css" />
     <link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
+    
     <title>POST-GUARD | 로그인</title>
   </head>
+  
   <style>
 
 .mainlogo {
@@ -76,7 +77,7 @@ font-size:13px;
 			<nav>
 				<ul>
 					<li><a href="index.jsp"><img
-							class="mainlogo" src="./images/logo.png" /></a></li>
+							class="mainlogo" src="./images/logo(white).png" /></a></li>
 					<div class="box_container">
 						<div class="box1">
 							<li><a href="product.jsp">상품 소개</a></li>
@@ -165,7 +166,11 @@ font-size:13px;
 			</div>
 		</div>
 	</footer>
+	
     <script src="assets/js/login.js"></script>
+    <script src="https://kit.fontawesome.com/44ebe7b134.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript">
   		var naver_id_login = new naver_id_login("yM9Km9V1RKBifED86IwM", "http://localhost:8081/POST_GUARD/navercallback.jsp");
   		var state = naver_id_login.getUniqState();
