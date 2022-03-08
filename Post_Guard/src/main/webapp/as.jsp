@@ -97,10 +97,10 @@
 					for (int i = arr_vo.size() - 1; i >= 0; i--) {
 					%>
 					<tr scope="row">
+					<td><%=arr_vo.get(i).getAs_category()%></td>
 					<!-- 게시글 보여주는 페이지로 이동시키기! href수정해야함!!  -->
-					<td><a href="#?AS_seq=<%=arr_vo.get(i).getAs_category()%>"></a></td>
-					<td><%= arr_vo.get(i).getAs_title()%></td>
-					<td><%= userInfo.getMem_id()%></td>
+					<td><a href="post-detail.jsp?as_title=<%= arr_vo.get(i).getAs_title()%>"><%= arr_vo.get(i).getAs_title()%></a></td>
+					<td><%= arr_vo.get(i).getMem_id()%></td>
 					<td>Y/S</td>
 
 

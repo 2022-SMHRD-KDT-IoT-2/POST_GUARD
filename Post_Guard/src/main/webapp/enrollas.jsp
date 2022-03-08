@@ -71,10 +71,13 @@
                   <label for="budget" class="col-form-label">카테고리</label>
                   <!--  select -->
                   <select class="custom-select" id="category">
-				    <option value="수리요청">수거 요청</option>
+				    <option value="수리요청">수리 요청</option>
+				    <option value="수거요청">수거 요청</option>
   				  </select>
-<!--   				  <label for="date" class="col-form-label">방문 요청 날짜</label>
-  				  <input type = "date" class="date" name ="date"/> -->
+   				  <label for="date" class="col-form-label">요청 날짜</label>
+  				  <input type = "date" class="currentDate" id ="currentDate" disabled/>
+  				  <script>document.getElementById('currentDate').value=
+  					  new Date().toISOString().substring(0,10);</script>
                 </div>
 
               </div>
