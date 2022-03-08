@@ -11,64 +11,9 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
     <link rel="stylesheet" href="assets/css/sidebar.css" />
-    <link rel="stylesheet" href="service/css/style.css">
-    <link rel="stylesheet" href="service/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
-	<link rel="stylesheet" href="service/vendor/date-picker/css/datepicker.min.css">
-	
+    <link rel="stylesheet" href="assets/css/service.css" />
     <title>POST-GUARD | 서비스신청</title>
   </head>
-  <style>
-
-.mainlogo {
-
- width: 180px;
- height: 200px;
-}
-
-.box1 li {
-
-font-size:40px;
-
-}
-
-.box2 li {
-
-font-size:35px;
-
-}
-
-
-.footerlogo{
-    width: 150px;
-    height: 150px;
-   }
-.footer__up-textrow1{
-font-size:25px;
-}
-
-.footer__up-textrow2{
-font-size:25px;
-}
-.footer__up-textrow3{
-font-size:25px;
-}
-.footer__up-textrow4{
-font-size:25px;
-}
-
-.footer__down{
-font-size:13px;
-}
-.wrapper {
-margin-right: -280px;
-margin-bottom: 50px;
-margin-top: 50px; 
-}
-
-
-
-
-</style>
   <body>
 <%
 	MemberVO userInfo = (MemberVO)session.getAttribute("userInfo");
@@ -96,26 +41,16 @@ margin-top: 50px;
 						<%} %>
 						</div>
 					</div>
-					<!-- <li><a href="#">택배 예약</a></li>
-		            <li><a href="#">고객 정보 수정</a></li>
-		            <li><a href="#">고객 정보 수정</a></li>
-		            <li><a href="#">운송장</a></li> -->
 				</ul>
 			</nav>
 		</div>
-		
 	</section>
-	
-	
-				
-				
-			<div class="wrapper" >
-            	
-            	
-            	<div id="wizard">
-            		<h4></h4>
-            		 <section>
-	                 	                  
+			<div class="serviceWrapper">
+					<div class="service__image--container">
+						<img class="service__image" src="./images/courier.png">
+					</div>
+            		 <div class="service__container">
+            		 	<span class="service__h">개인정보입력</span>
 	                    <div class="form-row">
 	                    	<label for="id">
 	                    		아이디 :
@@ -144,61 +79,49 @@ margin-top: 50px;
 											onclick="openDaumPostCode()">
 									</div>
 						</div>
-	                </section>
-            	
-            		<!-- SECTION 1 -->
-	                <h4></h4>
-	                <section>
-	                    <div class="form-row" style="margin-bottom: 26px;">
+					<div>
+	                    <div class="form-row">
 	                    	<label for="Subscribe_path">
 	                    		가입경로 :
 	                    	</label>
 	                    	<div class="form-holder">
-	                    		<select name="Subpath" id="path" class="form-control">
+	                    		<select name="Subpath" id="path">
 									<option value="Internet" class="option">인터넷</option>
 									<option value="Advertise" class="option">광고</option>
 									<option value="SNS" class="option">SNS</option>
 									<option value="Recommend Acquaintance"class="option">지인 추천</option>
 								</select>
-								
 	                    	</div>
-	                    </div>	
-	                   
-	                    
+	                    </div>
 							<label for = "payment">
 								결제수단 :
 							</label>
 								<div class = "form-holder">
 									<select name = "payment1" id = "pay" class = "form-control">
-										<option id = "c"  style = "color : grey">신용카드</option>
-										<option id = "n"  style = "color : grey">네이버 PAY</option>
-										<option id = "t"  style = "color : grey">계좌이체</option>
+										<option id = "c">신용카드</option>
+										<option id = "n">네이버 PAY</option>
+										<option id = "t">계좌이체</option>
 									</select>							
 								</div>
-					 </section>
-	             </div>
-            </div>
-        
-        
-        <div class="submit" style = "margin-left: 600px">
-        <%if(userInfo != null) {%>
-            <form action="" method = "post">
-            	<div class="form-header">
-            		<a href="#">Post-Guard 서비스 신청</a>
-            		<h3>서비스 신청</h3>
-            	</div>
-            	</form>
-        <%} 
-        else { %>
-            	<div class="login" style =  "margin-left: 280px">
-					<div class="image-holder">
-						<a href = "login.jsp">로그인을 해주세요</a>
+								<div class="submit">
+							        <%if(userInfo != null) {%>
+							            <form action="" method = "post">
+							            	<div class="applyservice">
+							            		<a href="#" class="applyserviceBtn">서비스 신청</a>
+							            	</div>
+							            	</form>
+							        <%} 
+							        else { %>
+							            	<div class="login">
+												<div class="image-holder">
+													<a href = "login.jsp">로그인을 해주세요</a>
+												</div>
+											</div>
+							            <%} %>
+								</div>
+					 	</div>
+	             	 </div>
 					</div>
-				</div>
-            <%} %>
-		</div>
-	
-		
 	<!-- Footer -->
 	<footer id="footer">
 		<div class="footer__inner">
