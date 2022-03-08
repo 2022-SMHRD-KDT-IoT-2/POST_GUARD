@@ -170,9 +170,9 @@ font-size:13px;
 							</label>
 								<div class = "form-holder">
 									<select name = "payment1" id = "pay" class = "form-control">
-										<option id = "c">신용카드</option>
-										<option id = "n">네이버 PAY</option>
-										<option id = "t">계좌이체</option>
+										<option id = "c"  style = "color : grey">신용카드</option>
+										<option id = "n"  style = "color : grey">네이버 PAY</option>
+										<option id = "t"  style = "color : grey">계좌이체</option>
 									</select>							
 								</div>
 						</div>		
