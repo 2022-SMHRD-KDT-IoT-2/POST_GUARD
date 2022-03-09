@@ -102,7 +102,7 @@
 								<tr>
 									<td><%=arr_vo.get(i).getAs_category()%></td>
 									<td><a
-										href="post-detail.jsp?as_title=<%= arr_vo.get(i).getAs_title()%>"><%= arr_vo.get(i).getAs_title()%></a></td>
+										href="post-detail.jsp?as_seq=<%=arr_vo.get(i).getAs_seq() %>"><%= arr_vo.get(i).getAs_title()%></a></td>
 									<td><%= arr_vo.get(i).getMem_id()%></td>
 									<!--admin계정일 때 progress선택 가능하게-->
 									<%if(userInfo.getMem_id().equals("admin")) { %>

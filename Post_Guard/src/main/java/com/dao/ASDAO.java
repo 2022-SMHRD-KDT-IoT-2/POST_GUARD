@@ -147,14 +147,14 @@ public class ASDAO {
 	}
 
 	// 제목 클릭했을 때 내용 보여주는 기능
-	public ArrayList<ASVO> getAS_content(int as_seq) {
-		ArrayList<ASVO> arr_vo = new ArrayList<ASVO>();
+	public ASVO getAS_datail(int as_seq) {
+		ASVO vo = null;
 
 		try {
 
 			DB();
 
-			String sql = "select as_title, as_content,  mem_id, as_category, as_progress from T_AS where AS_SEQ = ?";
+			String sql = "select as_title, as_content, as_date, mem_id, as_category from T_AS where AS_SEQ = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, as_seq);
 
@@ -164,13 +164,11 @@ public class ASDAO {
 
 				String getAs_title = rs.getString(1);
 				String getAs_content = rs.getString(2);
+				String getAs_date = rs.getString(5);
 				String getMem_id = rs.getString(3);
 				String getAs_category = rs.getString(4);
-				String getAs_progress = rs.getString(5);
 
-				System.out.println(getAs_progress);
-				ASVO vo = new ASVO(getAs_category, getAs_title, getMem_id, getAs_content, getAs_progress);
-				arr_vo.add(vo);
+				vo = new ASVO(getAs_category, getAs_title, getMem_id, getAs_content, getAs_date);
 			}
 
 		} catch (Exception e) {
@@ -184,7 +182,7 @@ public class ASDAO {
 			}
 
 		}
-		return arr_vo;
+		return vo;
 	}
 
 //	// 진행상황 반환하는 메서드
