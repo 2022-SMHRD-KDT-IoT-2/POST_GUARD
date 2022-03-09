@@ -45,6 +45,7 @@
 			</nav>
 		</div>
 	</section>
+	<form action="servicesuccess.jsp">
 			<div class="serviceWrapper">
             		 <div class="service__container">
             		 	<div class="joinpath">
@@ -100,7 +101,7 @@
             		 			<span>신청자 정보</span>
             		 		</div>
             		 		<div class="user__inner">
-			                    <div class="form-row">
+			                    <div>
 			                    	<label for="name">
 			                    		이름
 			                    	</label>
@@ -108,7 +109,7 @@
 			                    		<input type="text" id="name" class="service--nameinput" required>
 			                    	</div>
 			                    </div>	            		 		
-			                    <div class="form-row">
+			                    <div>
 			                    	<label for="email">
 			                    		이메일
 			                    	</label>
@@ -116,11 +117,11 @@
 			                    		<input type="email" id="email" class="service--emailinput" required>
 			                    	</div>
 			                    </div>	
-			                    <div class="form-row">
+			                    <div>
 			                    	<label for="phone">
 			                    		전화번호 (-없이 입력)
 			                    	</label>
-			                    	<div class="form-holder">
+			                    	<div>
 			                    		<input type="text" id = "tel" class="service--phoneinput" required>
 			                    	</div>
 			                    </div>	
@@ -188,14 +189,12 @@
 						<div>
 								<div class="submit">
 							        <%if(userInfo != null) {%>
-							        <form>
 										<div class="service--login">
 							            	<div class="service__emptybox"></div>
 							            	<div class="applyservice">
-							            		<a href="servicesuccess.jsp" class="applyserviceBtn">서비스 신청</a>
+							            		<button class="applyserviceBtn">서비스 신청</button>
 							            	</div>
 										</div>
-									</form>
 							        <%} 
 							        else { %>
 							            	<div class="service--login">
@@ -209,6 +208,7 @@
 					 	</div>
 	             	 </div>
 	             </div>
+	        </form>
 	<!-- Footer -->
 	<footer id="footer" style ="color : rgb(9, 41, 97)">
 		<div class="footer__inner">
