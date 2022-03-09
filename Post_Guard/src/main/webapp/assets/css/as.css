@@ -23,14 +23,18 @@
 
 .progress__container {
 	display:flex;
+	align-items : center;
+	justify-content : center;
 }
 
 .prograss {
 	width : 100px !important;
 	border : none !important;
 	border-bottom : 1px solid black !important;
+	margin-right : 20px !important;
 }
 
 .proBtn {
 	all : unset;
+	border : none !important;
 }
