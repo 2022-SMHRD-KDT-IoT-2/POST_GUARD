@@ -1,0 +1,9 @@
+.AsDetail__container {
+	height: auto;
+ 	min-height: 100%;
+  	padding-bottom: 195px;
+}
+
+.as__seq {
+	visibility : hidden;
+}

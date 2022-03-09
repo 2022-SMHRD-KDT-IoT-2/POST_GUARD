@@ -1,11 +1,11 @@
 #footer {
-	height: auto;
+	height: auto !important;
 	width: 100%;
 	display: flex; 
 	justify-content : center;
 	background-color : #F8F9FA;
 	position : relative;
-    transform : translateY(-100%);
+    transform : translateY(-100%) !important;
 }
 
 .footer__inner {

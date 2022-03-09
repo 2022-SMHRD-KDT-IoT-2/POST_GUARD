@@ -9,8 +9,9 @@ public class ASReplyVO {
 	private String as_cmt_content;
 
 	// ex) 2022/03/02 ADMIN 2022/03/03일 수거 예정입니다.
-	public ASReplyVO(String as_cmt_content, String mem_id) {
+	public ASReplyVO(String as_cmt_date, String as_cmt_content, String mem_id) {
 		super();
+		this.as_cmt_date=as_cmt_date; 
 		this.as_cmt_content = as_cmt_content;
 		this.mem_id = mem_id;
 
