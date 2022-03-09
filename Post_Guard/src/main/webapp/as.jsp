@@ -86,13 +86,13 @@
 						</a>
 					</div>
 					<div class="table-responsive">
-						<table class="table table-striped custom-table" align="right">
+						<table class="table table-striped custom-table">
 							<thead class="ASTable--thead">
 								<tr>
-									<th>카테고리</th>
-									<th>제목</th>
-									<th>작성자</th>
-									<th>답변 유무</th>
+									<th width="10%">카테고리</th>
+									<th width="50%">제목</th>
+									<th width="5%">작성자</th>
+									<th width="20%" style="text-align : center;">답변 유무</th>
 								</tr>
 							</thead>
 							<tbody class="ASTable--tbody">
@@ -106,7 +106,7 @@
 									<td><%= arr_vo.get(i).getMem_id()%></td>
 									<!--admin계정일 때 progress선택 가능하게-->
 									<%if(userInfo.getMem_id().equals("admin")) { %>
-									<td class="progress__container" colspan="1">
+									<td class="progress__container">
 									<select class="progress prograss">
 										<option>답변완료</option>
 										<option>답변대기</option>
@@ -114,8 +114,8 @@
 										<button class="proBtn" id="<%=arr_vo.get(i).getAs_seq()%>">수정</button>
 									</td>
 									<% }else{ %>
-									<td><%= arr_vo.get(i).getAs_progress()%></td>
-									<% } %>
+									<td class="progress__container"><%= arr_vo.get(i).getAs_progress()%></td>
+									  <% } %>
 									<% } %>
 								</tr>
 							</tbody>
