@@ -53,8 +53,6 @@ h1 {
 }
 .custom-table thead tr,
 .custom-table thead th {
-  padding-bottom: 30px;
-  border-top: none;
   border-bottom: none !important;
   color:#777;
   font-size: 20px;
@@ -63,11 +61,6 @@ h1 {
 }
 .custom-table tbody th,
 .custom-table tbody td {
-  color: #777;
-  font-weight: 600;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  border: none;
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;

@@ -200,7 +200,7 @@
 							            	<div class="service--login">
 							            		<div class="service__emptybox"></div>
 												<div class="service--login__inner">
-													<a href = "login.jsp">로그인이 필요한 서비스입니다.</a>
+													<a href = "login.jsp" class="service--needLogin">로그인이 필요한 서비스입니다.</a>
 												</div>
 											</div>
 							            <%} %>
@@ -283,5 +283,4 @@
 		}
 	</script>
 	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-  
 </html>
