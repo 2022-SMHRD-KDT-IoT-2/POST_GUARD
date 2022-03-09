@@ -13,11 +13,8 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
     <link rel="stylesheet" href="assets/css/sidebar.css" />
-    <link rel="stylesheet" href="service/css/style.css">
-    <link rel="stylesheet" href="service/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
-	<link rel="stylesheet" href="service/vendor/date-picker/css/datepicker.min.css">
-	
-    <title>POST-GUARD | 서비스신청</title>
+    <link rel="stylesheet" href="assets/css/asSuccess.css" />
+    <title>POST-GUARD | 신청 완료</title>
   </head>
   <body>
 <%
@@ -46,30 +43,25 @@
 						<%} %>
 						</div>
 					</div>
-					<!-- <li><a href="#">택배 예약</a></li>
-		            <li><a href="#">고객 정보 수정</a></li>
-		            <li><a href="#">고객 정보 수정</a></li>
-		            <li><a href="#">운송장</a></li> -->
 				</ul>
 			</nav>
 		</div>
 		
 	</section>
 	
-	<div class="wrapper" style="margin-right: -50px">
-			
+	<div class="asSuccess__container">
 			<%if(userInfo != null) {%>
-            <form action="" method = "post">
-            	<div class="form-header">
-            		<br>
-            		<a href="index.jsp">메인으로 돌아가기</a>
-            		
-            	</div>
-            	<br>
-            	<div id="wizard">
-            			<h3>서비스 신청이 완료되었습니다</h3>
-	              </div>
-            </form>
+			<div class="asSuccess__inner">
+				<div>
+					<i class="fa-regular fa-circle-check"></i>
+	            	<div style="margin-top : 40px;">
+	            		<h3>서비스 신청이 완료되었습니다.</h3>
+		            </div>
+		           	<div style="margin-top : 10px;">
+	            		<a href="index.jsp" class="asSuccessGoMain">메인으로 돌아가기</a>
+	            	</div>
+	            </div>
+	        </div>
             <%} 
 			else { %>
             	<div class="wrapper">
@@ -79,11 +71,6 @@
 				</div>
             <%} %>
 		</div>
-		<script>
-			
-		</script>
-		
-		
 	<!-- Footer -->
 	<footer id="footer" style ="color : rgb(9, 41, 97)">
 		<div class="footer__inner">
@@ -117,6 +104,4 @@
 	
 	</footer>
   </body>
-  	<script src="assets/js/join.js"></script>
-	  
 </html>

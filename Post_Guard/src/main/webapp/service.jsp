@@ -325,7 +325,7 @@ import="com.vo.MemberVO" %>
 			                    </div>	
 			                    <div class="form-row">
 			                    	<label for="phone">
-			                    		전화번호
+			                    		전화번호 (-없이 입력)
 			                    	</label>
 			                    	<div class="form-holder">
 			                    		<input type="text" id = "tel" class="service--phoneinput" required>
@@ -399,7 +399,7 @@ import="com.vo.MemberVO" %>
 										<div class="service--login">
 							            	<div class="service__emptybox"></div>
 							            	<div class="applyservice">
-							            		<a href="#" class="applyserviceBtn">서비스 신청</a>
+							            		<a href="servicesuccess.jsp" class="applyserviceBtn">서비스 신청</a>
 							            	</div>
 										</div>
 									</form>
