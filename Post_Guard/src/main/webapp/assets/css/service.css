@@ -7,6 +7,7 @@
 	height: auto;
  	min-height: 100%;
   	padding-bottom: 195px;
+  	color : black;
 }
 
 .service__container{
@@ -58,11 +59,13 @@
 
 .joinpath,
 .payment,
-.user {
+.user,
+.personalinfo {
 	display:flex;
 	padding-top : 30px;
 	padding-bottom : 30px;
 }
+
 
 .joinpath__inner,
 .payment__inner {
@@ -77,15 +80,41 @@
 	margin : 0 auto;
 }
 
+.personal__inner{
+	border: 1px solid #ccc;
+    border-radius: 6px;
+	width : 60%;
+	height : 200px;
+	margin : 0 auto;
+	overflow-y : scroll;
+	padding : 24px;
+}
+
+.personal__inner::-webkit-scrollbar {
+	height: 8px;
+	width: 10px;
+	border-radius: 6px;
+	background: rgba(255, 255, 255, 0.3);
+        }
+.personal__inner::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 6px;
+}
+
 .joinpath--h,
 .payment--h,
 .user--h {
 	width : 10%;
 }
 
+.personal--h {
+	width : 10.5%;
+}
+
 .joinpath--h span,
 .payment--h span,
-.user--h span{
+.user--h span,
+.personal--h span{
 	font-size : 24px;
 }
 
@@ -149,4 +178,58 @@
 }
 .service--login__inner a {
 	font-size : 20px;
+}
+
+.personal__table {
+	width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    font-size: 16px;
+    border-collapse: collapse;
+}
+
+.personal__table thead {
+	display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.personal__table thead th {
+	vertical-align: top;
+    border: 1px solid #dee2e6;
+    font-weight: 600;
+    padding : 12px;
+}
+
+.personal__table tbody {
+	text-align: center !important;
+}
+
+.personal__table tbody td {
+	border: 1px solid #dee2e6;
+	padding : 12px;
+}
+
+.personal__inner p {
+	font-size : 24px;
+}
+
+.table-bordered {
+	border: 1px solid #dee2e6;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top: 2px solid rgb(9, 41, 97);
+}
+
+.personal__check {
+	display: flex;
+	align-items: center;
+}
+
+#agreeCheck {
+	zoom : 2;
+}
+
+.checkLabel {
+	font-size : 18px !important;
 }
