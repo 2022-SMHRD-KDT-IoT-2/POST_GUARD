@@ -13,8 +13,8 @@ const handleXMLHTTPRequest = (as_title, as_content, as_category, mem_id, as_date
     as_title: as_title,
     as_content: as_content,
     as_category: as_category,
-	mem_id=mem_id, 
-	as_date=as_date
+	mem_id:mem_id, 
+	as_date:as_date
   };
 
   xhr.open("post", "ASDetailCon");
