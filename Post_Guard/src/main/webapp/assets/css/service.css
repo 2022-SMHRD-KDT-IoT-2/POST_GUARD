@@ -141,8 +141,8 @@
 	height : 2px;
 	background : #444444;
 }
-
-.service--idinput,
+.service--nameinput,
+.service--emailinput,
 .service--phoneinput,
 .service--addinput1,
 .service--addinput2,

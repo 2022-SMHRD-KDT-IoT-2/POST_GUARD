@@ -101,11 +101,19 @@
             		 		</div>
             		 		<div class="user__inner">
 			                    <div class="form-row">
-			                    	<label for="id">
-			                    		아이디
+			                    	<label for="name">
+			                    		이름
 			                    	</label>
 			                    	<div>
-			                    		<input type="text" id="id" class="service--idinput">
+			                    		<input type="text" id="name" class="service--nameinput" required>
+			                    	</div>
+			                    </div>	            		 		
+			                    <div class="form-row">
+			                    	<label for="email">
+			                    		이메일
+			                    	</label>
+			                    	<div>
+			                    		<input type="email" id="email" class="service--emailinput" required>
 			                    	</div>
 			                    </div>	
 			                    <div class="form-row">
@@ -113,14 +121,14 @@
 			                    		전화번호
 			                    	</label>
 			                    	<div class="form-holder">
-			                    		<input type="text" id = "tel" class="service--phoneinput">
+			                    		<input type="text" id = "tel" class="service--phoneinput" required>
 			                    	</div>
 			                    </div>	
 			                   <div class="field">
 											<label for="address">주소</label> 
-											<input type="text" id="sample6_postcode" placeholder="우편번호" readonly class="service--addinput1">
-											<input type="text" id="sample6_address" placeholder="주소" readonly class="service--addinput2"> 
-											<input type="text" id="sample6_detailAddress" placeholder="상세주소" class="service--addinput3">
+											<input type="text" id="sample6_postcode" placeholder="우편번호" readonly class="service--addinput1" required>
+											<input type="text" id="sample6_address" placeholder="주소" readonly class="service--addinput2" required> 
+											<input type="text" id="sample6_detailAddress" placeholder="상세주소" class="service--addinput3" required>
 											<div class="addr__container">
 												<input type="button" class="daumBtn"
 													value="우편번호 찾기"
