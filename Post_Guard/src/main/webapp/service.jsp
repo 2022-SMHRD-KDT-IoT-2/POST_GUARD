@@ -129,6 +129,54 @@
 								</div>            		 		
             		 		</div>
             		 	</div>
+            		 	<hr class="service__hr">
+            		 	<div class="personalinfo">
+            		 		<div class="personal--h">
+            		 			<span>개인정보수집 및 이용동의</span>
+            		 		</div>
+            		 		<div class="personal__inner">
+            		 			<p>개인정보 수집 및 이용에 관한 동의사항</p>
+            		 			<table class="personal__table table-bordered">
+            		 				<thead>
+            		 					<tr>
+            		 						<th>수집•이용 목적</th>
+            		 						<th>수집하는 개인정보의 항목</th>
+            		 						<th>개인정보 보유 및 이용기간</th>
+            		 					</tr>
+            		 				</thead>
+            		 				<tbody>
+            		 					<tr>
+            		 						<td>
+            		 							<span>- 서비스 제공 계약 체결 관련 상담</span>
+            		 							<br>
+            		 							<span>- 서비스 제공 계약 조건 확인을 위한 본인식별 및 실명확인</span>
+            		 							<br>
+            		 							<span>- 기존 회원 여부 확인</span>
+            		 							</td>
+            		 						<td>
+            		 							<span>E-Mail</span>
+            		 							<br>
+            		 							<span>연락처</span>
+            		 							<br>
+            		 							<span>주소</span>
+            		 							<br>
+            		 							<span>이름</span>
+            		 						</td>
+            		 						<td rowspan="6">
+            		 							<span>상담 완료 후 6개월</span>
+            		 						</td>
+            		 					</tr>
+            		 				</tbody>
+            		 			</table>
+            		 			<span style="font-size: 16px;">* 위의 개인정보 수집•이용에 대한 동의를 거부하실 수 있습니다. 다만 동의를 거부하는 경우 문의내용에 대한 상담이 정상적으로 진행 될 수 없음을 안내드립니다.</span>
+            		 		</div>
+            		 	</div>
+            		 		<div class="personal__check">
+            		 		<input type="checkbox" id="agreeCheck" required/>
+            		 		<label for="agreeCheck" class="checkLabel">
+            		 			<span>개인정보 수집 및 이용 내용에 동의합니다.*</span>
+            		 		</label>      
+            		 		</div>     		 	
 						<div>
 								<div class="submit">
 							        <%if(userInfo != null) {%>
