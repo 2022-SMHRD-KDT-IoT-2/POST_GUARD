@@ -188,3 +188,13 @@
 .hiddenId{
 	visibility:hidden;
 }
+
+.receiptBtn {
+	all : unset;
+	cursor : pointer;
+	border : 1px solid black;
+	width : 100px;
+	text-align : center;
+	background-color : rgb(9, 41, 97);
+	color : white;
+}
