@@ -2,6 +2,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.dao.ASDAO"%>
 <%@page import="com.vo.MemberVO"%>
+<%@page import="com.vo.ASReplyVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,8 +14,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/sidebar.css" />
+    <link rel="stylesheet" href="assets/css/DetailAs.css" />
     <link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
-
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
 <title>글 내용 보는 페이지</title>
 
 </head>
@@ -25,7 +27,9 @@
 	ASDAO dao = new ASDAO();
 	MemberVO userInfo = (MemberVO) session.getAttribute("userInfo");
 	ASVO vo = dao.getAS_datail(parsed_seq);
+	ArrayList<ASReplyVO> al = dao.getAS_cmt_content(parsed_seq);
 	%>
+	
 <section id="sidebar">
 		<div class="inner">
 			<nav>
@@ -52,8 +56,7 @@
 			</nav>
 		</div>
 	</section>
-
-	<div class="container">
+	<div class="AsDetail__container">
 		<hr />
 		<div class="row">
 			<div class="col-md-10">
@@ -86,38 +89,40 @@
 				</table>
 				<table id="commentTable" class="table table-condensed"></table>
 				<table class="table table-condensed">
+				<tr>
+				<td colspan="2">
+				<%for(int i=0; i<al.size()-1; i++){ %>
+				<div>
+				<p><%=al.get(i).getMem_id()%></p>
+				<p><%=al.get(i).getAs_cmt_content()%></p>
+				<p><%=al.get(i).getAs_cmt_date()%></p>
+				</div>
+				<%} %>
+				</td>
+				</tr>
 					<tr>
-						<td><div class="form-inline" role="form">
-								<p>
-<!-- 								<div class="form-group">
-									<input type="text" id="commentParentName"
-										name="commentParentName" class="form-control col-lg-2"
-										data-rule-required="true" placeholder="이름" maxlength="10">
-								</div>
-								<div class="form-group">
-									<input type="password" id="commentParentPassword"
-										name="commentParentPassword" class="form-control col-lg-2"
-										data-rule-required="true" placeholder="패스워드" maxlength="10">
-								</div> -->
-								</p> <textarea style="resize:none;" id="commentParentText" class="form-control col-lg-12"
+						<td>
+							<div class="form-inline" role="form">
+								 <textarea style="resize:none;" id="commentParentText" class="form-control col-lg-12"
 									style="width: 875px; height: 80px;" rows="4" ></textarea>
 								<div class="form-group">
-									<button type="button" id="submitBtn" value="enrollComment"
-										name="commentParentSubmit" class="btn btn-default">댓글 등록</button>
-								</div>
-						</div></td>
+									<button type="button" id="submitBtn" class="btn btn-default">댓글 등록</button>
+							</div>
+						</div>
+						</td>
 					</tr>
 				</table>
 				<table class="table table-condensed">
 					<thead>
 						<tr>
-							<td><span style='float: right'> <a href="as.jsp"><button
-											type="button" id="list" class="btn btn-default">목록</button></a>
-									<button type="button" id="modify" class="btn btn-default">수정</button>
-									<button type="button" id="delete" class="btn btn-default">삭제</button>
-									<a href="enrollas.jsp"><button type="button" id="write"
-											class="btn btn-default">글쓰기</button></a>
-							</span></td>
+							<td>
+							<span style='float: right'>
+								 <a href="as.jsp"><button type="button" id="list" class="btn btn-default">목록</button></a>
+								<button type="button" id="modify" class="btn btn-default">수정</button>
+								<button type="button" id="delete" class="btn btn-default">삭제</button>
+
+							</span>
+							</td>
 						</tr>
 					</thead>
 				</table>
@@ -125,9 +130,9 @@
 		</div>
 		<hr />
 	</div>
-	
+	<span class="as__seq"><%=as_seq %></span>
 		<!-- Footer -->
-	<footer id="footer" style="position : absolute; bottom : 0;">
+	<footer id="footer">
 		<div class="footer__inner">
 			<div class="footer__up">
 				<img class="footerlogo" src="./images/footerlogo.png" />
@@ -157,12 +162,6 @@
 			</div>
 		</div>
 	</footer>
+	<script src="assets/js/enrollCmt.js"></script>
 </body>
-<link
-	href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
-	rel="stylesheet" id="bootstrap-css">
-	    <script src="assets/js/login.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
-
-
 </html>

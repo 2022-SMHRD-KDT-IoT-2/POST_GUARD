@@ -36,22 +36,23 @@ public class ASReplyCon extends HttpServlet {
 		JsonParser parser = new JsonParser();
 		JsonElement element = parser.parse(sb.toString());
 
-		int as_cmt_seq = element.getAsJsonObject().get("as_cmt_seq").getAsInt();
-		String mem_id = element.getAsJsonObject().get("mem_id").getAsString();
-		String as_cmt_content = element.getAsJsonObject().get("as_cmt_content").getAsString();
+		String as_cmt_content = element.getAsJsonObject().get("comment").getAsString();
+		String as_seq = element.getAsJsonObject().get("as_seq").getAsString();
 
+		int parsed_as_seq = Integer.parseInt(as_seq);
+		
 		HttpSession session = request.getSession();
-		MemberVO vo = (MemberVO) session.getAttribute("t_member");
+		MemberVO vo = (MemberVO) session.getAttribute("userInfo");
 		
 		ASDAO dao = new ASDAO();
-		int cnt = dao.write_AS_cmt(as_cmt_content, mem_id);
+		int cnt = dao.write_AS_cmt(parsed_as_seq, as_cmt_content, vo.getMem_id());
 		
 		PrintWriter out = response.getWriter();
 		
 		if(cnt>0) {
-			out.print("success");
+			out.print("CommentEnrollSuccess");
 		}else {
-			out.print("fail");
+			out.print("CommentEnrollFailure");
 		}
 		
 	}

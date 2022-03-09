@@ -296,27 +296,27 @@ public class ASDAO {
 	}
 
 	// 댓글 보여주는 기능
-	public ArrayList<ASReplyVO> getAS_cmt_content(int as_cmt_seq, String mem_id, String as_cmt_content) {
-
-		ArrayList<ASReplyVO> arr_vo = new ArrayList<ASReplyVO>();
+	public ArrayList<ASReplyVO> getAS_cmt_content(int as_seq) {
+		ArrayList<ASReplyVO> al = new ArrayList<ASReplyVO>(); 
 
 		try {
 
 			DB();
 
-			String sql = "select * from T_AS_COMMENT where AS_CMT_SEQ = ?";
+			String sql = "select mem_id, AS_cmt_content, as_cmt_date from t_as_comment where AS_SEQ = ?";
 			psmt = conn.prepareStatement(sql);
-			psmt.setInt(1, as_cmt_seq);
+			psmt.setInt(1, as_seq);
 
 			rs = psmt.executeQuery();
 
 			while (rs.next()) {
 
-				String getAS_cmt_content = rs.getString(1);
-				String getMem_id = rs.getString(2);
+				String mem_id = rs.getString(1);
+				String getAS_cmt_content = rs.getString(2);
+				String getAs_cmt_date = rs.getString(3);
 
-				ASReplyVO vo = new ASReplyVO(getAS_cmt_content, getMem_id);
-				arr_vo.add(vo);
+				ASReplyVO replyvo = new ASReplyVO(getAs_cmt_date, getAS_cmt_content, mem_id);
+				al.add(replyvo);
 
 			}
 
@@ -331,37 +331,37 @@ public class ASDAO {
 			}
 
 		}
-		return arr_vo;
+		return al;
 	}
 
 	// 댓글 작성
-	public int write_AS_cmt(String as_cmt_content, String mem_id) {
+	public int write_AS_cmt(int as_seq, String comment, String mem_id) {
 
 		int cnt = 0;
 
-		try {
-
-			DB();
-
-			String sql = "insert into T_AS_COMMENT values(as_cmt_seq.nextval, ?, ?, sysdate)";
-			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, mem_id);
-			psmt.setString(2, as_cmt_content);
-
-			cnt = psmt.executeUpdate();
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-
 			try {
-				close();
-			} catch (Exception e2) {
-				e2.printStackTrace();
+	
+				DB();
+	
+				String sql = "insert into T_AS_COMMENT (as_cmt_seq, as_seq, as_cmt_content, mem_id, as_cmt_date) values (as_cmt_seq.nextval, ?, ?, ?, sysdate)";
+				psmt = conn.prepareStatement(sql);
+				psmt.setInt(1, as_seq);
+				psmt.setString(2, comment);
+				psmt.setString(3, mem_id);
+				cnt = psmt.executeUpdate();
+	
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+	
+				try {
+					close();
+				} catch (Exception e2) {
+					e2.printStackTrace();
+				}
 			}
+			return cnt;
 		}
-		return cnt;
-	}
 
 	// 댓글 수정
 	public void update_AS_cmt(String as_cmt_content, int as_cmt_seq) {
