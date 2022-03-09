@@ -25,14 +25,15 @@ public class ASVO {
 		this.as_cnt = as_cnt;
 	}
 
-	// as카테고리, 제목, 작성자, 내용 보여주는 method
-	public ASVO (String as_category, String as_title, String mem_id, String as_content, String as_progress) {
+	// as카테고리, 제목, 작성자, 내용,날짜 보여주는 method
+	public ASVO (String as_category, String as_title, String mem_id, String as_content, String as_date) {
 		super();
 		this.as_category = as_category;
 		this.as_title = as_title;
 		this.mem_id = mem_id;
 		this.as_content = as_content;
-		this.as_progress=as_progress; 
+		this.as_date=as_date;
+		
 	}
 	
 	public ASVO (int as_seq, String as_category, String as_title, String mem_id, String as_progress) {
@@ -76,5 +77,7 @@ public class ASVO {
 	public String getAs_progress() {
 		return as_progress; 
 	}
-
+public String getAs_date() {
+	return as_date; 
+}
 }

@@ -17,14 +17,14 @@
 
 <title>글 내용 보는 페이지</title>
 
-
-
 </head>
 <body>
 	<%
+	String as_seq = request.getParameter("as_seq");
+	int parsed_seq = Integer.parseInt(as_seq);
 	ASDAO dao = new ASDAO();
 	MemberVO userInfo = (MemberVO) session.getAttribute("userInfo");
-	ArrayList<ASVO> content_vo = new ArrayList<ASVO>();
+	ASVO arr_vo = dao.getAS_datail(parsed_seq);
 	%>
 <section id="sidebar">
 		<div class="inner">
@@ -61,24 +61,20 @@
 					<thead>
 						<tr align="center">
 							<th width="10%">제목</th>
-							<%for (int i=0; i<content_vo.size(); i++){ %>
-							<th width="60%"><%= content_vo.get(i).getAs_title() %></th>
+							<th width="60%"></th>
 						</tr>
-						<%} %>
 					</thead>
 					<tbody>
 						<tr>
 							<td>작성일</td>
-							<td>2014-12-15 04:45:23</td>
+							<td></td>
 						</tr>
 						<tr>
 							<td>글쓴이</td>
-							<td><%=userInfo.getMem_id()%>" disabled<span
-								style='float: right'>조회 : 0</span></td>
+							<td><%=userInfo.getMem_id()%></td>
 						</tr>
 						<tr>
 							<td colspan="2">
-								<!--  <input type="text" -->
 
 							</td>
 						</tr>
@@ -87,9 +83,9 @@
 				<table id="commentTable" class="table table-condensed"></table>
 				<table class="table table-condensed">
 					<tr>
-						<td><span class="form-inline" role="form">
+						<td><div class="form-inline" role="form">
 								<p>
-								<div class="form-group">
+<!-- 								<div class="form-group">
 									<input type="text" id="commentParentName"
 										name="commentParentName" class="form-control col-lg-2"
 										data-rule-required="true" placeholder="이름" maxlength="10">
@@ -98,14 +94,14 @@
 									<input type="password" id="commentParentPassword"
 										name="commentParentPassword" class="form-control col-lg-2"
 										data-rule-required="true" placeholder="패스워드" maxlength="10">
-								</div>
+								</div> -->
+								</p> <textarea style="resize:none;" id="commentParentText" class="form-control col-lg-12"
+									style="width: 875px; height: 80px;" rows="4" ></textarea>
 								<div class="form-group">
-									<button type="button" id="commentParentSubmit"
-										name="commentParentSubmit" class="btn btn-default">확인</button>
+									<button type="button" id="submitBtn" value="enrollComment"
+										name="commentParentSubmit" class="btn btn-default">댓글 등록</button>
 								</div>
-								</p> <textarea id="commentParentText" class="form-control col-lg-12"
-									style="width: 100%" rows="4"></textarea>
-						</span></td>
+						</div></td>
 					</tr>
 				</table>
 				<table class="table table-condensed">
