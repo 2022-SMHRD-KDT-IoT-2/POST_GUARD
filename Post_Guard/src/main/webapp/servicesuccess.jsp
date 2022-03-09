@@ -19,52 +19,6 @@
 	
     <title>POST-GUARD | 서비스신청</title>
   </head>
-  <style>
-
-.mainlogo {
- width: 180px;
- height: 200px;
-}
-
-.box1 li {
-
-font-size:40px;
-
-}
-
-.box2 li {
-
-font-size:35px;
-
-}
-
-
-.footerlogo{
-    width: 150px;
-    height: 150px;
-   }
-.footer__up-textrow1{
-font-size:25px;
-}
-
-.footer__up-textrow2{
-font-size:25px;
-}
-.footer__up-textrow3{
-font-size:25px;
-}
-.footer__up-textrow4{
-font-size:25px;
-}
-
-.footer__down{
-font-size:13px;
-}
-
-
-
-
-</style>
   <body>
 <%
 	MemberVO userInfo = (MemberVO)session.getAttribute("userInfo");

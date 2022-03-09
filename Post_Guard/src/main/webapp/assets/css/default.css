@@ -17,6 +17,17 @@ body {
 	height : 110vh;
 }
 
+body::-webkit-scrollbar {
+	height: 8px;
+	width: 10px;
+	border-radius: 6px;
+	background: rgba(255, 255, 255, 0.3);
+}
+body::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 6px;
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup,
 	menu, nav, section {
 	display: block;

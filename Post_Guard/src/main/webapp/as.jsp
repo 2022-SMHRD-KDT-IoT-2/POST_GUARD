@@ -35,6 +35,7 @@
 <link rel="stylesheet" href="assets/css/main.css" />
 <link rel="stylesheet" href="assets/css/sidebar.css" />
 <link rel="stylesheet" href="assets/css/button.css" />
+<link rel="stylesheet" href="assets/css/as.css" />
 
 <link type="text/css" rel="stylesheet"
 	href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
@@ -76,10 +77,10 @@
 		</div>
 	</section>
 
-	<section>
+	<div class="asWrapper">
 		<div class="container">
 					<h3 class="mb-3">AS 요청</h3>
-				</div>
+		</div>
 			<!-- AS게시글 목록 -->
 						<%if(userInfo != null) {%>
 			<div class="content">
@@ -125,8 +126,9 @@
 							</tbody>
 						</table>
 					</div>
-			</div>
 				</div>
+				</div>
+			</div>
             <%} else { %>
             	<div class="wrapper">
 					<div class="image-holder">
@@ -171,7 +173,7 @@
 			</div>
 		</div>
 	</footer>
-	    <script src="assets/js/login.js"></script>
+	<script src="assets/js/login.js"></script>
 	<script src="assets/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/s/popper.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
