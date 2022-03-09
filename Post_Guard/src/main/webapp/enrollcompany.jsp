@@ -47,7 +47,7 @@
 			</nav>
 		</div>
 	</section>
-	<form action="#" method="post">
+	
 		<div class="mypage__container">
 			<div class="mypage__section1">
 				<ul>
@@ -91,7 +91,6 @@
 				</div>
 			</div>
 		</div>
-	</form>
 	
 		<!-- Footer -->
 	<footer id="footer">

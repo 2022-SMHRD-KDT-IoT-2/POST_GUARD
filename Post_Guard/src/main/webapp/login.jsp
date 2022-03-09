@@ -22,55 +22,6 @@
     
     <title>POST-GUARD | 로그인</title>
   </head>
-  
-  <style>
-
-.mainlogo {
- width: 180px;
- height: 200px;
-}
-
-.box1 li {
-
-font-size:40px;
-
-}
-
-.box2 li {
-
-font-size:35px;
-}
-
-
-
-
-.footerlogo{
-    
-    width: 150px;
-    height: 150px;
-   
-    
-}
-.footer__up-textrow1{
-font-size:25px;
-}
-
-.footer__up-textrow2{
-font-size:25px;
-}
-.footer__up-textrow3{
-font-size:25px;
-}
-.footer__up-textrow4{
-font-size:25px;
-}
-
-.footer__down{
-font-size:13px;
-}
-
-
-</style>
   <body>
 	<section id="sidebar">
 		<div class="inner">
@@ -99,9 +50,7 @@ font-size:13px;
 		</div>
 	</section>
 
-    <div id="wrapper">
-      <section id="three" class="wrapper style1 fade-up">
-        <div class="inner">
+    <div class="loginWrapper">
           <div class="login__container">
             <section>
               <form method="post" action="index.jsp">
@@ -131,12 +80,10 @@ font-size:13px;
               </form>
             </section>
           </div>
-        </div>
-      </section>
     </div>
     
 	<!-- Footer -->
-	<footer id="footer" style="position : absolute; bottom : 0;">
+	<footer id="footer">
 		<div class="footer__inner">
 			<div class="footer__up">
 				<img class="footerlogo" src="./images/footerlogo.png" />

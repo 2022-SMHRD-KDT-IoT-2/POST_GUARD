@@ -51,7 +51,7 @@
 		</div>
 	</section>
 	<!-- Wrapper -->
-	    <div class="main__container">
+	<div class="main__container">
 	    <div class="main__image">
     		<img  style="width : 100%; height : 100%;" src="./images/main.png"/>
     	</div>

@@ -1,5 +1,11 @@
+.loginWrapper {
+	height: auto;
+ 	min-height: 100%;
+ 	padding-top : 300px;
+  	padding-bottom: 195px;
+}
+
 .login__container {
-  height: 100%;
   width: 30%;
   margin: 0 auto;
   padding: 8px 0px;

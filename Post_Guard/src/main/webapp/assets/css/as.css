@@ -1,5 +1,3 @@
-@charset "EUC-KR";
-
 body {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
@@ -120,4 +118,11 @@ h2 {
 .AS_table_col .box td,
 .AS_table_col .box th {
   border: none !important;
+}
+
+.asWrapper {
+	height: auto;
+ 	min-height: 100%;
+  	padding-bottom: 195px;
+	
 }
