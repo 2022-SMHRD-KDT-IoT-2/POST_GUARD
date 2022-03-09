@@ -62,7 +62,7 @@
             <form class="mb-5" method="post" id="contactForm" name="contactForm">
               <div class="row">
                <div class="col-md-6 form-group" >
-               	<h1 style = "text-align : center">AS 서비스 신청</h1>
+               	<h1>AS 서비스 신청</h1>
                	<br>
                <!-- <h3 class="heading">AS신청서를 작성해주세요.</h3> -->
                   <label for="budget" class="col-form-label">AS TYPE</label>
