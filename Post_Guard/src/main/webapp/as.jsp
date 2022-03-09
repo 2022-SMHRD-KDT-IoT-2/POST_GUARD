@@ -74,9 +74,9 @@
 
 
 
-	<div class="asWrapper">
 			<!-- AS게시글 목록 -->
 			<%if(userInfo != null) {%>
+			<div class="asWrapper">
 			<div class="content">
 				<div class="container">
 					<h1 class="mb-5">AS 신청</h1>
@@ -125,15 +125,20 @@
 				</div>
 			</div>
             <%} else { %>
-            	<div class="wrapper">
-					<div class="image-holder">
-						<a href = "login.jsp">로그인을 해주세요.</a>
-					</div>
-				</div>
+	<div class="doNotEnterAs__container">
+			<div class="doNotEnterAs__inner">
+				<div>
+					<i class="fa-regular fa-circle-xmark"></i>
+	            	<div style="margin-top : 40px;">
+	            		<h3>로그인 후 이용가능합니다.</h3>
+		            </div>
+		           	<div style="margin-top : 10px;">
+	            		<a href="index.jsp" class="doNotEnterAsGoMain">메인으로 돌아가기</a>
+	            	</div>
+	            </div>
+	        </div>
+		</div>
             <%} %>
-		<script>
-			
-		</script>
 	<!-- footer -->
 	<footer id="footer">
 		<div class="footer__inner">

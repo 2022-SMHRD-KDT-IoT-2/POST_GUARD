@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
     <link rel="stylesheet" href="assets/css/sidebar.css" />
-    <link rel="stylesheet" href="assets/css/asSuccess.css" />
+    <link rel="stylesheet" href="assets/css/serviceSuccess.css" />
     <title>POST-GUARD | 신청 완료</title>
   </head>
   <body>
@@ -49,16 +49,16 @@
 		
 	</section>
 	
-	<div class="asSuccess__container">
+	<div class="serviceSuccess__container">
 			<%if(userInfo != null) {%>
-			<div class="asSuccess__inner">
+			<div class="serviceSuccess__inner">
 				<div>
 					<i class="fa-regular fa-circle-check"></i>
 	            	<div style="margin-top : 40px;">
 	            		<h3>서비스 신청이 완료되었습니다.</h3>
 		            </div>
 		           	<div style="margin-top : 10px;">
-	            		<a href="index.jsp" class="asSuccessGoMain">메인으로 돌아가기</a>
+	            		<a href="index.jsp" class="serviceSuccessGoMain">메인으로 돌아가기</a>
 	            	</div>
 	            </div>
 	        </div>
