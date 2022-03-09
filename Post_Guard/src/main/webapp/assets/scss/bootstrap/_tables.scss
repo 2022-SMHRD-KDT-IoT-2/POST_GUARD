@@ -71,12 +71,6 @@
 //
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
 
-.table-striped {
-  tbody tr:nth-of-type(#{$table-striped-order}) {
-    background-color: $table-accent-bg;
-  }
-}
-
 
 // Hover effect
 //
@@ -139,12 +133,6 @@
 
   &.table-bordered {
     border: 0;
-  }
-
-  &.table-striped {
-    tbody tr:nth-of-type(odd) {
-      background-color: $table-dark-accent-bg;
-    }
   }
 
   &.table-hover {

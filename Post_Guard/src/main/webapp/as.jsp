@@ -77,47 +77,47 @@
 		</div>
 	</section>
 
+
+
 	<div class="asWrapper">
-		<div class="container">
-					<h3 class="mb-3">AS 요청</h3>
-		</div>
 			<!-- AS게시글 목록 -->
-						<%if(userInfo != null) {%>
+			<%if(userInfo != null) {%>
 			<div class="content">
 				<div class="container">
 					<h1 class="mb-5">AS 신청</h1>
-					<a href="enrollas.jsp">
-						<button name="enrollASList" value="AS등록">게시글 등록</button>
-					</a>
+					<div class="boardMenu">
+						<a href="enrollas.jsp">
+							<button name="enrollASList" value="AS등록">게시글 등록</button>
+						</a>
+					</div>
 					<div class="table-responsive">
-						<table class="table table-striped custom-table">
-							<thead>
+						<table class="table table-striped custom-table" align="right">
+							<thead class="ASTable--thead">
 								<tr>
-									<th scope="col">카테고리</th>
-									<th scope="col">제목</th>
-									<th scope="col">작성자</th>
-									<th scope="col">답변 유무</th>
+									<th>카테고리</th>
+									<th>제목</th>
+									<th>작성자</th>
+									<th>답변 유무</th>
 								</tr>
 							</thead>
-
-							<tbody>
+							<tbody class="ASTable--tbody">
 								<%
-					for (int i = 0; i < arr_vo.size(); i++) {
-					%>
-								<tr scope="row">
+								for (int i = 0; i < arr_vo.size(); i++) {
+								%>
+								<tr>
 									<td><%=arr_vo.get(i).getAs_category()%></td>
 									<td><a
 										href="post-detail.jsp?as_title=<%= arr_vo.get(i).getAs_title()%>"><%= arr_vo.get(i).getAs_title()%></a></td>
 									<td><%= arr_vo.get(i).getMem_id()%></td>
 									<!--admin계정일 때 progress선택 가능하게-->
 									<%if(userInfo.getMem_id().equals("admin")) { %>
-									<td><select class="progress">
-											<option>답변완료</option>
-											<option>답변대기</option>
-									
+									<td class="progress__container" colspan="1">
+									<select class="progress prograss">
+										<option>답변완료</option>
+										<option>답변대기</option>
 									</select>
-										<button class="proBtn" id="<%=arr_vo.get(i).getAs_seq()%>">진행상황
-											수정하기</button></td>
+										<button class="proBtn" id="<%=arr_vo.get(i).getAs_seq()%>">수정</button>
+									</td>
 									<% }else{ %>
 									<td><%= arr_vo.get(i).getAs_progress()%></td>
 									<% } %>

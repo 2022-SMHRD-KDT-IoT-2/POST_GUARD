@@ -63,7 +63,7 @@ body {
 	background: white;
 }
 
-body, input, select, textarea, li {
+body, input, textarea, li {
 	color: rgb(9, 41, 97);
 	font-family: "mainfont";
 	font-size: 30px;
