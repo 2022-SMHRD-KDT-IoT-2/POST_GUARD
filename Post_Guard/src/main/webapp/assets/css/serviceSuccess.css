@@ -1,4 +1,4 @@
-.asSuccess__container {
+.serviceSuccess__container {
 	display:flex;
 	align-items: center;
 	height: auto;
@@ -7,7 +7,7 @@
   	padding-bottom: 195px;
 }
 
-.asSuccess__inner {
+.serviceSuccess__inner {
 	display: flex;
 	align-items: center;
 	justify-content : center;
@@ -22,7 +22,7 @@
 	font-size : 300px;
 }
 
-.asSuccessGoMain {
+.serviceSuccessGoMain {
 	border : 1px solid rgb(9, 41, 97);
 	background-color : rgb(9, 41, 97);
 	border-radius : 30px;
