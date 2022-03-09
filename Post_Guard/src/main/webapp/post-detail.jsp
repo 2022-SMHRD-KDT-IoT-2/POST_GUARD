@@ -24,7 +24,7 @@
 	int parsed_seq = Integer.parseInt(as_seq);
 	ASDAO dao = new ASDAO();
 	MemberVO userInfo = (MemberVO) session.getAttribute("userInfo");
-	ASVO arr_vo = dao.getAS_datail(parsed_seq);
+	ASVO vo = dao.getAS_datail(parsed_seq);
 	%>
 <section id="sidebar">
 		<div class="inner">
@@ -61,21 +61,25 @@
 					<thead>
 						<tr align="center">
 							<th width="10%">제목</th>
-							<th width="60%"></th>
+							<th width="60%"><%= vo.getAs_title() %></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>작성일</td>
-							<td></td>
+							<td>등록일자</td>
+							<td><%= vo.getAs_date() %></td>
 						</tr>
 						<tr>
 							<td>글쓴이</td>
-							<td><%=userInfo.getMem_id()%></td>
+							<td><%=userInfo.getMem_id() %></td>
+						</tr>
+						<tr>
+							<td>카테고리</td>
+							<td><%=vo.getAs_category() %></td>
 						</tr>
 						<tr>
 							<td colspan="2">
-
+							<%=vo.getAs_content() %>
 							</td>
 						</tr>
 					</tbody>

@@ -164,9 +164,9 @@ public class ASDAO {
 
 				String getAs_title = rs.getString(1);
 				String getAs_content = rs.getString(2);
-				String getAs_date = rs.getString(5);
-				String getMem_id = rs.getString(3);
-				String getAs_category = rs.getString(4);
+				String getAs_date = rs.getString(3);
+				String getMem_id = rs.getString(4);
+				String getAs_category = rs.getString(5);
 
 				vo = new ASVO(getAs_category, getAs_title, getMem_id, getAs_content, getAs_date);
 			}
