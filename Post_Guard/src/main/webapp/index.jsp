@@ -17,60 +17,6 @@
 <link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
 </head>
 
-<style>
-
-.mainlogo {
- width: 180px;
- height: 200px;
-}
-
-.box1 li {
-
-font-size:40px;
-
-}
-
-.box2 li {
-
-font-size:35px;
-}
-
-
-.main__container{
-
-  margin-right: -20px;
-  margin-bottom: -20px; !important
-}
-
-
-.footerlogo{
-    
-    width: 150px;
-    height: 150px;
-   
-    
-}
-.footer__up-textrow1{
-font-size:25px;
-}
-
-.footer__up-textrow2{
-font-size:25px;
-}
-.footer__up-textrow3{
-font-size:25px;
-}
-.footer__up-textrow4{
-font-size:25px;
-}
-
-.footer__down{
-font-size:13px;
-}
-
-
-</style>
-
 <body class="is-preload">
 <%
 	MemberVO userInfo = (MemberVO)session.getAttribute("userInfo");
@@ -100,36 +46,16 @@ font-size:13px;
 						</div>
 					</div>
 					</div>
-					<!-- <li><a href="#">택배 예약</a></li>
-		            <li><a href="#">고객 정보 수정</a></li>
-		            <li><a href="#">고객 정보 수정</a></li>
-		            <li><a href="#">운송장</a></li> -->
 				</ul>
 			</nav>
 		</div>
 	</section>
 	<!-- Wrapper -->
-	    <div class="main__container">
+	<div class="main__container">
 	    <div class="main__image">
     		<img  style="width : 100%; height : 100%;" src="./images/main.png"/>
     	</div>
     </div>
-
-	<!-- <div id="wrapper">
-		Intro
-		<section id="intro" class="wrapper fullscreen fade-up">
-			<div class="inner">
-				<h1>Post Guard</h1>
-				<p>개인단위의 택배보관함 블라블라</p>
-				<ul class="actions">
-					<li><a href="product.jsp" class="button scrolly">상품 소개 바로 가기</a>
-					</li>
-				</ul>
-			</div>
-		</section>
-	</div>
- -->
-
 
 	<!-- Footer -->
 	<footer id="footer">

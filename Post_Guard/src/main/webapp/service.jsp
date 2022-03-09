@@ -11,64 +11,9 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
     <link rel="stylesheet" href="assets/css/sidebar.css" />
-    <link rel="stylesheet" href="service/css/style.css">
-    <link rel="stylesheet" href="service/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
-	<link rel="stylesheet" href="service/vendor/date-picker/css/datepicker.min.css">
-	
+    <link rel="stylesheet" href="assets/css/service.css" />
     <title>POST-GUARD | 서비스신청</title>
   </head>
-  <style>
-
-.mainlogo {
-
- width: 180px;
- height: 200px;
-}
-
-.box1 li {
-
-font-size:40px;
-
-}
-
-.box2 li {
-
-font-size:35px;
-
-}
-
-
-.footerlogo{
-    width: 150px;
-    height: 150px;
-   }
-.footer__up-textrow1{
-font-size:25px;
-}
-
-.footer__up-textrow2{
-font-size:25px;
-}
-.footer__up-textrow3{
-font-size:25px;
-}
-.footer__up-textrow4{
-font-size:25px;
-}
-
-.footer__down{
-font-size:13px;
-}
-.wrapper {
-margin-right: -280px;
-margin-bottom: 50px;
-margin-top: 50px; 
-}
-
-
-
-
-</style>
   <body>
 <%
 	MemberVO userInfo = (MemberVO)session.getAttribute("userInfo");
@@ -96,109 +41,174 @@ margin-top: 50px;
 						<%} %>
 						</div>
 					</div>
-					<!-- <li><a href="#">택배 예약</a></li>
-		            <li><a href="#">고객 정보 수정</a></li>
-		            <li><a href="#">고객 정보 수정</a></li>
-		            <li><a href="#">운송장</a></li> -->
 				</ul>
 			</nav>
 		</div>
-		
 	</section>
-	
-	
-				
-				
-			<div class="wrapper" >
-            	
-            	
-            	<div id="wizard">
-            		<h4></h4>
-            		 <section>
-	                 	                  
-	                    <div class="form-row">
-	                    	<label for="id">
-	                    		아이디 :
-	                    	</label>
-	                    	<div class="form-holder">
-	                    		<input type="text" class="form-control" style = "color : black" id = "id">
-	                    	</div>
-	                    </div>	
-	                    <div class="form-row">
-	                    	<label for="phone">
-	                    		전화번호 :
-	                    	</label>
-	                    	<div class="form-holder">
-	                    		<input type="text" class="form-control" style = "color : black" id = "tel">
-	                    	</div>
-	                    </div>	
-	                   <div class="field">
-									<label for="address">주소</label> 
-									<p></p>	
-									<input type="text" id="sample6_postcode" placeholder="우편번호" readonly style = "color : black"  >
-									<input type="text" id="sample6_address" placeholder="주소" readonly style = "color : black"> 
-									<input type="text" id="sample6_detailAddress" placeholder="상세주소" style = "color : black">
-									<div class="addr__container">
-										<input type="button" class="daumBtn"
-											value="우편번호 찾기"
-											onclick="openDaumPostCode()">
-									</div>
-						</div>
-	                </section>
-            	
-            		<!-- SECTION 1 -->
-	                <h4></h4>
-	                <section>
-	                    <div class="form-row" style="margin-bottom: 26px;">
-	                    	<label for="Subscribe_path">
-	                    		가입경로 :
-	                    	</label>
-	                    	<div class="form-holder">
-	                    		<select name="Subpath" id="path" class="form-control">
-									<option value="Internet" class="option">인터넷</option>
-									<option value="Advertise" class="option">광고</option>
-									<option value="SNS" class="option">SNS</option>
-									<option value="Recommend Acquaintance"class="option">지인 추천</option>
-								</select>
-								
-	                    	</div>
-	                    </div>	
-	                   
-	                    
-							<label for = "payment">
-								결제수단 :
-							</label>
-								<div class = "form-holder">
-									<select name = "payment1" id = "pay" class = "form-control">
-										<option id = "c"  style = "color : grey">신용카드</option>
-										<option id = "n"  style = "color : grey">네이버 PAY</option>
-										<option id = "t"  style = "color : grey">계좌이체</option>
-									</select>							
+	<form action="servicesuccess.jsp">
+			<div class="serviceWrapper">
+            		 <div class="service__container">
+            		 	<div class="joinpath">
+            		 		<div class="joinpath--h">
+            		 		<span>가입 경로</span>
+            		 		</div>
+            		 		<div class="joinpath__inner">
+	            		 		<div class="joinpath--internet">
+	            		 			<p>인터넷</p>
+	            		 			<input type="radio" name="joinpathradio" value=" "/>
+	            		 		</div>
+	            		 		<div class="joinpath--ad">
+	            		 			<p>광고</p>
+	            		 			<input type="radio" name="joinpathradio" value=" "/>       		 			
+	            		 		</div>
+	            		 		<div class="joinpath--friends">
+	            		 			<p>지인추천</p>
+	            		 			<input type="radio" name="joinpathradio" value=" "/>     		 			
+	            		 		</div>
+	            		 		<div class="joinpath--SNS">
+	            		 			<p>SNS</p>
+	            		 			<input type="radio" name="joinpathradio" value=" "/>     		 			
+	            		 		</div>
+            		 		</div>
+            		 	</div>
+            		 	<hr class="service__hr">
+            		 	<div class="payment">
+            		 		<div class="payment--h">
+            		 			<span>지불수단</span>
+            		 		</div>
+            		 		<div class="payment__inner">
+	            		 		<div class="payment--card">
+	            		 			<p>신용카드</p>
+	            		 			<input type="radio" name="paymentradio" value=" "/>
+	            		 		</div>
+	            		 		<div class="payment--account">
+	            		 			<p>계좌이체</p>
+	            		 			<input type="radio" name="paymentradio" value=" "/>       		 			
+	            		 		</div>
+	            		 		<div class="payment--noaccount">
+	            		 			<p>무통장입금</p>
+	            		 			<input type="radio" name="paymentradio" value=" "/>     		 			
+	            		 		</div>
+	            		 		<div class="payment--phone">
+	            		 			<p>휴대폰소액결제</p>
+	            		 			<input type="radio" name="paymentradio" value=" "/>     		 			
+	            		 		</div>	            		 		
+            		 		</div>            		 		
+            		 	</div>
+            		 	<hr class="service__hr">
+            		 	<div class="user">
+            		 		<div class="user--h">
+            		 			<span>신청자 정보</span>
+            		 		</div>
+            		 		<div class="user__inner">
+			                    <div>
+			                    	<label for="name">
+			                    		이름
+			                    	</label>
+			                    	<div>
+			                    		<input type="text" id="name" class="service--nameinput" required>
+			                    	</div>
+			                    </div>	            		 		
+			                    <div>
+			                    	<label for="email">
+			                    		이메일
+			                    	</label>
+			                    	<div>
+			                    		<input type="email" id="email" class="service--emailinput" required>
+			                    	</div>
+			                    </div>	
+			                    <div>
+			                    	<label for="phone">
+			                    		전화번호 (-없이 입력)
+			                    	</label>
+			                    	<div>
+			                    		<input type="text" id = "tel" class="service--phoneinput" required>
+			                    	</div>
+			                    </div>	
+			                   <div class="field">
+											<label for="address">주소</label> 
+											<input type="text" id="sample6_postcode" placeholder="우편번호" readonly class="service--addinput1" required>
+											<input type="text" id="sample6_address" placeholder="주소" readonly class="service--addinput2" required> 
+											<input type="text" id="sample6_detailAddress" placeholder="상세주소" class="service--addinput3" required>
+											<div class="addr__container">
+												<input type="button" class="daumBtn"
+													value="우편번호 찾기"
+													onclick="openDaumPostCode()">
+											</div>
+								</div>            		 		
+            		 		</div>
+            		 	</div>
+            		 	<hr class="service__hr">
+            		 	<div class="personalinfo">
+            		 		<div class="personal--h">
+            		 			<span>개인정보수집 및 이용동의</span>
+            		 		</div>
+            		 		<div class="personal__inner">
+            		 			<p>개인정보 수집 및 이용에 관한 동의사항</p>
+            		 			<table class="personal__table table-bordered">
+            		 				<thead>
+            		 					<tr>
+            		 						<th>수집•이용 목적</th>
+            		 						<th>수집하는 개인정보의 항목</th>
+            		 						<th>개인정보 보유 및 이용기간</th>
+            		 					</tr>
+            		 				</thead>
+            		 				<tbody>
+            		 					<tr>
+            		 						<td>
+            		 							<span>- 서비스 제공 계약 체결 관련 상담</span>
+            		 							<br>
+            		 							<span>- 서비스 제공 계약 조건 확인을 위한 본인식별 및 실명확인</span>
+            		 							<br>
+            		 							<span>- 기존 회원 여부 확인</span>
+            		 							</td>
+            		 						<td>
+            		 							<span>E-Mail</span>
+            		 							<br>
+            		 							<span>연락처</span>
+            		 							<br>
+            		 							<span>주소</span>
+            		 							<br>
+            		 							<span>이름</span>
+            		 						</td>
+            		 						<td rowspan="6">
+            		 							<span>상담 완료 후 6개월</span>
+            		 						</td>
+            		 					</tr>
+            		 				</tbody>
+            		 			</table>
+            		 			<span style="font-size: 16px;">* 위의 개인정보 수집•이용에 대한 동의를 거부하실 수 있습니다. 다만 동의를 거부하는 경우 문의내용에 대한 상담이 정상적으로 진행 될 수 없음을 안내드립니다.</span>
+            		 		</div>
+            		 	</div>
+            		 		<div class="personal__check">
+            		 		<input type="checkbox" id="agreeCheck" required/>
+            		 		<label for="agreeCheck" class="checkLabel">
+            		 			<span>개인정보 수집 및 이용 내용에 동의합니다.*</span>
+            		 		</label>      
+            		 		</div>     		 	
+						<div>
+								<div class="submit">
+							        <%if(userInfo != null) {%>
+										<div class="service--login">
+							            	<div class="service__emptybox"></div>
+							            	<div class="applyservice">
+							            		<button class="applyserviceBtn">서비스 신청</button>
+							            	</div>
+										</div>
+							        <%} 
+							        else { %>
+							            	<div class="service--login">
+							            		<div class="service__emptybox"></div>
+												<div class="service--login__inner">
+													<a href = "login.jsp">로그인이 필요한 서비스입니다.</a>
+												</div>
+											</div>
+							            <%} %>
 								</div>
-					 </section>
+					 	</div>
+	             	 </div>
 	             </div>
-            </div>
-        
-        
-        <div class="submit" style = "margin-left: 600px">
-        <%if(userInfo != null) {%>
-            <form action="" method = "post">
-            	<div class="form-header">
-            		<a href="servicesuccess.jsp">Post-Guard 서비스 신청</a>
-            		<h3>서비스 신청</h3>
-            	</div>
-            	</form>
-        <%} 
-        else { %>
-            	<div class="login" style =  "margin-left: 280px">
-					<div class="image-holder">
-						<a href = "login.jsp">로그인을 해주세요</a>
-					</div>
-				</div>
-            <%} %>
-		</div>
-	
-		
+	        </form>
 	<!-- Footer -->
 	<footer id="footer" style ="color : rgb(9, 41, 97)">
 		<div class="footer__inner">
