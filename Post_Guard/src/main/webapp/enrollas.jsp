@@ -52,16 +52,18 @@
 			</nav>
 		</div>
 	</section>
-			
+		
    		<div class="content" >
-   			
+   				
         <div class="col-md-6">
-        	
+        		
           <div class="box" >
             
             <form class="mb-5" method="post" id="contactForm" name="contactForm">
               <div class="row">
                <div class="col-md-6 form-group" >
+               	<h1>AS 서비스 신청</h1>
+               	<br>
                <!-- <h3 class="heading">AS신청서를 작성해주세요.</h3> -->
                   <label for="budget" class="col-form-label">AS TYPE</label>
                   <!--  select -->
@@ -105,9 +107,9 @@
               </div>
 
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12" style = "margin-left :50%;">
                 <!--  input -->
-                  <input type="button" value="AS신청서 접수하기" class="btn btn-block btn-primary rounded-0 py-2 px-4" id="submitBtn" onClick = "location.href = 'asrequire.jsp'">
+                  <input type="button" value="AS신청서 접수하기" class="btn btn-block btn-primary rounded-0 py-2 px-4" id="submitBtn" onClick = "location.href = 'asrequire.jsp'" style = "margin-bottom : 10%;" >
                   <span class="submitting"></span>
                 </div>
               </div>

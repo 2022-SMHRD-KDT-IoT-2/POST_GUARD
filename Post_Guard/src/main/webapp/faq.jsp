@@ -93,9 +93,8 @@
                                     <p>저희 상품 회원가입은 홈페이지를 통해서만 가능합니다.</p>
                                     
                                     <p>가입은 다음과 같은 절차로 진행됩니다.</p>
-                                    <p>① 약관동의 </p>
-									<p>② 가입정보입력 </p>
-									<p>③ 이메일 인증 </p>
+                                   	<p>ⓢ가입정보입력 </p>
+									<p>② 회원가입 </p>
                                     </div>
                                 </div>
                             </div>
@@ -105,17 +104,22 @@
                                 <div class="panel-heading">
                                     <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-2">
                                         <h4 class="panel-title">
-                                            인증메일을 받지 못하면 어떻게 하나요?
+                                            회원 탈퇴는 어디서 하나요?
                                             <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
                                         </h4>
                                     </a>
                                 </div>
                                 <div id="faq-cat-1-sub-2" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                   <p> POGUARD 계정에서 보내드린 인증 메일이 메일 수신함에 없을 경우 인증 메일을 받으실 메일 주소를 정확하게 입력하셨는지 다시 한 번 확인해주시고 </p>
-                                   <p> 스팸 메일함 또는 정크 메일함에 수신된 인증 메일이 없는지 확인해주시기 바랍니다. </p>
+                                   <p>회원 탈퇴는 아래와 같이 진행됩니다.</p>
 									
-									<p>인증 메일을 찾으실 수 없는 경우, 가입하신 POGAURD계정과 비밀번호로 로그인 하시면 [인증 메일 재발송] 기능을 이용하여 인증 메일을 재전송 받으실 수 있습니다.</p>
+									<p></p>
+									<p>① 로그인 하신뒤 오른쪽 상단의 로그아웃 옆 로그인하신 아이디를 눌러줍니다. </p>
+									<p>② 다음 화면에서 왼쪽메뉴 중 회원탈퇴를 눌러주신뒤 확인창에서 예를 눌러주시면 회원탈퇴가 완료됩니다..</p>
+									
+                                  
+									
+									
                                     
                                     </div>
                                 </div>
@@ -126,22 +130,22 @@
                                 <div class="panel-heading">
                                     <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-3">
                                         <h4 class="panel-title">
-                                            비밀번호를 잊어버렸어요
+                                           회원정보 수정은 어디서 하나요?
                                             <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
                                         </h4>
                                     </a>
                                 </div>
                                 <div id="faq-cat-1-sub-3" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                    <p>POGAURD계정 회원가입 후 비밀번호를 분실하셨을 경우 ‘비밀번호 재설정’ 기능을 이용하여 새로운 비밀번호를 만들 수 있습니다.</p>
-									<p>POGAURD 계정으로 가입하셨던 아이디를 입력하시면 비밀번호를 새로 만들 수 있는 (링크가 포함된) 메일이 발송됩니다.</p>
-									<p>단, 페이스북/구글 계정으로 로그인한 고객님은 해당 사이트에서 확인하셔야 합니다.</p>
+                                    <p>회원 정보 수정은 아래와 같이 진행됩니다.</p>
+									<p></p>
+									<p></p>
 									<span> </span>
-									<p>비밀번호 재설정 절차는 아래와 같습니다.</p>
-									<p>① 메뉴 '비밀번호 재설정'으로 이동</p>
-									<p>② '비밀번호 재설정' 에서 회원가입 시 등록했던 아이디 입력 후 확인 클릭</p>
-									<p>③ 비밀번호 재설정 링크가 이메일로 발송</p>
-									<p>④ 안내 메일에서 재설정 링크를 통해 새로운 비밀번호로 변경"</p>
+									<p></p>
+									<p>① 로그인 하신뒤 오른쪽 상단의 로그아웃 옆 로그인하신 아이디를 눌러줍니다. </p>
+									<p>② 다음 화면에서 왼쪽메뉴 중 회원 정보를 눌러주신뒤 현재 사용중인 비밀번호를 입력합니다.</p>
+									<p>③ 원하시는 개인정보를 수정하신뒤 정보수정을 눌러주시면 완료됩니다. </p>
+								
                                     </div>
                                 </div>
                             </div>
