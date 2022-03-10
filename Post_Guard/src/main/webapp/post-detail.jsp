@@ -64,27 +64,28 @@
 
 
 
+
 	<div class="AsDetail__container">
 		<div class="asdetail">
 			<div class="detail_page">
 				<table class="table inner">
 					<thead>
 						<tr align="center">
-							<th width="10%">제목</th>
-							<th width="60%"><%=vo.getAs_title()%></th>
+							<th width="20%"><span class="title">제목</span></th>
+							<th width="20%"><%=vo.getAs_title()%></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>등록일자</td>
+							<td><span class="title">등록일자</span></td>
 							<td><%=vo.getAs_date()%></td>
 						</tr>
 						<tr>
-							<td>글쓴이</td>
+							<td><span class="title">글쓴이</span></td>
 							<td><%=userInfo.getMem_id()%></td>
 						</tr>
 						<tr>
-							<td>카테고리</td>
+							<td><span class="title">카테고리</span></td>
 							<td><%=vo.getAs_category()%></td>
 						</tr>
 						<tr>
@@ -100,7 +101,7 @@
 							<th> </th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody class="tbody_cmt_list">
 						<%
 						for (int i = 0; i < al.size() - 1; i++) {
 						%>
@@ -112,23 +113,25 @@
 						<%
 						}
 						%>
-						<tr>
-							<td colspan="3">
-								<div class="form-inline" role="form">
-								<span>Comments</span>
-									<textarea style="resize: none; width:685px; height:100px; overflow:hidden; background-color:#f3f3f3; color:#262626;" class="enrollCommnet"></textarea>
 
-									<div class="form-group">
-										<button type="button" id="submitBtn">댓글 등록</button>
-										<button type="button" id="submitBtn">댓글 수정</button>
-										<button type="button" id="submitBtn">댓글 삭제</button>
-									</div>
-								</div>
-							</td>
-						</tr>
 					</tbody>
 				</table>
-				<div class="form-group">
+						<tr>
+							<td colspan="3">
+							<div class="as__comment">
+								<div class="comment_as_title" role="form">
+								<div class="comment_as_title__inner">
+									<span class="commentTitle" >Comments</span>
+									<div class="input_comment">
+										<textarea placeholder="댓글을 입력해주세요." class="comment_enroll" style="resize: none; overflow:hidden; width:550px; height:60px;"></textarea>
+										<button type="button" class="eorollCommentBtn">등록</button>
+									</div>
+								</div>
+								</div>
+							</div>
+							</td>
+						</tr>
+				<div class="form-group_content">
 					<a href="as.jsp">
 						<button type="button" id="submitBtn">목록</button>
 						<button type="button" id="submitBtn">글 수정</button>
@@ -140,6 +143,10 @@
 		<hr />
 	</div>
 	<span class="as__seq"><%= as_seq%></span>
+
+
+
+
 
 
 	<!-- Footer -->
