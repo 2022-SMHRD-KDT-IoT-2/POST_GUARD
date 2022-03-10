@@ -31,17 +31,11 @@ public class ArduinoCon extends HttpServlet {
 		for (int i = 0; i < al.size(); i++) {
 			if (al.get(i).getDelivery_no()
 					.substring(al.get(i).getDelivery_no().length() - 4, al.get(i).getDelivery_no().length())
-					.equals(pin)) {
+					.equals(pin) || pin.equals(adminPassword)) {
 				response.setStatus(200);
 			} else {
 				response.setStatus(400);
 			}
-		}
-
-		if (pin.equals(adminPassword)) {
-			response.setStatus(200);
-		} else {
-			response.setStatus(400);
 		}
 	}
 }
