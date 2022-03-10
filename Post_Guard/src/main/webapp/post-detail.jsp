@@ -58,11 +58,13 @@
 	</section>
 	
 	
+	
+	
+	
 	<div class="AsDetail__container">
-		<hr />
-		<div class="row">
-			<div class="col-md-10">
-				<table class="table table-condensed">
+		<div class="asdetail">
+			<div class="detail_page">
+				<table class="table inner">
 					<thead>
 						<tr align="center">
 							<th width="10%">제목</th>
@@ -107,32 +109,27 @@
 							<div class="form-inline" role="form">
 								 <textarea style="resize:none;" id="commentParentText" class="form-control col-lg-12"
 									style="width: 875px; height: 80px;" rows="4" ></textarea>
+								
 								<div class="form-group">
-									<button type="button" id="submitBtn" class="btn btn-default">댓글 등록</button>
-							</div>
+									<button type="button" id="submitBtn" >댓글 등록</button>
+							    </div>
 						</div>
 						</td>
 					</tr>
 				</table>
-				<table class="table table-condensed">
-					<thead>
-						<tr>
-							<td>
-							<span style='float: right'>
-								 <a href="as.jsp"><button type="button" id="list" class="btn btn-default">목록</button></a>
-								<button type="button" id="modify" class="btn btn-default">수정</button>
-								<button type="button" id="delete" class="btn btn-default">삭제</button>
-
-							</span>
-							</td>
-						</tr>
-					</thead>
-				</table>
+							<div class="form-group">
+								 <a href="as.jsp">
+								   <button type="button" id="submitBtn">목록</button>
+								 </a>
+							</div>
 			</div>
 		</div>
 		<hr />
 	</div>
 	<span class="as__seq"><%=as_seq %></span>
+	
+	
+	
 	
 	
 		<!-- Footer -->
