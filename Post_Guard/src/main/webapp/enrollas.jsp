@@ -1,30 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@ page import="com.vo.MemberVO" %>
+	pageEncoding="UTF-8"%>
+<%@ page import="com.vo.MemberVO" %>
 <!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="young/fonts/icomoon/style.css">
-
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="young/css/bootstrap.min.css">
-    
-    <!-- Style -->
-    <link rel="stylesheet" href="young/css/style.css">
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="assets/css/sidebar.css" />
 
+    <!-- Style -->
+<link rel="stylesheet" href="young/css/style.css"/>
+<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="assets/css/button.css" />
+<link rel="stylesheet" href="assets/css/sidebar.css" />
+<link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
+   
     <title>AS 게시글 등록 페이지</title>
   </head>
   <body>
+  
   <% MemberVO userInfo = (MemberVO)session.getAttribute("userInfo");%>
   
-	<!-- INDEX -->
+	<!-- 네비게이터 -->
 <section id="sidebar">
 		<div class="inner">
 			<nav>
@@ -52,77 +50,113 @@
 			</nav>
 		</div>
 	</section>
-		
-   		<div class="content" >
-   				
-        <div class="col-md-6">
-        		
-          <div class="box" >
-            
-            <form class="mb-5" method="post" id="contactForm" name="contactForm">
-              <div class="row">
-               <div class="col-md-6 form-group" >
-               	<h1>AS 서비스 신청</h1>
-               	<br>
-               <!-- <h3 class="heading">AS신청서를 작성해주세요.</h3> -->
-                  <label for="budget" class="col-form-label">AS TYPE</label>
-                  <!--  select -->
-                  <select class="custom-select" id="category">
-				    <option value="수리요청">수리 요청</option>
-				    <option value="수거요청">수거 요청</option>
-  				  </select>
-   				  <label for="date" class="col-form-label">요청 날짜</label>
-  				  <input type = "date" class="currentDate" id ="currentDate" disabled/>
-  				  <script>document.getElementById('currentDate').value=
-  					  new Date().toISOString().substring(0,10);</script>
-                </div>
+	
 
-              </div>
-              <div class="row">
-                <div class="col-md-12 form-group">
-                  <label for="astitle" class="col-form-label">글 제목</label>
-                  <!--  input -->
-                  <input type="text" class="form-control" name="astitle" id="title" placeholder="글 제목을 입력하세요. ">
-                </div>
-              </div>
+	<!-- 접수신청서 -->
+	<form action ="asrequire.jsp">
+		<div class="ASWrapper">
+			<div class="ASContainer">
+				<div class="aspath">
+					<div class="aspath_">
+               		<div class="enrollas">
+               		<p>AS신청서를 접수해주세요.</p>
+               		</div>
+               		
+                  <!--  select category -->
+		<div class="category__container">
+                <div class="title_category">
+				  <span style="white-space: nowrap;">접수 구분</span>
+				</div>
+				<div class="as_select_category">
+				  <div class="select_fix">
+				     <p>수리 요청</p>
+				     <input type="radio" name ="asselect" class="asselcet" value="수리요청"/>
+  				  </div>
+  				  <div class="select_return">  
+  				  <p>수거 요청</p>
+  				  <input type="radio" name="asselect" class="asselcet" value="수거요청" />
+  				</div>
+  				</div>
+  			</div>
+  		</div>
+  			<hr>
 
-              <div class="row">
-                <div class="col-md-12 form-group">
-                  <label for="message" class="col-form-label">글 내용</label>
-                  <!--  textarea -->
-                  <textarea class="form-control" name="message" id="content" cols="30" rows="7"></textarea>
+                  <!--  title -->
+				<div class = "title_title">
+				  <span>접수 제목</span>
+				</div>
+				<div class="as_input_title">
+                  <input type="text" class="as_title" id="title">
+				</div>
+				
+				
+				
+                  <!--  content -->
+				<div class="as_content">
+				<div class="title_content">
+				  <span>접수 내용</span>
+				  </div>
+				  <div class="as_input_content"> 
+                  <textarea style="resize:none; width:685px; height:100px; overflow:hidden;" 
+                  class="as_content_textarea" id="content"></textarea>
+                  <div class="sub_">
+                  <table class="sub__">
+                  <thead>
+                  <tr>
+                  <td class="as__comment"> 
+                  <span> * 문의 내용을 구체적으로 작성해 주세요. 정확하고 빠른 답변에 도움이 됩니다. </span>
+                  <br>
+                  <span> * 주민등록번호를 포함한 고객님의 소중한 개인정보는 사이트에 노출되지 않으나 꼭 필요한 경우가 아닌 경우 기재를 삼가시길 바랍니다.</span>
+                  </td>
+				  </tr>
+				  </thead>
+				  </table>
+				  </div>
+				  </div>
+				  <hr>
+				</div>
+				
+				
+				
+				<!-- 답변알림 -->
+			<div class="as_arlrm_select">
+				<div class="title_arlam">
+					<span>답변 알림</span>
+					  <div class="as_select_email">
+					   <input type="text" class="emailInfoInput" name="userInfoEmail" value="<%=userInfo.getMem_email() %>" disabled>
+					   <input type="text" class="phoneInfoInput" name="userInfoPhone" value="<%=userInfo.getMem_phone() %>" disabled>				   
+				      </div>
+				   	<div class="as_radio_container">
+					   <div class="select_email">
+					     <input type="radio" name = "selectarlam" value="email"/>			
+					     <p>이메일로 알람 받기</p>
+					   </div>
+					  <div class="select_phone">
+						   <input type="radio" name = "selectarlam" value="phone"/>
+						   <p>SMS로 알람 받기</p>
+					  </div>
+				   </div>				   
+				  </div>
+			</div>
+				  <hr>
+
+                <!--  submit-->
+                <div class="submit">
+                  <input type="button" id="submitBtn" value="AS접수신청" />
                 </div>
-              </div>
-              <div class="row mb-3">
-              
-                <div class="col-md-6 form-group">
-                  <label for="name" class="col-form-label">작성자 아이디</label>
-                  
-                  <!--  input -->
-                  <input type="text" class="form-control" name="name" id="id" value="<%=userInfo.getMem_id()%>" disabled>
-                </div>
+					</div>
+				</div>
+			</div>
+	</form>
 
 
-                </div>
-              </div>
 
-              <div class="row">
-                <div class="col-md-12" style = "margin-left :50%;">
-                <!--  input -->
-                  <input type="button" value="AS신청서 접수하기" class="btn btn-block btn-primary rounded-0 py-2 px-4" id="submitBtn" onClick = "location.href = 'asrequire.jsp'" style = "margin-bottom : 10%;" >
-                  <span class="submitting"></span>
-                </div>
-              </div>
 
-            <div id="form-message-warning mt-4"></div> 
-            <div id="form-message-success">
-            </div>
-            
-          </div>
-        </div>
-       
-        		<!-- footer -->
-		<footer id="footer">
+
+
+
+
+	<!-- 	<footer id="footer" style="position:absolute; bottom:0;">
 			<div class="footer__inner">
 				<div class="footer__up">
 					<img class="footerlogo" src="./images/logo(navy).png" />
@@ -154,9 +188,9 @@
 						<span>&copy; POST GUARD; All rights reserved.</span>
 						</div>
 				</div>
-			</footer>
-
-    <script src="young/js/jquery-3.3.1.min.js"></script>
+			</footer>  -->
+		
+	<script src="young/js/jquery-3.3.1.min.js"></script>
     <script src="young/js/popper.min.js"></script>
     <script src="young/js/bootstrap.min.js"></script>
     <script src="young/js/jquery.validate.min.js"></script>

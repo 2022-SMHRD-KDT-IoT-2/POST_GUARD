@@ -1,8 +1,8 @@
 const as_title = document.querySelector("#title");
 const as_content = document.querySelector("#content");
-const as_category = document.querySelector("#category");
-
+const as_category = document.getElementsByName("asselect");
 const submitBtn = document.querySelector("#submitBtn");
+let categoryValue; 
 
 const handleXMLHTTPRequest = (as_title, as_content, as_category) => {
   let xhr = new XMLHttpRequest();
@@ -41,7 +41,21 @@ const handleXMLHTTPRequest = (as_title, as_content, as_category) => {
 
 const handleSubmit = (e) => {
   e.preventDefault();
-  handleXMLHTTPRequest(as_title.value, as_content.value, as_category.value);
+  handleXMLHTTPRequest(as_title.value, as_content.value, categoryValue);
 };
 
+const getCategoryValue = (e) => {
+	categoryValue = e.target.value;
+	console.log(categoryValue);
+}
+
 submitBtn.addEventListener("click", handleSubmit);
+
+function addEventListenerByClass(className, event, fn) {
+    var list = document.getElementsByClassName(className);
+    for (var i = 0, len = list.length; i < len; i++) {
+        list[i].addEventListener(event, fn, false);
+    }
+}
+
+addEventListenerByClass('asselcet', 'input', getCategoryValue); 
