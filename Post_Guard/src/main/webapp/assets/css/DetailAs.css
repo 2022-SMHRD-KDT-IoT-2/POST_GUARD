@@ -43,3 +43,11 @@
 .form-group{
 	display:flex; 
 }
+
+.commentList{
+	display:flex; 	
+}
+.enrollCommnet{
+	width:685px !important;
+	height:auto;
+}

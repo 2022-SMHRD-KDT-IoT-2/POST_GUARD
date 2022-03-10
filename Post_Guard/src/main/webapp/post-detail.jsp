@@ -12,11 +12,14 @@
 <meta charset="utf-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/sidebar.css" />
-    <link rel="stylesheet" href="assets/css/DetailAs.css" />
-    <link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
-	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="assets/css/sidebar.css" />
+<link rel="stylesheet" href="assets/css/DetailAs.css" />
+<link type="text/css" rel="stylesheet"
+	href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
+<link
+	href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css" />
 <title>글 내용 보는 페이지</title>
 
 </head>
@@ -29,13 +32,13 @@
 	ASVO vo = dao.getAS_datail(parsed_seq);
 	ArrayList<ASReplyVO> al = dao.getAS_cmt_content(parsed_seq);
 	%>
-	
-<section id="sidebar">
+
+	<section id="sidebar">
 		<div class="inner">
 			<nav>
 				<ul>
-					<li><a href="index.jsp"><img
-							class="mainlogo" src="./images/logo(white).png" /></a></li>
+					<li><a href="index.jsp"><img class="mainlogo"
+							src="./images/logo(white).png" /></a></li>
 					<div class="box_container">
 						<div class="box1">
 							<li><a href="product.jsp">상품 소개</a></li>
@@ -56,11 +59,11 @@
 			</nav>
 		</div>
 	</section>
-	
-	
-	
-	
-	
+
+
+
+
+
 	<div class="AsDetail__container">
 		<div class="asdetail">
 			<div class="detail_page">
@@ -68,71 +71,78 @@
 					<thead>
 						<tr align="center">
 							<th width="10%">제목</th>
-							<th width="60%"><%= vo.getAs_title() %></th>
+							<th width="60%"><%=vo.getAs_title()%></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td>등록일자</td>
-							<td><%= vo.getAs_date() %></td>
+							<td><%=vo.getAs_date()%></td>
 						</tr>
 						<tr>
 							<td>글쓴이</td>
-							<td><%=userInfo.getMem_id() %></td>
+							<td><%=userInfo.getMem_id()%></td>
 						</tr>
 						<tr>
 							<td>카테고리</td>
-							<td><%=vo.getAs_category() %></td>
+							<td><%=vo.getAs_category()%></td>
 						</tr>
 						<tr>
-							<td colspan="2">
-							<%=vo.getAs_content() %>
+							<td colspan="2"><%=vo.getAs_content()%></td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="table table-condensed">
+					<thead>
+						<tr>
+							<th> </th>
+							<th> </th>
+							<th> </th>
+						</tr>
+					</thead>
+					<tbody>
+						<%
+						for (int i = 0; i < al.size() - 1; i++) {
+						%>
+						<tr>
+							<td>[<%=al.get(i).getMem_id()%>]</td>
+							<td><%=al.get(i).getAs_cmt_content()%></td>
+							<td><%=al.get(i).getAs_cmt_date()%></td>
+						</tr>
+						<%
+						}
+						%>
+						<tr>
+							<td colspan="3">
+								<div class="form-inline" role="form">
+								<span>Comments</span>
+									<textarea style="resize: none; width:685px; height:100px; overflow:hidden; background-color:#f3f3f3; color:#262626;" class="enrollCommnet"></textarea>
+
+									<div class="form-group">
+										<button type="button" id="submitBtn">댓글 등록</button>
+										<button type="button" id="submitBtn">댓글 수정</button>
+										<button type="button" id="submitBtn">댓글 삭제</button>
+									</div>
+								</div>
 							</td>
 						</tr>
 					</tbody>
 				</table>
-				<table id="commentTable" class="table table-condensed"></table>
-				<table class="table table-condensed">
-				<tr>
-				<td colspan="2">
-				<%for(int i=0; i<al.size()-1; i++){ %>
-				<div>
-				<p><%=al.get(i).getMem_id()%></p>
-				<p><%=al.get(i).getAs_cmt_content()%></p>
-				<p><%=al.get(i).getAs_cmt_date()%></p>
+				<div class="form-group">
+					<a href="as.jsp">
+						<button type="button" id="submitBtn">목록</button>
+						<button type="button" id="submitBtn">글 수정</button>
+						<button type="button" id="submitBtn">글 삭제</button>
+					</a>
 				</div>
-				<%} %>
-				</td>
-				</tr>
-					<tr>
-						<td>
-							<div class="form-inline" role="form">
-								 <textarea style="resize:none;" id="commentParentText" class="form-control col-lg-12"
-									style="width: 875px; height: 80px;" rows="4" ></textarea>
-								
-								<div class="form-group">
-									<button type="button" id="submitBtn" >댓글 등록</button>
-							    </div>
-						</div>
-						</td>
-					</tr>
-				</table>
-							<div class="form-group">
-								 <a href="as.jsp">
-								   <button type="button" id="submitBtn">목록</button>
-								 </a>
-							</div>
 			</div>
 		</div>
 		<hr />
 	</div>
-	<span class="as__seq"><%=as_seq %></span>
-	
-	
-	
-	
-	
-		<!-- Footer -->
+	<span class="as__seq"><%= as_seq%></span>
+
+
+	<!-- Footer -->
 	<footer id="footer">
 		<div class="footer__inner">
 			<div class="footer__up">
@@ -152,12 +162,15 @@
 			</div>
 			<hr>
 			<div class="footer__down">
-				<span>광주 동구 예술길 31-15 광주아트센터 4층 (POST-GUARD)
- 사업자 등록번호 : 375-87-00088 직업정보제공사업 신고번호 : J1200020200016</span>
+				<span>광주 동구 예술길 31-15 광주아트센터 4층 (POST-GUARD) 사업자 등록번호 :
+					375-87-00088 직업정보제공사업 신고번호 : J1200020200016</span>
 				<div class="footer__icons">
-					<a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-					<a href="https://twitter.com/"><i class="fa-brands fa-twitter fa-2xl"></i></a>
-					<a href="https://ko-kr.facebook.com/"><i class="fa-brands fa-facebook-square fa-2xl"></i></a>
+					<a href="https://www.instagram.com/"><i
+						class="fa-brands fa-instagram fa-2xl"></i></a> <a
+						href="https://twitter.com/"><i
+						class="fa-brands fa-twitter fa-2xl"></i></a> <a
+						href="https://ko-kr.facebook.com/"><i
+						class="fa-brands fa-facebook-square fa-2xl"></i></a>
 				</div>
 				<span>&copy; POST GUARD; All rights reserved.</span>
 			</div>
