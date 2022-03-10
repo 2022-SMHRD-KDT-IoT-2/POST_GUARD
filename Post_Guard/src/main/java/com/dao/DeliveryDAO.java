@@ -118,4 +118,33 @@ public class DeliveryDAO {
 		}
 		return cnt;
 	}
+	
+	public ArrayList<DeliveryVO> select_all_tracking_num() {
+		ArrayList<DeliveryVO> al = new ArrayList<DeliveryVO>();
+		try {
+			DB();
+			String sql = "select * from t_my_delivery";
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+
+			while (rs.next()) {
+				int delivery_seq = Integer.parseInt(rs.getString(1));
+				String delivery_no = rs.getString(2);
+				String receiver = rs.getString(3);
+				String reg_date = rs.getString(4);
+				String delivery_status = rs.getString(5);
+				int rq_seq = 0;
+				String receipt_time = rs.getString(7);
+				DeliveryVO vo = new DeliveryVO(delivery_seq, delivery_no, receiver, reg_date, delivery_status,
+						rq_seq, receipt_time);
+				al.add(vo);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return al;
+	}
 }
