@@ -88,9 +88,7 @@
 				<div class="as_input_title">
                   <input type="text" class="as_title" id="title">
 				</div>
-				
-				
-				
+
                   <!--  content -->
 				<div class="as_content">
 				<div class="title_content">
@@ -115,7 +113,6 @@
 				  </div>
 				  <hr>
 				</div>
-				
 				
 				
 				<!-- 답변알림 -->
@@ -149,46 +146,36 @@
 			</div>
 	</form>
 
-
-
-
-
-
-
-
-	<!-- 	<footer id="footer" style="position:absolute; bottom:0;">
-			<div class="footer__inner">
-				<div class="footer__up">
-					<img class="footerlogo" src="./images/logo(navy).png" />
-					<div class="footer__up-textrow1">
-						<a href="product.jsp"><span>상품 소개</span></a>
-					</div>
-					<div class="footer__up-textrow2">
-						<a href="service.jsp"><span>서비스 신청</span></a>
-					</div>
-					<div class="footer__up-textrow3">
-						<a href="#"><span>회사 소개</span></a>
-					</div>
-					<div class="footer__up-textrow4">
-						<a href="#"><span>채용</span></a>
-					</div>
-					</div>
-				<hr>
-					<div class="footer__down">
-					<span>광주 동구 예술길 31-15 광주아트센터 4층 (POST-GUARD) 사업자 등록번호 :
-						375-87-00088 직업정보제공사업 신고번호 : J1200020200016</span>
-						<div class="footer__icons">
-							<a href="https://www.instagram.com/"><i
-								class="fa-brands fa-instagram fa-2xl"></i></a> <a
-								href="https://twitter.com/"><i
-								class="fa-brands fa-twitter fa-2xl"></i></a> <a
-								href="https://ko-kr.facebook.com/"><i
-								class="fa-brands fa-facebook-square fa-2xl"></i></a>
-						</div>
-						<span>&copy; POST GUARD; All rights reserved.</span>
-						</div>
+	<footer id="footer">
+		<div class="footer__inner">
+			<div class="footer__up">
+				<img class="footerlogo" src="./images/footerlogo.png" />
+				<div class="footer__up-textrow1">
+					<a href="product.jsp"><span>상품 소개</span></a>
 				</div>
-			</footer>  -->
+				<div class="footer__up-textrow2">
+					<a href="service.jsp"><span>서비스 신청</span></a>
+				</div>
+				<div class="footer__up-textrow3">
+					<a href="#"><span>회사 소개</span></a>
+				</div>
+				<div class="footer__up-textrow4">
+					<a href="#"><span>채용</span></a>
+				</div>
+			</div>
+			<hr>
+			<div class="footer__down">
+				<span>광주 동구 예술길 31-15 광주아트센터 4층 (POST-GUARD)
+ 사업자 등록번호 : 375-87-00088 직업정보제공사업 신고번호 : J1200020200016</span>
+				<div class="footer__icons">
+					<a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+					<a href="https://twitter.com/"><i class="fa-brands fa-twitter fa-2xl"></i></a>
+					<a href="https://ko-kr.facebook.com/"><i class="fa-brands fa-facebook-square fa-2xl"></i></a>
+				</div>
+				<span>&copy; POST GUARD; All rights reserved.</span>
+			</div>
+		</div>
+	</footer>
 		
 	<script src="young/js/jquery-3.3.1.min.js"></script>
     <script src="young/js/popper.min.js"></script>
