@@ -56,6 +56,8 @@
 			</nav>
 		</div>
 	</section>
+	
+	
 	<div class="AsDetail__container">
 		<hr />
 		<div class="row">
@@ -131,6 +133,8 @@
 		<hr />
 	</div>
 	<span class="as__seq"><%=as_seq %></span>
+	
+	
 		<!-- Footer -->
 	<footer id="footer">
 		<div class="footer__inner">
