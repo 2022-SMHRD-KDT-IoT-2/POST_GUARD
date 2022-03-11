@@ -135,7 +135,9 @@
 						</tr>
 				<div class="form-group_content">
 						<button type="button" class="listBtn">목록</button>
+						<%if(userInfo.getMem_id().equals("admin")) { %>
 						<button type="button" class="deleteBtn">글 삭제</button>
+						<%} %>
 				</div>
 			</div>
 		</div>
