@@ -310,14 +310,13 @@ public class ASDAO {
 
 			DB();
 
-			String sql = "select mem_id, AS_cmt_content, as_cmt_date from t_as_comment where AS_SEQ = ?";
+			String sql = "select mem_id, AS_cmt_content, as_cmt_date from t_as_comment where AS_SEQ = ? order by as_cmt_date";
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, as_seq);
 
 			rs = psmt.executeQuery();
 
 			while (rs.next()) {
-
 				String mem_id = rs.getString(1);
 				String getAS_cmt_content = rs.getString(2);
 				String getAs_cmt_date = rs.getString(3);
