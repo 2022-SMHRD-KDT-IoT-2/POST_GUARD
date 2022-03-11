@@ -117,7 +117,9 @@
 .payment--h span,
 .user--h span,
 .personal--h span{
-	font-size : 24px;
+	font-size : 22px;
+	font-weight:bold; 
+	
 }
 
 .joinpath--internet,
