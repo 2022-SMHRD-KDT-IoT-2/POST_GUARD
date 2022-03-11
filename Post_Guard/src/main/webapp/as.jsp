@@ -31,10 +31,9 @@
 <link rel="stylesheet" href="assets/css/sidebar.css" />
 <link rel="stylesheet" href="assets/css/button.css" />
 <link rel="stylesheet" href="assets/css/as.css" />
-
 <link type="text/css" rel="stylesheet"
 	href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
-<title>AS 신청</title>
+<title>POST-GUARD | AS 신청</title>
 </head>
 <body>
 
@@ -90,7 +89,7 @@
 						<table class="table table-striped custom-table">
 							<thead class="ASTable--thead">
 								<tr>
-									<th width="10%">카테고리</th>
+									<th width="13%">카테고리</th>
 									<th width="50%">제목</th>
 									<th width="5%">작성자</th>
 									<th width="20%" style="text-align : center;">답변 유무</th>

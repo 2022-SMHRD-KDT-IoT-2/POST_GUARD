@@ -12,23 +12,19 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.dao.ASDAO;
-import com.dao.CompanyDAO;
 import com.dao.MemberDAO;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
-import com.vo.MemberVO;
 
 /**
- * Servlet implementation class DeleteMemberCon
+ * Servlet implementation class DeleteASCon
  */
-@WebServlet("/DeleteMemberCon")
-public class DeleteMemberCon extends HttpServlet {
+@WebServlet("/DeleteASCon")
+public class DeleteASCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		HttpSession userInfo = request.getSession();
-		MemberDAO dao = new MemberDAO();
+		ASDAO dao = new ASDAO();
 		StringBuffer sb = new StringBuffer();
 		String line = null;
 
@@ -40,17 +36,18 @@ public class DeleteMemberCon extends HttpServlet {
 		JsonParser parser = new JsonParser();
 		JsonElement element = parser.parse(sb.toString());
 
-		String user_id = element.getAsJsonObject().get("userId").getAsString(); 
+		String as_seq = element.getAsJsonObject().get("seq").getAsString(); 
 		PrintWriter out = response.getWriter();
-		int cnt = dao.delete_user(user_id);
+		int parsed_seq = Integer.parseInt(as_seq);
+		int cnt = dao.delete_AS(parsed_seq);
 	
 		
 		if(cnt > 0) {
-			userInfo.removeAttribute("userInfo");
 			out.print("DeleteSuccess");
 		}
 		else {
 			out.print("DeleteFailure");
 		}
 	}
+
 }

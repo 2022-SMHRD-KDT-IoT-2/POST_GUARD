@@ -111,3 +111,19 @@ font-weight:bold;
 	padding-top : 15px;
 	
 }
+
+.listBtn,
+.editBtn,
+.deleteBtn {
+	all : unset !important;
+	border : 1px solid rgb(9, 41, 97)!important;
+	font-size : 12px!important;
+	margin: 20px 0px 0px 5px !important;
+	padding : 4px!important;
+	border-radius : 30px!important;
+	width : 65px!important;
+	text-align : center!important;
+	background-color : rgb(9, 41, 97)!important;
+	color : white !important;
+	cursor : pointer!important;
+}

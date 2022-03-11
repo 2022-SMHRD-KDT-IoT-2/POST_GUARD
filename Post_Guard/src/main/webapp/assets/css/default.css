@@ -44,7 +44,7 @@ table {
 
 @font-face {
 	src: url("../fonts/NanumBarunGothic.ttf");
-	font-family: "mainfont";
+	font-family: "mainfont" !important; 
 }
 
 html {

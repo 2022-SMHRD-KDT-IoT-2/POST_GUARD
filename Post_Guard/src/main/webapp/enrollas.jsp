@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="assets/css/sidebar.css" />
 <link type="text/css" rel="stylesheet" href="./plugin/fontawesome-free-6.0.0-web/css/all.min.css">
    
-    <title>AS 게시글 등록 페이지</title>
+    <title>POST-GUARD | AS 게시글 등록</title>
   </head>
   <body>
   
