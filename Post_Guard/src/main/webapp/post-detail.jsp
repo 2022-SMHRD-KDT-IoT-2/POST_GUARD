@@ -34,12 +34,12 @@
 	ArrayList<ASReplyVO> al = dao.getAS_cmt_content(parsed_seq);
 	%>
 
-	<section id="sidebar">
+<section id="sidebar">
 		<div class="inner">
 			<nav>
 				<ul>
-					<li><a href="index.jsp"><img class="mainlogo"
-							src="./images/logo(white).png" /></a></li>
+					<li><a href="index.jsp">
+					<img class="mainlogo" src="./images/logo.png" /></a></li>
 					<div class="box_container">
 						<div class="box1">
 							<li><a href="product.jsp">상품 소개</a></li>
@@ -48,8 +48,13 @@
 							<li><a href="faq.jsp">FAQ</a></li>
 						</div>
 						<div class="box2">
+						<%if(userInfo == null) {%>
 							<li><a href="join.jsp">회원가입</a></li>
 							<li><a href="login.jsp">로그인</a></li>
+						<%} else { %>
+							<li><a href="mypage.jsp"><%=userInfo.getMem_name() %></a></li>
+							<li><a href="LogoutCon">로그아웃</a>
+						<%} %>
 						</div>
 					</div>
 				</ul>
