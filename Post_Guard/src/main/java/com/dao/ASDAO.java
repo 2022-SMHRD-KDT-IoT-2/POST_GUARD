@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import com.vo.ASReplyVO;
 import com.vo.ASVO;
 
-// AS°Ô½ÃÆÇ DAO (±Û+´ñ±Û) 
+// ASï¿½Ô½ï¿½ï¿½ï¿½ DAO (ï¿½ï¿½+ï¿½ï¿½ï¿½) 
 public class ASDAO {
 
 	Connection conn = null;
@@ -48,7 +48,7 @@ public class ASDAO {
 		}
 	}
 
-	// AS°Ô½ÃÆÇ ¸ñ·Ï
+	// ASï¿½Ô½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 	public ArrayList<ASVO> getAS_list() {
 
 		ArrayList<ASVO> arr_vo = new ArrayList<ASVO>();
@@ -90,7 +90,7 @@ public class ASDAO {
 		return arr_vo;
 	}
 
-	// AS °Ô½ÃÆÇ¿¡ ±Û µî·Ï
+	// AS ï¿½Ô½ï¿½ï¿½Ç¿ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½
 	public int write_AS(String as_category, String as_title, String as_content, String mem_id) {
 
 		int cnt = 0;
@@ -99,7 +99,7 @@ public class ASDAO {
 
 			DB();
 
-			String sql = "insert into T_AS (as_title, as_content, as_date, as_file, as_cnt, mem_id, as_category, as_progress) values (?, ?, sysdate, 'noFile', 0, ?, ?, 'ÁøÇàÁß')";
+			String sql = "insert into T_AS (as_title, as_content, as_date, as_file, as_cnt, mem_id, as_category, as_progress) values (?, ?, sysdate, 'noFile', 0, ?, ?, 'ì§„í–‰ì¤‘')";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, as_title);
 			psmt.setString(2, as_content);
@@ -121,7 +121,7 @@ public class ASDAO {
 		return cnt;
 	}
 
-	// Á¶È¸¼ö Áõ°¡ ±â´É
+	// ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 	public void updateAS_cnt(int as_seq) {
 
 		try {
@@ -146,7 +146,7 @@ public class ASDAO {
 		}
 	}
 
-	// Á¦¸ñ Å¬¸¯ÇßÀ» ¶§ ³»¿ë º¸¿©ÁÖ´Â ±â´É
+	// ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½
 	public ASVO getAS_datail(int as_seq) {
 		ASVO vo = null;
 
@@ -185,7 +185,7 @@ public class ASDAO {
 		return vo;
 	}
 
-//	// ÁøÇà»óÈ² ¹ÝÈ¯ÇÏ´Â ¸Þ¼­µå
+//	// ï¿½ï¿½ï¿½ï¿½ï¿½È² ï¿½ï¿½È¯ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
 //	public void show_progress(String mem_id) {
 //		try {
 //
@@ -211,7 +211,7 @@ public class ASDAO {
 //		}
 //	}
 
-	// ±Û ¼öÁ¤
+	// ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	public void update_AS(String as_category, String as_title, String as_content, String as_file, int as_seq) {
 		try {
 
@@ -264,7 +264,7 @@ public class ASDAO {
 		return cnt;
 	}
 
-	// ±Û »èÁ¦
+	// ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	public int delete_AS(int as_seq) {
 		int cnt = 0;
 		int doneDelete = 0;
@@ -278,12 +278,12 @@ public class ASDAO {
 			doneDelete = psmt.executeUpdate();
 
 			if (doneDelete > 0) {
-				// ´ñ±ÛÀÌ ÀÖ´Â °æ¿ì
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½
 				String sql_AS = "delete from T_AS where as_seq =" + as_seq;
 				psmt = conn.prepareStatement(sql_AS);
 				cnt = psmt.executeUpdate();
 			} else {
-				// ´ñ±ÛÀÌ ¾ø´Â °æ¿ì
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 				String sql_AS = "delete from T_AS where as_seq =" + as_seq;
 				psmt = conn.prepareStatement(sql_AS);
 				cnt = psmt.executeUpdate();
@@ -302,7 +302,7 @@ public class ASDAO {
 		return cnt;
 	}
 
-	// ´ñ±Û º¸¿©ÁÖ´Â ±â´É
+	// ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½
 	public ArrayList<ASReplyVO> getAS_cmt_content(int as_seq) {
 		ArrayList<ASReplyVO> al = new ArrayList<ASReplyVO>(); 
 
@@ -341,7 +341,7 @@ public class ASDAO {
 		return al;
 	}
 
-	// ´ñ±Û ÀÛ¼º
+	// ï¿½ï¿½ï¿½ ï¿½Û¼ï¿½
 	public int write_AS_cmt(int as_seq, String comment, String mem_id) {
 
 		int cnt = 0;
@@ -370,7 +370,7 @@ public class ASDAO {
 			return cnt;
 		}
 
-	// ´ñ±Û ¼öÁ¤
+	// ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	public void update_AS_cmt(String as_cmt_content, int as_cmt_seq) {
 		try {
 
@@ -395,7 +395,7 @@ public class ASDAO {
 		}
 	}
 
-	// ´ñ±Û »èÁ¦
+	// ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	public int delete_AS_cmt(int as_cmt_seq) {
 		int cnt = 0;
 		try {
