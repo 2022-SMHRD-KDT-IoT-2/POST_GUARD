@@ -272,13 +272,20 @@ public class ASDAO {
 
 			DB();
 
-			String sql_AS = "delete from T_AS where =" + as_seq;
-			psmt = conn.prepareStatement(sql_AS);
+			
+			String sql_AS_cmt = "delete from T_AS_COMMENT where AS_SEQ=" + as_seq;
+			psmt = conn.prepareStatement(sql_AS_cmt);
 			doneDelete = psmt.executeUpdate();
 
 			if (doneDelete > 0) {
-				String sql_AS_cmt = "delete from T_AS_COMMENT where AS_SEQ=" + as_seq;
-				psmt = conn.prepareStatement(sql_AS_cmt);
+				// 댓글이 있는 경우
+				String sql_AS = "delete from T_AS where as_seq =" + as_seq;
+				psmt = conn.prepareStatement(sql_AS);
+				cnt = psmt.executeUpdate();
+			} else {
+				// 댓글이 없는 경우
+				String sql_AS = "delete from T_AS where as_seq =" + as_seq;
+				psmt = conn.prepareStatement(sql_AS);
 				cnt = psmt.executeUpdate();
 			}
 
@@ -389,17 +396,17 @@ public class ASDAO {
 	}
 
 	// 댓글 삭제
-	public void delete_AS_cmt(int as_cmt_seq) {
-
+	public int delete_AS_cmt(int as_cmt_seq) {
+		int cnt = 0;
 		try {
 
 			DB();
 
-			String sql = "delete from T_AS where AS_CMT_SEQ = ?";
+			String sql = "delete from T_AS_COMMENT where AS_CMT_SEQ = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, as_cmt_seq);
 
-			psmt.executeUpdate();
+			cnt = psmt.executeUpdate();
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -411,6 +418,6 @@ public class ASDAO {
 				e2.printStackTrace();
 			}
 		}
+		return cnt;
 	}
-
 }

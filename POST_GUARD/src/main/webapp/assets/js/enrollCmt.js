@@ -1,5 +1,5 @@
-const submitBtn = document.querySelector("#submitBtn");
-const textarea = document.querySelector("#commentParentText");
+const submitBtn = document.querySelector(".eorollCommentBtn");
+const textarea = document.querySelector(".comment_enroll");
 const as_seq = document.querySelector(".as__seq").textContent;
 
 const handleXMLHTTPRequest = (comment, as_seq) => {

@@ -8,6 +8,14 @@
     transform : translateY(-100%) !important;
 }
 
+#footer a {
+	color : rgb(9, 41, 97) !important;
+}
+
+#footer span {
+	color : rgb(9, 41, 97) !important;
+}
+
 .footer__inner {
 	width: 60%;
 }

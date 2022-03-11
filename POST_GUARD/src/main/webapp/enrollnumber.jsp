@@ -52,7 +52,6 @@
 		<div class="mypage__container">
 			<div class="mypage__section1">
 				<ul>
-					<li><a href="reservation.jsp">발송 예약</a></li>
 					<li><a href="enrollnumber.jsp">운송장 번호 등록</a></li>
 					<li><a href="mytrackingnum.jsp">등록한 운송장 번호</a></li>
 					<%if(!userInfo.isSocial()) { %>
@@ -60,7 +59,6 @@
 					<%} %>
 					<%if(userInfo.getMem_id().equals("admin")) { %>
 					<li><a href="enrollcompany.jsp">택배사 등록 - 관리자 전용</a></li>
-					<li><a href="manageuser.jsp">고객 정보 관리 - 관리자 전용</a></li>
 					<%} %>
 				</ul>
 			</div>

@@ -20,7 +20,8 @@
 <link
 	href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
 	rel="stylesheet" id="bootstrap-css" />
-<title>글 내용 보는 페이지</title>
+
+<title>POST-GUARD | AS 신청</title>
 
 </head>
 <body>
@@ -51,10 +52,6 @@
 							<li><a href="login.jsp">로그인</a></li>
 						</div>
 					</div>
-					<!-- <li><a href="#">택배 예약</a></li>
-		            <li><a href="#">고객 정보 수정</a></li>
-		            <li><a href="#">고객 정보 수정</a></li>
-		            <li><a href="#">운송장</a></li> -->
 				</ul>
 			</nav>
 		</div>
@@ -72,7 +69,7 @@
 					<thead>
 						<tr align="center">
 							<th width="20%"><span class="title">제목</span></th>
-							<th width="20%"><%=vo.getAs_title()%></th>
+							<th width="20%" class="vo_as_title"><%=vo.getAs_title()%></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -86,10 +83,10 @@
 						</tr>
 						<tr>
 							<td><span class="title">카테고리</span></td>
-							<td><%=vo.getAs_category()%></td>
+							<td class="vo_as_category"><%=vo.getAs_category()%></td>
 						</tr>
 						<tr>
-							<td colspan="2"><%=vo.getAs_content()%></td>
+							<td colspan="2" class="vo_as_content"><%=vo.getAs_content()%></td>
 						</tr>
 					</tbody>
 				</table>
@@ -132,11 +129,8 @@
 							</td>
 						</tr>
 				<div class="form-group_content">
-					<a href="as.jsp">
-						<button type="button" id="submitBtn">목록</button>
-						<button type="button" id="submitBtn">글 수정</button>
-						<button type="button" id="submitBtn">글 삭제</button>
-					</a>
+						<button type="button" class="listBtn">목록</button>
+						<button type="button" class="deleteBtn">글 삭제</button>
 				</div>
 			</div>
 		</div>
@@ -184,5 +178,6 @@
 		</div>
 	</footer>
 	<script src="assets/js/enrollCmt.js"></script>
+	<script src="assets/js/ASButtons.js"></script>
 </body>
 </html>
