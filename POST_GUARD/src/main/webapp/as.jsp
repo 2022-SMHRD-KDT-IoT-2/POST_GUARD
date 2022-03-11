@@ -43,6 +43,7 @@
 	ASDAO dao = new ASDAO();
 	MemberVO userInfo = (MemberVO) session.getAttribute("userInfo");
 	ArrayList<ASVO> arr_vo = dao.getAS_list(); 
+	request.setCharacterEncoding("utf-8");
 	%>
 
 	<!-- INDEX -->
