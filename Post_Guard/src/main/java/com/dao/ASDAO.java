@@ -99,7 +99,7 @@ public class ASDAO {
 
 			DB();
 
-			String sql = "insert into T_AS (as_title, as_content, as_date, as_file, as_cnt, mem_id, as_category, as_progress) values (?, ?, sysdate, 'noFile', 0, ?, ?, '진행중')";
+			String sql = "insert into T_AS (as_title, as_content, as_date, as_file, as_cnt, mem_id, as_category, as_progress) values (?, ?, sysdate, 'noFile', 0, ?, ?, 'IN PROGRESS')";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, as_title);
 			psmt.setString(2, as_content);
