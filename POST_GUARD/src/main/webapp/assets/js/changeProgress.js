@@ -2,7 +2,7 @@ const progress = document.querySelectorAll(".progress");
 const proBtn = document.querySelectorAll(".proBtn");
 // 버튼 DOM : 이벤트 click -> 백엔드에 통신
 
-const handleXhr = (seq, progress) => {
+const handleproXhr = (seq, progress) => {
   let xhr = new XMLHttpRequest();
 
   const userObj = {
@@ -39,6 +39,6 @@ const handleXhr = (seq, progress) => {
 for (let i = 0; i < progress.length; i++) {
   proBtn[i].addEventListener("click", (e) => {
     e.preventDefault();
-    handleXhr(e.target.id, progress[i].value)
+    handleproXhr(e.target.id, progress[i].value)
   });
 }
