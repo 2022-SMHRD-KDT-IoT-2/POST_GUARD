@@ -105,7 +105,7 @@
 					</thead>
 					<tbody class="tbody_cmt_list">
 						<%
-						for (int i = 0; i < al.size() - 1; i++) {
+						for (int i = 0; i < al.size(); i++) {
 						%>
 						<tr>
 							<td>[<%=al.get(i).getMem_id()%>]</td>
