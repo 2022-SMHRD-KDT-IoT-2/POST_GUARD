@@ -1,7 +1,7 @@
 const deleteMemberBtn = document.querySelector(".deleteMember");
 const hiddenId = document.querySelector(".hiddenId").textContent;
 
-const requestXhr = (id) => {
+const requestDeleteXhr = (id) => {
   let xhr = new XMLHttpRequest();
 
   const Obj = {
@@ -37,7 +37,7 @@ const handleDelete = (e) => {
   e.preventDefault();
   let isConfirm = confirm("정말 탈퇴하시겠습니까?");
   if (isConfirm) {
-    requestXhr(hiddenId);
+    requestDeleteXhr(hiddenId);
   }
 };
 

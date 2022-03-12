@@ -84,7 +84,7 @@
 						</tr>
 						<tr>
 							<td><span class="title">글쓴이</span></td>
-							<td><%=userInfo.getMem_id()%></td>
+							<td><%=vo.getMem_id()%></td>
 						</tr>
 						<tr>
 							<td><span class="title">카테고리</span></td>

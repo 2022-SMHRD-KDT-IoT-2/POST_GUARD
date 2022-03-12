@@ -54,7 +54,7 @@
 	</section>
 	
     <div class="productImg__container">
-    	<img id="detailimage" style="width : 100%; height : 100%;"src="assets/css/images/detailpage.png"/>
+    	<img id="detailimage" style="width : 100%; height : 100%;"src="assets/css/images/detail_page.png"/>
     </div>
     
 	<!-- Footer -->
