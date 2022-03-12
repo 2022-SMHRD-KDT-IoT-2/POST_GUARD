@@ -60,7 +60,9 @@
 				<%if(userInfo.getMem_id().equals("admin")) { %>
 				<li><a href="enrollcompany.jsp">택배사 등록 - 관리자 전용</a></li>
 				<%} %>
+				<li><span class="deleteMember">회원 탈퇴</span></li>
 			</ul>
+			<span class="hiddenId"><%=userInfo.getMem_id() %></span>
 		</div>
 		<div class="mypage__section2">
 			<div class="mypage__section2--inner">
@@ -190,5 +192,6 @@
 		}
 	</script>
 	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	<script src="assets/js/deleteMember.js"></script>
 </body>
 </html>
