@@ -2,6 +2,7 @@
 ## 주요기능
 ## 개발환경
 ## 대표이미지
+https://github.com/2022-SMHRD-KDT-IoT-2/POST_GUARD/issues/6#issue-1169044645
 ## 기능흐름도
 ## 사용부품
 ## 회로도
