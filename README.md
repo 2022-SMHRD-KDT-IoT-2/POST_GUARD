@@ -22,7 +22,7 @@
 ## 대표이미지
 ![메인](https://user-images.githubusercontent.com/97871608/158281988-4289b6a8-95ca-4b7c-a54b-315a07cef2f7.PNG)
 ## 기능흐름도
-![서비스 흐름도](https://user-images.githubusercontent.com/97871608/158282026-b3914152-a4bf-4468-8328-d6ea28383fb9.PNG)
+![흐름도 수정](https://user-images.githubusercontent.com/97871608/158286672-99666873-0da7-49be-88d5-2cf6b3352aa2.PNG)
 ## 사용부품
 ![아두이노 부품](https://user-images.githubusercontent.com/97871608/158282050-ded7dd2f-b0c0-4b88-bd74-692b9ab59fcd.PNG)
 ## 회로도
