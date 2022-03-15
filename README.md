@@ -29,6 +29,7 @@
 ![회로도](https://user-images.githubusercontent.com/97871608/158282105-2b6451cf-b48d-48f6-bafe-f4c9dd41f027.PNG)
 ## 활용 사진 예시
 ![제품사진](https://user-images.githubusercontent.com/97871608/158283159-68a8b1f1-d67e-44d8-8fa7-24ca4d418a80.PNG)
+![웹사진](![빈 문서 1001](https://user-images.githubusercontent.com/97923812/158287629-0534242d-054b-4540-a561-a81d3bd00cd0.jpg)
 ## 제작일정
 |일정  |상세내용          |
 |-------|-------------------|
