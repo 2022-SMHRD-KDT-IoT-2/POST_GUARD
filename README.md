@@ -15,7 +15,7 @@
 ## 개발환경
 - 사용언어 : Java 1.8 / HTML / CSS / Javascript
 - 개발도구 : Eclipse / VSCode / Arduino
-- 서버환경 : Tomcat 9.0 / JSP · Servlet
+- 서버환경 : Tomcat 9.0
 - 데이터베이스 : Oracle 11g
 - 디자인도구 : PhotoShop, InDesign
 - 영상편집도구 : Premire Pro 2020
