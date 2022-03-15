@@ -1,6 +1,16 @@
 ## 프로젝트명
+- 분실방지를 위한 개인 단위의 스마트 택배보관함
+- Challenge Point : 스마트 홈 - 조명/전력/가전 제어 및 보안 시스템(지문, 도어락) 구축
 ## 주요기능
+- 고객이 웹에 등록한 운송장 뒷 번호 4자리를 입력하면 택배함 열림
+- 택배함 도난 방지
 ## 개발환경
+- 사용언어 : Java 1.8 / HTML / CSS / Javascript
+- 개발도구 : Eclipse / VSCode / Arduino
+- 서버환경 : Tomcat 9.0 / JSP · Servlet
+- 데이터베이스 : Oracle 11g
+- 디자인도구 : PhotoShop, InDesign
+- 영상편집도구 : Premire Pro 2020
 ## 대표이미지
 ![메인](https://user-images.githubusercontent.com/97871608/158281988-4289b6a8-95ca-4b7c-a54b-315a07cef2f7.PNG)
 ## 기능흐름도
