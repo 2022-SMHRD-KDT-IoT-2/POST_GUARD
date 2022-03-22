@@ -15,22 +15,17 @@ const handleXhr = (id, pw) => {
 
   xhr.onreadystatechange = function () {
     if (xhr.readyState === XMLHttpRequest.DONE) {
-      //요청성공
       if (xhr.status === 200) {
-        //응답성공
         console.log(xhr.responseText);
         if (xhr.responseText === "loginSuccess") {
-          // 로그인 성공
           location.href = "index.jsp";
         } else {
-          // 로그인 실패
           AlertMessage.classList.remove("hide");
         }
       } else {
         console.log("response fail");
       }
     } else {
-      //요청실패
       console.log("request fail");
     }
   };
